@@ -1,2 +1,1 @@
-# FlexibleSetting
-Хранение гибких настроек для обработки 1С
+UpdateService
