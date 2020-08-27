@@ -1,0 +1,1330 @@
+﻿<ValueTree xmlns="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ValueTree">
+	<column>
+		<Name xsi:type="xs:string">Использовать</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">ТипТранзакции</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">Источник</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">Приемник</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">Служебные</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">Атрибуты</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">АтрибутыЗначения</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">Данные</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">ДанныеЗначения</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">ДоступныеЗначения</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">Связи</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">СлужебныеЗначения</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">Сохранение</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">Загрузка</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">Обязательный</Name>
+		<ValueType/>
+	</column>
+	<row>
+		<row>
+			<row>
+				<Value xsi:type="xs:boolean">true</Value>
+				<Value xsi:type="xs:string"/>
+				<Value xsi:type="xs:string"/>
+				<Value xsi:type="xs:string">СвОЭДОтпр</Value>
+				<Value xsi:nil="true"/>
+				<Value xsi:type="ValueListType">
+					<valueType/>
+					<lastId xsi:type="xs:decimal">5</lastId>
+					<item>
+						<value xsi:type="xs:string">НаимОрг</value>
+						<presentation>Документ.СвОЭДОтпр_НаимОрг</presentation>
+						<id xsi:type="xs:decimal">3</id>
+					</item>
+					<item>
+						<value xsi:type="xs:string">ИННЮЛ</value>
+						<presentation>Документ.СвОЭДОтпр_ИННЮЛ</presentation>
+						<id xsi:type="xs:decimal">4</id>
+					</item>
+					<item>
+						<value xsi:type="xs:string">ИдЭДО</value>
+						<presentation>Документ.СвОЭДОтпр_ИдЭДО</presentation>
+						<id xsi:type="xs:decimal">5</id>
+					</item>
+				</Value>
+				<Value xsi:type="xs:string"/>
+				<Value xsi:type="xs:string"/>
+				<Value xsi:type="ValueTable"/>
+				<Value xsi:type="ValueListType">
+					<valueType/>
+					<lastId xsi:type="xs:decimal">-1</lastId>
+				</Value>
+				<Value xsi:type="ValueListType">
+					<valueType/>
+					<lastId xsi:type="xs:decimal">-1</lastId>
+				</Value>
+				<Value xsi:type="xs:string"/>
+				<Value xsi:type="xs:decimal">0</Value>
+				<Value xsi:type="xs:decimal">0</Value>
+				<Value xsi:type="xs:boolean">false</Value>
+			</row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">СвУчДокОбор</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">10</lastId>
+				<item>
+					<value xsi:type="xs:string">ИдГрузОтпр</value>
+					<presentation>Документ.ИдГрузОтпр</presentation>
+					<checkState>1</checkState>
+					<id xsi:type="xs:decimal">8</id>
+				</item>
+				<item>
+					<value xsi:type="xs:string">ИдГрузПол</value>
+					<presentation>Документ.ИдГрузПол</presentation>
+					<checkState>1</checkState>
+					<id xsi:type="xs:decimal">9</id>
+				</item>
+				<item>
+					<value xsi:type="xs:string">ИдГрузПер</value>
+					<presentation>Документ.ИдГрузПер</presentation>
+					<checkState>1</checkState>
+					<id xsi:type="xs:decimal">10</id>
+				</item>
+			</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueTable"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:boolean">true</Value>
+		</row>
+		<row>
+			<row>
+				<row>
+					<Value xsi:type="xs:boolean">true</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string">ГрузИнф</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">25</lastId>
+						<item>
+							<value xsi:type="xs:string">МассаБрутто</value>
+							<presentation>Документ.МассаБрутто</presentation>
+							<id xsi:type="xs:decimal">24</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">ФактСостГруз</value>
+							<presentation>Документ.ФактСостГруз</presentation>
+							<id xsi:type="xs:decimal">25</id>
+						</item>
+					</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="ValueTable"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:boolean">true</Value>
+				</row>
+				<row>
+					<row>
+						<Value xsi:type="xs:boolean">true</Value>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="xs:string">Палетты</Value>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">5</lastId>
+							<item>
+								<value xsi:type="xs:string">SSCC</value>
+								<presentation>ПеревозкаИнф.SSCC</presentation>
+								<checkState>1</checkState>
+								<id xsi:type="xs:decimal">4</id>
+							</item>
+							<item>
+								<value xsi:type="xs:string">МассаБрутто</value>
+								<presentation>ПеревозкаИнф.МассаБрутто</presentation>
+								<id xsi:type="xs:decimal">5</id>
+							</item>
+						</Value>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="ValueTable"/>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="xs:decimal">0</Value>
+						<Value xsi:type="xs:decimal">0</Value>
+						<Value xsi:type="xs:boolean">true</Value>
+					</row>
+					<Value xsi:type="xs:boolean">true</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string">ПеревозкаИнф</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">51</lastId>
+					</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string">Результат  = Новый ТаблицаЗначений;
+		
+Колонки = Новый Массив;
+Колонки.Добавить("Ссылка");
+Колонки.Добавить("SSCC");
+Колонки.Добавить("МассаБрутто");
+Колонки.Добавить("КодПричины");
+Колонки.Добавить("ТекстПричины");
+Колонки.Добавить("УпаковкаПартнера");
+
+Для Каждого Колонка Из Колонки Цикл
+	Результат.Колонки.Добавить(Колонка);
+КонецЦикла;
+
+Запрос = Новый Запрос;
+Запрос.Текст = "ВЫБРАТЬ РАЗЛИЧНЫЕ
+               |	ЭКОМ_ЦепочкиДокументовЭТРН.ВходящаяНакладная КАК Ссылка,
+               |	ЭКОМ_ДокументыТЧ_Товары.НомерПродукта КАК SSCC,
+               |	ЭКОМ_ДокументыТЧ_Товары.КоличествоПоставляемое КАК МассаБрутто,
+               |	ЭКОМ_ДокументыТЧ_Товары.УточнениеОПоставке КАК ТекстПричины,
+               |	ЭКОМ_ДокументыТЧ_Товары.xmlЕдиницаИзмерения КАК УпаковкаПартнера,
+               |	ЭКОМ_ДокументыТЧ_Товары.НомерГТД КАК КодПричины
+               |ИЗ
+               |	РегистрСведений.ЭКОМ_ЦепочкиДокументовЭТРН КАК ЭКОМ_ЦепочкиДокументовЭТРН
+               |		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ЭКОМ_Документы КАК ЭКОМ_Документы
+               |			ЛЕВОЕ СОЕДИНЕНИЕ Документ.ЭКОМ_Документы.ТЧ_Товары КАК ЭКОМ_ДокументыТЧ_Товары
+               |			ПО (ЭКОМ_Документы.Ссылка = ЭКОМ_ДокументыТЧ_Товары.Ссылка)
+               |		ПО (ЭКОМ_ЦепочкиДокументовЭТРН.ДокументЭКОМ = ЭКОМ_Документы.Ссылка)
+               |ГДЕ
+               |	ЭКОМ_ЦепочкиДокументовЭТРН.ВходящаяНакладная В (&amp;Документ)";
+
+Запрос.УстановитьПараметр("Документ", Источник);
+РезультатЗапроса = Запрос.Выполнить();
+Выборка = РезультатЗапроса.Выбрать();
+
+Пока Выборка.Следующий() Цикл
+	
+	СтрокаСтруктуры = Результат.Добавить();
+	СтрокаСтруктуры.Ссылка           = Выборка.Ссылка;
+	СтрокаСтруктуры.SSCC             = Выборка.SSCC;
+	СтрокаСтруктуры.КодПричины       = Выборка.КодПричины;
+	СтрокаСтруктуры.ТекстПричины     = Выборка.ТекстПричины;
+	СтрокаСтруктуры.УпаковкаПартнера = Выборка.УпаковкаПартнера;
+	СтрокаСтруктуры.МассаБрутто      = Выборка.МассаБрутто;
+	
+КонецЦикла;
+
+Возврат Результат;</Value>
+					<Value xsi:type="ValueTable"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">5</lastId>
+						<item>
+							<value xsi:type="xs:string">Ссылка</value>
+							<id xsi:type="xs:decimal">0</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">SSCC</value>
+							<id xsi:type="xs:decimal">1</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">МассаБрутто</value>
+							<id xsi:type="xs:decimal">2</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">КодПричины</value>
+							<id xsi:type="xs:decimal">3</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">ТекстПричины</value>
+							<id xsi:type="xs:decimal">4</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">УпаковкаПартнера</value>
+							<id xsi:type="xs:decimal">5</id>
+						</item>
+					</Value>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">1</lastId>
+						<item>
+							<value xsi:type="xs:string">Документ.Ссылка</value>
+							<presentation>ПеревозкаИнф.Ссылка</presentation>
+							<id xsi:type="xs:decimal">1</id>
+						</item>
+					</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:boolean">true</Value>
+				</row>
+				<row>
+					<Value xsi:type="xs:boolean">true</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string">ИнфВыгруз</Value>
+					<Value xsi:nil="true"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">117</lastId>
+						<item>
+							<value xsi:type="xs:string">НаименМестаВыгруз</value>
+							<presentation>Документ.НаименМестаВыгруз</presentation>
+							<checkState>1</checkState>
+							<id xsi:type="xs:decimal">102</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">GLNТочкиПолучат</value>
+							<presentation>Документ.GLNТочкиПолучат</presentation>
+							<checkState>1</checkState>
+							<id xsi:type="xs:decimal">103</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">Индекс</value>
+							<presentation>Документ.ИнфВыгруз_Индекс</presentation>
+							<checkState>1</checkState>
+							<id xsi:type="xs:decimal">104</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">КодРегион</value>
+							<presentation>Документ.ИнфВыгруз_КодРегион</presentation>
+							<checkState>1</checkState>
+							<id xsi:type="xs:decimal">105</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">Район</value>
+							<presentation>Документ.ИнфВыгруз_Район</presentation>
+							<id xsi:type="xs:decimal">106</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">Город</value>
+							<presentation>Документ.ИнфВыгруз_Город</presentation>
+							<id xsi:type="xs:decimal">107</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">Улица</value>
+							<presentation>Документ.ИнфВыгруз_Улица</presentation>
+							<id xsi:type="xs:decimal">108</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">Дом</value>
+							<presentation>Документ.ИнфВыгруз_Дом</presentation>
+							<id xsi:type="xs:decimal">109</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">Корпус</value>
+							<presentation>Документ.ИнфВыгруз_Корпус</presentation>
+							<id xsi:type="xs:decimal">110</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">ДатаПодачиТС</value>
+							<presentation>Документ.ИнфВыгруз_ДатаПодачиТС</presentation>
+							<id xsi:type="xs:decimal">111</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">ВремяПодачиТС</value>
+							<presentation>Документ.ИнфПогруз_ВремяПодачиТС</presentation>
+							<id xsi:type="xs:decimal">112</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">ФактДатаПриб</value>
+							<presentation>Документ.ИнфВыгруз_ФактДатаПриб</presentation>
+							<checkState>1</checkState>
+							<id xsi:type="xs:decimal">113</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">ФактВремяПриб</value>
+							<presentation>Документ.ИнфВыгруз_ФактВремяПриб</presentation>
+							<checkState>1</checkState>
+							<id xsi:type="xs:decimal">114</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">ФактВремяУбыт</value>
+							<presentation>Документ.ИнфВыгруз_ФактВремяУбыт</presentation>
+							<checkState>1</checkState>
+							<id xsi:type="xs:decimal">115</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">ФактДатаУбыт</value>
+							<presentation>Документ.ИнфВыгруз_ФактДатаУбыт</presentation>
+							<checkState>1</checkState>
+							<id xsi:type="xs:decimal">116</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">ФактКолГрузМест</value>
+							<presentation>Документ.ИнфВыгруз_ФактКолГрузМест</presentation>
+							<checkState>1</checkState>
+							<id xsi:type="xs:decimal">117</id>
+						</item>
+					</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="ValueTable"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:boolean">true</Value>
+				</row>
+				<Value xsi:type="xs:boolean">true</Value>
+				<Value xsi:type="xs:string"/>
+				<Value xsi:type="xs:string"/>
+				<Value xsi:type="xs:string">СвЭТРН</Value>
+				<Value xsi:type="xs:string"/>
+				<Value xsi:type="ValueListType">
+					<valueType/>
+					<lastId xsi:type="xs:decimal">25</lastId>
+					<item>
+						<value xsi:type="xs:string">ТипЭТРН</value>
+						<presentation>Документ.ТипЭТРН</presentation>
+						<checkState>1</checkState>
+						<id xsi:type="xs:decimal">22</id>
+					</item>
+					<item>
+						<value xsi:type="xs:string">НомерЭТРН</value>
+						<presentation>Документ.НомерЭТРН</presentation>
+						<checkState>1</checkState>
+						<id xsi:type="xs:decimal">23</id>
+					</item>
+					<item>
+						<value xsi:type="xs:string">ДатаЭТРН</value>
+						<presentation>Документ.ДатаЭТРН</presentation>
+						<checkState>1</checkState>
+						<id xsi:type="xs:decimal">24</id>
+					</item>
+					<item>
+						<value xsi:type="xs:string">ИдФайлПервичн</value>
+						<presentation>Документ.ИдФайлПервичн</presentation>
+						<id xsi:type="xs:decimal">25</id>
+					</item>
+				</Value>
+				<Value xsi:type="xs:string"/>
+				<Value xsi:type="xs:string"/>
+				<Value xsi:type="ValueTable"/>
+				<Value xsi:type="ValueListType">
+					<valueType/>
+					<lastId xsi:type="xs:decimal">-1</lastId>
+				</Value>
+				<Value xsi:type="ValueListType">
+					<valueType/>
+					<lastId xsi:type="xs:decimal">-1</lastId>
+				</Value>
+				<Value xsi:type="xs:string"/>
+				<Value xsi:type="xs:decimal">0</Value>
+				<Value xsi:type="xs:decimal">0</Value>
+				<Value xsi:type="xs:boolean">true</Value>
+			</row>
+			<row>
+				<row>
+					<Value xsi:type="xs:boolean">true</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string">Приемщик</Value>
+					<Value xsi:nil="true"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">35</lastId>
+						<item>
+							<value xsi:type="xs:string">Должность</value>
+							<presentation>Документ.Приемщик_Должность</presentation>
+							<checkState>1</checkState>
+							<id xsi:type="xs:decimal">30</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">Фамилия</value>
+							<presentation>Документ.Приемщик_Фамилия</presentation>
+							<checkState>1</checkState>
+							<id xsi:type="xs:decimal">31</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">Имя</value>
+							<presentation>Документ.Приемщик_Имя</presentation>
+							<checkState>1</checkState>
+							<id xsi:type="xs:decimal">32</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">Отчество</value>
+							<presentation>Документ.Приемщик_Отчество</presentation>
+							<checkState>1</checkState>
+							<id xsi:type="xs:decimal">33</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">Дата</value>
+							<presentation>Документ.Приемщик_Дата</presentation>
+							<checkState>1</checkState>
+							<id xsi:type="xs:decimal">34</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">Время</value>
+							<presentation>Документ.Приемщик_Время</presentation>
+							<id xsi:type="xs:decimal">35</id>
+						</item>
+					</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="ValueTable"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:boolean">true</Value>
+				</row>
+				<row>
+					<Value xsi:type="xs:boolean">true</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string">ПредставительГП</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">43</lastId>
+						<item>
+							<value xsi:type="xs:string">ИдАрхиваДок</value>
+							<presentation>Документ.ПредставительГП_ИдАрхиваДок</presentation>
+							<id xsi:type="xs:decimal">38</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">Фамилия</value>
+							<presentation>Документ.ПредставительГП_Фамилия</presentation>
+							<checkState>1</checkState>
+							<id xsi:type="xs:decimal">39</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">Имя</value>
+							<presentation>Документ.ПредставительГП_Имя</presentation>
+							<checkState>1</checkState>
+							<id xsi:type="xs:decimal">40</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">Отчество</value>
+							<presentation>Документ.ПредставительГП_Отчество</presentation>
+							<checkState>1</checkState>
+							<id xsi:type="xs:decimal">41</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">Дата</value>
+							<presentation>Документ.ПредставительГП_Дата</presentation>
+							<id xsi:type="xs:decimal">42</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">Время</value>
+							<presentation>Документ.ПредставительГП_Время</presentation>
+							<id xsi:type="xs:decimal">43</id>
+						</item>
+					</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="ValueTable"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:boolean">true</Value>
+				</row>
+				<row>
+					<Value xsi:type="xs:boolean">true</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string">ВодительВыгруз</Value>
+					<Value xsi:nil="true"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">41</lastId>
+						<item>
+							<value xsi:type="xs:string">ИдентифВодит</value>
+							<presentation>Документ.Водитель_ИдентифВодит</presentation>
+							<id xsi:type="xs:decimal">33</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">Фамилия</value>
+							<presentation>Документ.ВодительВыгруз_Фамилия</presentation>
+							<id xsi:type="xs:decimal">34</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">Имя</value>
+							<presentation>Документ.ВодительВыгруз_Имя</presentation>
+							<id xsi:type="xs:decimal">35</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">Отчество</value>
+							<presentation>Документ.ВодительВыгруз_Отчество</presentation>
+							<id xsi:type="xs:decimal">36</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">Телефон</value>
+							<presentation>Документ.ВодительВыгруз_Телефон</presentation>
+							<id xsi:type="xs:decimal">37</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">ВУ</value>
+							<presentation>Документ.ВодительВыгруз_ВУ</presentation>
+							<id xsi:type="xs:decimal">38</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">Дата</value>
+							<presentation>Документ.ВодительВыгруз_Дата</presentation>
+							<id xsi:type="xs:decimal">39</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">Время</value>
+							<presentation>Документ.ВодительВыгруз_Время</presentation>
+							<id xsi:type="xs:decimal">40</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">ФактСостГруза</value>
+							<presentation>Документ.ВодительВыгруз_ФактСостГруза</presentation>
+							<id xsi:type="xs:decimal">41</id>
+						</item>
+					</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="ValueTable"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:boolean">false</Value>
+				</row>
+				<Value xsi:type="xs:boolean">true</Value>
+				<Value xsi:type="xs:string"/>
+				<Value xsi:type="xs:string"/>
+				<Value xsi:type="xs:string">Подписи</Value>
+				<Value xsi:nil="true"/>
+				<Value xsi:type="ValueListType">
+					<valueType/>
+					<lastId xsi:type="xs:decimal">-1</lastId>
+				</Value>
+				<Value xsi:type="xs:string"/>
+				<Value xsi:type="xs:string"/>
+				<Value xsi:type="ValueTable"/>
+				<Value xsi:type="ValueListType">
+					<valueType/>
+					<lastId xsi:type="xs:decimal">-1</lastId>
+				</Value>
+				<Value xsi:type="ValueListType">
+					<valueType/>
+					<lastId xsi:type="xs:decimal">-1</lastId>
+				</Value>
+				<Value xsi:type="xs:string"/>
+				<Value xsi:type="xs:decimal">0</Value>
+				<Value xsi:type="xs:decimal">0</Value>
+				<Value xsi:type="xs:boolean">false</Value>
+			</row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Документ</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">7</lastId>
+				<item>
+					<value xsi:type="xs:string">Дата</value>
+					<presentation>Документ.Дата</presentation>
+					<checkState>1</checkState>
+					<id xsi:type="xs:decimal">6</id>
+				</item>
+				<item>
+					<value xsi:type="xs:string">Время</value>
+					<presentation>Документ.Время</presentation>
+					<checkState>1</checkState>
+					<id xsi:type="xs:decimal">7</id>
+				</item>
+			</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueTable"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:boolean">true</Value>
+		</row>
+		<Value xsi:type="xs:boolean">true</Value>
+		<Value xsi:type="xs:string">Исходящий WHGPU-08(Приемка - титул ГП) - Титул ГП</Value>
+		<Value xsi:type="xs:string">ВходящаяНакладная</Value>
+		<Value xsi:type="xs:string">Файл</Value>
+		<Value xsi:type="Structure">
+			<Property name="ВидДокумента">
+				<Value xsi:type="xs:string">Документ.ВидДокумента</Value>
+			</Property>
+			<Property name="ЗаказДата">
+				<Value xsi:type="xs:string">Документ.ЗаказДата</Value>
+			</Property>
+			<Property name="ЗаказНомер">
+				<Value xsi:type="xs:string">Документ.ЗаказНомер</Value>
+			</Property>
+			<Property name="Идентификатор">
+				<Value xsi:type="xs:string">Документ.Идентификатор</Value>
+			</Property>
+			<Property name="ИдентификаторИспр">
+				<Value xsi:type="xs:string">Документ.ИдентификаторИспр</Value>
+			</Property>
+			<Property name="Контрагент">
+				<Value xsi:type="xs:string">Документ.Контрагент</Value>
+			</Property>
+			<Property name="Номер">
+				<Value xsi:type="xs:string"/>
+			</Property>
+			<Property name="Организация">
+				<Value xsi:type="xs:string">Документ.Организация</Value>
+			</Property>
+			<Property name="Ссылка">
+				<Value xsi:type="xs:string">Документ.Ссылка</Value>
+			</Property>
+			<Property name="Статус">
+				<Value xsi:type="xs:string">Документ.Статус</Value>
+			</Property>
+			<Property name="ФайлИмя">
+				<Value xsi:type="xs:string">Документ.ФайлИмя</Value>
+			</Property>
+			<Property name="ЭлектронныйДокумент">
+				<Value xsi:type="xs:string"/>
+			</Property>
+		</Value>
+		<Value xsi:type="ValueListType">
+			<valueType/>
+			<lastId xsi:type="xs:decimal">1</lastId>
+			<item>
+				<value xsi:type="xs:string">ИдФайл</value>
+				<presentation>Документ.ИдФайл</presentation>
+				<checkState>1</checkState>
+				<id xsi:type="xs:decimal">1</id>
+			</item>
+		</Value>
+		<Value xsi:type="xs:string"/>
+		<Value xsi:type="xs:string">Запрос = Новый Запрос;
+Запрос.Текст = "ВЫБРАТЬ
+               |	ПоступлениеТоваровУслуг.Ссылка КАК Ссылка,
+               |	ЗНАЧЕНИЕ(Перечисление.ЭКОМ_ВидыДокументов.WHGPU_08_Исходящий) КАК ВидДокумента,
+               |	ЭКОМ_ЦепочкиДокументовЭТРН.Заказ.Дата КАК ЗаказДата,
+               |	ЭКОМ_ЦепочкиДокументовЭТРН.Заказ.Номер КАК ЗаказНомер,
+               |	ПоступлениеТоваровУслуг.Контрагент КАК Контрагент,
+               |	ПоступлениеТоваровУслуг.Организация КАК Организация,
+               |	ЗНАЧЕНИЕ(Перечисление.ЭКОМ_Статусы.Отправлен) КАК Статус,
+               |	ЭКОМ_GLN_Отправитель.Ид_ОЭД КАК ИдГрузОтпр,
+               |	ЭКОМ_GLN_Получатель.Ид_ОЭД КАК ИдГрузПол,
+               |	ЭКОМ_GLN_Перевозчик.Ид_ОЭД КАК ИдГрузПер,
+               |	""WHGPU"" КАК ТипЭТРН,
+               |	ПоступлениеТоваровУслуг.НомерВходящегоДокумента КАК НомерЭТРН,
+               |	ПоступлениеТоваровУслуг.ДатаВходящегоДокумента КАК ДатаЭТРН,
+               |	"""" КАК ФактСостГруз,
+               |	0 КАК МассаБрутто,
+               |	ЭКОМ_ТранспортнаяИнформация.ВодительФамилия КАК ВодительВыгруз_ИдентифВодит,
+               |	ЭКОМ_ТранспортнаяИнформация.ВодительФамилия КАК ВодительВыгруз_Фамилия,
+               |	ЭКОМ_ТранспортнаяИнформация.ВодительИмя КАК ВодительВыгруз_Имя,
+               |	ЭКОМ_ТранспортнаяИнформация.ВодительОтчество КАК ВодительВыгруз_Отчество,
+               |	ЭКОМ_ТранспортнаяИнформация.ВодительТелефон КАК ВодительВыгруз_Телефон,
+               |	ЭКОМ_ТранспортнаяИнформация.ВодительскоеУдостоверение КАК ВодительВыгруз_ВУ,
+               |	"""" КАК ВодительВыгруз_ФактСостГруза,
+               |	ПоступлениеТоваровУслуг.Склад.Наименование КАК НаименМестаВыгруз,
+               |	ПоступлениеТоваровУслуг.Дата КАК ИнфВыгруз_ФактДатаПриб,
+               |	ПоступлениеТоваровУслуг.Дата КАК ИнфВыгруз_ФактВремяПриб,
+               |	"""" КАК ИнфВыгруз_ФактДатаУбыт,
+               |	"""" КАК ИнфВыгруз_ФактВремяУбыт,
+               |	"""" КАК ИнфВыгруз_ДатаПодачиТС,
+               |	"""" КАК ИнфВыгруз_ВремяПодачиТС,
+               |	ПоступлениеТоваровУслуг.Ответственный.ФизическоеЛицо.Фамилия КАК ПредставительГП_Фамилия,
+               |	ПоступлениеТоваровУслуг.Ответственный.ФизическоеЛицо.Имя КАК ПредставительГП_Имя,
+               |	ПоступлениеТоваровУслуг.Ответственный.ФизическоеЛицо.Отчество КАК ПредставительГП_Отчество,
+               |	"""" КАК ПредставительГП_ИдАрхиваДок,
+               |	"""" КАК ПредставительГП_Дата,
+               |	"""" КАК ПредставительГП_Время,
+               |	ЭКОМ_ЦепочкиДокументовЭТРН.КоличествоГрузовыхМест КАК ИнфВыгруз_ФактКолГрузМест,
+               |	ЭКОМ_GLN_Получатель.GLN КАК GLNТочкиПолучат,
+               |	ЭКОМ_GLN_Получатель.eXiteАдр_Индекс КАК ИнфВыгруз_Индекс,
+               |	ЭКОМ_GLN_Получатель.eXiteАдр_КодРегиона КАК ИнфВыгруз_КодРегион,
+               |	ЭКОМ_GLN_Получатель.eXiteАдр_Район КАК ИнфВыгруз_Район,
+               |	ЭКОМ_GLN_Получатель.eXiteАдр_Город КАК ИнфВыгруз_Город,
+               |	ЭКОМ_GLN_Получатель.eXiteАдр_Улица КАК ИнфВыгруз_Улица,
+               |	ЭКОМ_GLN_Получатель.eXiteАдр_Дом КАК ИнфВыгруз_Дом,
+               |	ЭКОМ_GLN_Получатель.eXiteАдр_Корпус КАК ИнфВыгруз_Корпус,
+               |	""Приемщик"" КАК Приемщик_Должность,
+               |	ОтветственныеЛицаСрезПоследних.ФизическоеЛицо.Фамилия КАК Приемщик_Фамилия,
+               |	ОтветственныеЛицаСрезПоследних.ФизическоеЛицо.Имя КАК Приемщик_Имя,
+               |	ОтветственныеЛицаСрезПоследних.ФизическоеЛицо.Отчество КАК Приемщик_Отчество,
+               |	"""" КАК Приемщик_Дата,
+               |	"""" КАК Приемщик_Время,
+               |	"""" КАК ИдентификаторИспр,
+               |	ЭКОМ_GLN_Отправитель.Партнер.Идентификатор КАК ИдентификаторОператораОтправителя,
+               |	ЭКОМ_GLN_Перевозчик.Партнер.Идентификатор КАК ИдентификаторОператораПеревозчика,
+               |	ЭКОМ_GLN_Получатель.Партнер.Идентификатор КАК ИдентификаторОператораПолучателя,
+               |	ЭКОМ_GLN_Отправитель.Партнер.ИНН КАК СвОЭДОтпр_ИННЮЛ,
+               |	ЭКОМ_GLN_Отправитель.Партнер.Наименование КАК СвОЭДОтпр_НаимОрг,
+               |	ЭКОМ_GLN_Отправитель.Партнер.Идентификатор КАК СвОЭДОтпр_ИдЭДО,
+               |	ЭКОМ_ЦепочкиДокументовЭТРН.ИдФайлПервичн КАК ИдФайлПервичн
+               |ИЗ
+               |	Документ.ПоступлениеТоваровУслуг КАК ПоступлениеТоваровУслуг
+               |		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЭКОМ_ЦепочкиДокументовЭТРН КАК ЭКОМ_ЦепочкиДокументовЭТРН
+               |			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЭКОМ_GLN КАК ЭКОМ_GLN_Перевозчик
+               |			ПО ((ВЫРАЗИТЬ(ЭКОМ_ЦепочкиДокументовЭТРН.Перевозчик КАК Справочник.Контрагенты)) = ЭКОМ_GLN_Перевозчик.Объект)
+               |			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЭКОМ_ТранспортнаяИнформация КАК ЭКОМ_ТранспортнаяИнформация
+               |			ПО ((ВЫРАЗИТЬ(ЭКОМ_ЦепочкиДокументовЭТРН.ДокументЭКОМ КАК Документ.ЭКОМ_Документы)) = ЭКОМ_ТранспортнаяИнформация.Документ)
+               |		ПО (ПоступлениеТоваровУслуг.Ссылка = ЭКОМ_ЦепочкиДокументовЭТРН.ВходящаяНакладная)
+               |		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЭКОМ_GLN КАК ЭКОМ_GLN_Отправитель
+               |		ПО (ПоступлениеТоваровУслуг.Контрагент = ЭКОМ_GLN_Отправитель.Объект)
+               |		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЭКОМ_GLN КАК ЭКОМ_GLN_Получатель
+               |		ПО (ПоступлениеТоваровУслуг.Организация = ЭКОМ_GLN_Получатель.Объект)
+               |		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ОтветственныеЛица.СрезПоследних КАК ОтветственныеЛицаСрезПоследних
+               |		ПО (ПоступлениеТоваровУслуг.Склад = ОтветственныеЛицаСрезПоследних.СтруктурнаяЕдиница)
+               |ГДЕ
+               |	ПоступлениеТоваровУслуг.Ссылка В(&amp;Документ)";
+
+Запрос.УстановитьПараметр("Документ", Источник);
+РезультатЗапроса = Запрос.Выполнить();
+ВыборкаДокумента = РезультатЗапроса.Выбрать();
+
+Результат = Новый ТаблицаЗначений;
+МассивКолонок = Новый Массив;
+
+//Сведения для регистра ЭКОМ события для документа
+МассивКолонок.Добавить("ВидДокумента");
+МассивКолонок.Добавить("ЗаказДата");
+МассивКолонок.Добавить("ЗаказНомер");
+МассивКолонок.Добавить("Идентификатор");
+МассивКолонок.Добавить("ИдентификаторИспр");
+МассивКолонок.Добавить("Контрагент");
+МассивКолонок.Добавить("Организация");
+МассивКолонок.Добавить("Ссылка");
+МассивКолонок.Добавить("Статус");
+МассивКолонок.Добавить("ФайлИмя");
+
+//Файл
+МассивКолонок.Добавить("ИдФайл");
+
+//СвУчДокОбор
+МассивКолонок.Добавить("ИдГрузОтпр");
+МассивКолонок.Добавить("ИдГрузПол");
+МассивКолонок.Добавить("ИдГрузПер");
+
+//СвОЭДОтпр
+МассивКолонок.Добавить("СвОЭДОтпр_НаимОрг");
+МассивКолонок.Добавить("СвОЭДОтпр_ИННЮЛ");
+МассивКолонок.Добавить("СвОЭДОтпр_ИдЭДО");
+
+//Документ
+МассивКолонок.Добавить("Дата");
+МассивКолонок.Добавить("Время");
+
+//СвЭТРН
+МассивКолонок.Добавить("ТипЭТРН");
+МассивКолонок.Добавить("НомерЭТРН");
+МассивКолонок.Добавить("ДатаЭТРН");
+МассивКолонок.Добавить("ИдФайлПервичн");
+
+//ГрузИнф
+МассивКолонок.Добавить("МассаБрутто");
+МассивКолонок.Добавить("ФактСостГруз");
+
+//ИнфВыгруз
+МассивКолонок.Добавить("НаименМестаВыгруз");
+МассивКолонок.Добавить("GLNТочкиПолучат");
+МассивКолонок.Добавить("ИнфВыгруз_Индекс");
+МассивКолонок.Добавить("ИнфВыгруз_КодРегион");
+МассивКолонок.Добавить("ИнфВыгруз_Район");
+МассивКолонок.Добавить("ИнфВыгруз_Город");
+МассивКолонок.Добавить("ИнфВыгруз_Улица");
+МассивКолонок.Добавить("ИнфВыгруз_Дом");
+МассивКолонок.Добавить("ИнфВыгруз_Корпус");
+МассивКолонок.Добавить("ИнфВыгруз_ДатаПодачиТС");
+МассивКолонок.Добавить("ИнфВыгруз_ВремяПодачиТС");
+МассивКолонок.Добавить("ИнфВыгруз_ФактДатаПриб");
+МассивКолонок.Добавить("ИнфВыгруз_ФактВремяПриб");
+МассивКолонок.Добавить("ИнфВыгруз_ФактВремяУбыт");
+МассивКолонок.Добавить("ИнфВыгруз_ФактДатаУбыт");
+МассивКолонок.Добавить("ИнфВыгруз_ФактКолГрузМест");
+
+// ПредставительГП
+МассивКолонок.Добавить("ПредставительГП_Фамилия");
+МассивКолонок.Добавить("ПредставительГП_Имя");
+МассивКолонок.Добавить("ПредставительГП_Отчество");
+МассивКолонок.Добавить("ПредставительГП_Дата");
+МассивКолонок.Добавить("ПредставительГП_Время");
+МассивКолонок.Добавить("ПредставительГП_ИдАрхиваДок");
+
+// Приемщик
+МассивКолонок.Добавить("Приемщик_Должность");
+МассивКолонок.Добавить("Приемщик_Фамилия");
+МассивКолонок.Добавить("Приемщик_Имя");
+МассивКолонок.Добавить("Приемщик_Отчество");
+МассивКолонок.Добавить("Приемщик_Дата");
+МассивКолонок.Добавить("Приемщик_Время");
+
+// Водитель
+МассивКолонок.Добавить("ВодительВыгруз_ИдентифВодит");
+МассивКолонок.Добавить("ВодительВыгруз_Фамилия");
+МассивКолонок.Добавить("ВодительВыгруз_Имя");
+МассивКолонок.Добавить("ВодительВыгруз_Отчество");
+МассивКолонок.Добавить("ВодительВыгруз_Телефон");
+МассивКолонок.Добавить("ВодительВыгруз_ВУ");
+МассивКолонок.Добавить("ВодительВыгруз_Дата");
+МассивКолонок.Добавить("ВодительВыгруз_Время");
+МассивКолонок.Добавить("ВодительВыгруз_ФактСостГруза");
+
+Для Каждого Колонка Из МассивКолонок Цикл
+	Результат.Колонки.Добавить(Колонка);
+КонецЦикла;
+
+Пока ВыборкаДокумента.Следующий() Цикл
+	
+	СтруктураДокумента = Результат.Добавить();	
+	
+	Идентификатор = Новый УникальныйИдентификатор;
+	ИдентификаторДляФайла = "TRNX5" + "_"
+	   + ВыборкаДокумента.ИдентификаторОператораПолучателя + ВыборкаДокумента.ИдГрузПол + "_"
+	   + ВыборкаДокумента.ИдентификаторОператораПеревозчика + ВыборкаДокумента.ИдГрузПер + "_"
+	   + ВыборкаДокумента.ИдентификаторОператораОтправителя + ВыборкаДокумента.ИдГрузОтпр + "_" 
+	   + Формат(ТекущаяДата(), "ДФ=yyyyMMdd") + "_" 
+	   + Строка(Идентификатор);
+	   	      		
+	//Сведения для регистра ЭКОМ события для документа
+    СтруктураДокумента.ВидДокумента        = ВыборкаДокумента.ВидДокумента;
+    СтруктураДокумента.ЗаказДата           = ВыборкаДокумента.ЗаказДата;
+    СтруктураДокумента.ЗаказНомер          = ВыборкаДокумента.ЗаказНомер;
+    СтруктураДокумента.Идентификатор       = ИдентификаторДляФайла;
+    СтруктураДокумента.ИдентификаторИспр   = ВыборкаДокумента.ИдентификаторИспр;
+    СтруктураДокумента.Контрагент          = ВыборкаДокумента.Контрагент;
+    СтруктураДокумента.Организация         = ВыборкаДокумента.Организация;
+    СтруктураДокумента.Ссылка              = ВыборкаДокумента.Ссылка;
+    СтруктураДокумента.Статус              = ВыборкаДокумента.Статус;
+    СтруктураДокумента.ФайлИмя             = ИдентификаторДляФайла + ".xml";
+
+	//Файл
+    СтруктураДокумента.ИдФайл = ИдентификаторДляФайла;
+	
+	//СвУчДокОбор
+	СтруктураДокумента.ИдГрузОтпр     = СокрЛП(ВыборкаДокумента.ИдентификаторОператораОтправителя) + СокрЛП(ВыборкаДокумента.ИдГрузОтпр);
+	СтруктураДокумента.ИдГрузПол      = СокрЛП(ВыборкаДокумента.ИдентификаторОператораПолучателя) + СокрЛП(ВыборкаДокумента.ИдГрузПол);
+	СтруктураДокумента.ИдГрузПер      = СокрЛП(ВыборкаДокумента.ИдентификаторОператораПеревозчика) + СокрЛП(ВыборкаДокумента.ИдГрузПер);
+		
+	//СвОЭДОтпр
+	СтруктураДокумента.СвОЭДОтпр_НаимОрг = ВыборкаДокумента.СвОЭДОтпр_НаимОрг;
+	СтруктураДокумента.СвОЭДОтпр_ИННЮЛ   = ВыборкаДокумента.СвОЭДОтпр_ИННЮЛ;
+	СтруктураДокумента.СвОЭДОтпр_ИдЭДО   = ВыборкаДокумента.СвОЭДОтпр_ИдЭДО;
+    
+	//Документ
+	СтруктураДокумента.Дата  = Формат(ТекущаяДата(), "ДФ=dd.MM.yyyy");
+	СтруктураДокумента.Время = Формат(ТекущаяДата(), "ДФ=hh:mm:ss");
+	
+	//СвЭТРН
+	СтруктураДокумента.ТипЭТРН            = ВыборкаДокумента.ТипЭТРН;
+	СтруктураДокумента.НомерЭТРН          = ВыборкаДокумента.НомерЭТРН;
+	СтруктураДокумента.ДатаЭТРН           = Формат(ВыборкаДокумента.ДатаЭТРН, "ДФ=dd.MM.yyyy");
+	СтруктураДокумента.ИдФайлПервичн      = ВыборкаДокумента.ИдФайлПервичн;
+	
+	//ГрузИнф
+	СтруктураДокумента.МассаБрутто        = Формат(ВыборкаДокумента.МассаБрутто, "ЧГ=0");
+	СтруктураДокумента.ФактСостГруз       = ВыборкаДокумента.ФактСостГруз;
+
+	//ИнфВыгруз
+	СтруктураДокумента.НаименМестаВыгруз       = ВыборкаДокумента.НаименМестаВыгруз;
+	СтруктураДокумента.GLNТочкиПолучат         = ВыборкаДокумента.GLNТочкиПолучат;
+	СтруктураДокумента.ИнфВыгруз_Индекс        = ВыборкаДокумента.ИнфВыгруз_Индекс;
+	СтруктураДокумента.ИнфВыгруз_КодРегион     = ВыборкаДокумента.ИнфВыгруз_КодРегион;
+	СтруктураДокумента.ИнфВыгруз_Район         = ВыборкаДокумента.ИнфВыгруз_Район;
+	СтруктураДокумента.ИнфВыгруз_Город         = ВыборкаДокумента.ИнфВыгруз_Город;
+	СтруктураДокумента.ИнфВыгруз_Улица         = ВыборкаДокумента.ИнфВыгруз_Улица;
+	СтруктураДокумента.ИнфВыгруз_Дом           = ВыборкаДокумента.ИнфВыгруз_Дом;
+	СтруктураДокумента.ИнфВыгруз_Корпус        = ВыборкаДокумента.ИнфВыгруз_Корпус;
+	СтруктураДокумента.ИнфВыгруз_ДатаПодачиТС  = ВыборкаДокумента.ИнфВыгруз_ДатаПодачиТС;
+	СтруктураДокумента.ИнфВыгруз_ВремяПодачиТС = ВыборкаДокумента.ИнфВыгруз_ВремяПодачиТС;
+	
+	ИнфВыгруз_ФактДатаУбыт = ТекущаяДата();
+	СтруктураДокумента.ИнфВыгруз_ФактДатаПриб    = Формат(ВыборкаДокумента.ИнфВыгруз_ФактДатаПриб, "ДФ=dd.MM.yyyy");
+	СтруктураДокумента.ИнфВыгруз_ФактВремяПриб   = Формат(ВыборкаДокумента.ИнфВыгруз_ФактВремяПриб, "ДФ=hh:mm:ss");	  
+	СтруктураДокумента.ИнфВыгруз_ФактВремяУбыт   = Формат(ИнфВыгруз_ФактДатаУбыт, "ДФ=hh:mm:ss");
+	СтруктураДокумента.ИнфВыгруз_ФактДатаУбыт    = Формат(ИнфВыгруз_ФактДатаУбыт, "ДФ=dd.MM.yyyy");
+	СтруктураДокумента.ИнфВыгруз_ФактКолГрузМест = Формат(ВыборкаДокумента.ИнфВыгруз_ФактКолГрузМест, "ЧГ=0");
+		
+	// ПредставительГП
+	СтруктураДокумента.ПредставительГП_Фамилия      = ВыборкаДокумента.ПредставительГП_Фамилия;
+	СтруктураДокумента.ПредставительГП_Имя          = ВыборкаДокумента.ПредставительГП_Имя;
+	СтруктураДокумента.ПредставительГП_Отчество     = ВыборкаДокумента.ПредставительГП_Отчество;
+	СтруктураДокумента.ПредставительГП_Дата         = ВыборкаДокумента.ПредставительГП_Дата;
+    СтруктураДокумента.ПредставительГП_Время        = ВыборкаДокумента.ПредставительГП_Время;
+    СтруктураДокумента.ПредставительГП_ИдАрхиваДок  = ВыборкаДокумента.ПредставительГП_ИдАрхиваДок;
+
+	// Приемщик
+	СтруктураДокумента.Приемщик_Должность = ВыборкаДокумента.Приемщик_Должность;
+	СтруктураДокумента.Приемщик_Фамилия   = ВыборкаДокумента.Приемщик_Фамилия;
+	СтруктураДокумента.Приемщик_Имя       = ВыборкаДокумента.Приемщик_Имя;
+	СтруктураДокумента.Приемщик_Отчество  = ВыборкаДокумента.Приемщик_Отчество;
+	СтруктураДокумента.Приемщик_Дата      = Формат(ТекущаяДата(), "ДФ=dd.MM.yyyy");
+	СтруктураДокумента.Приемщик_Время     = Формат(ТекущаяДата(), "ДФ=hh:mm:ss");
+		
+	// Водитель
+	СтруктураДокумента.ВодительВыгруз_ИдентифВодит  = ВыборкаДокумента.ВодительВыгруз_ИдентифВодит;
+	СтруктураДокумента.ВодительВыгруз_Фамилия       = ВыборкаДокумента.ВодительВыгруз_Фамилия;
+	СтруктураДокумента.ВодительВыгруз_Имя           = ВыборкаДокумента.ВодительВыгруз_Имя;
+	СтруктураДокумента.ВодительВыгруз_Отчество      = ВыборкаДокумента.ВодительВыгруз_Отчество;
+	СтруктураДокумента.ВодительВыгруз_Телефон       = ВыборкаДокумента.ВодительВыгруз_Телефон;
+	СтруктураДокумента.ВодительВыгруз_ВУ            = ВыборкаДокумента.ВодительВыгруз_ВУ;
+	СтруктураДокумента.ВодительВыгруз_Дата          = Формат(ТекущаяДата(), "ДФ=dd.MM.yyyy");
+	СтруктураДокумента.ВодительВыгруз_Время         = Формат(ТекущаяДата(), "ДФ=hh:mm:ss");
+	СтруктураДокумента.ВодительВыгруз_ФактСостГруза = ВыборкаДокумента.ВодительВыгруз_ФактСостГруза;
+		
+КонецЦикла;
+
+Возврат Результат;</Value>
+		<Value xsi:type="ValueTable"/>
+		<Value xsi:type="ValueListType">
+			<valueType/>
+			<lastId xsi:type="xs:decimal">61</lastId>
+			<item>
+				<value xsi:type="xs:string">ВидДокумента</value>
+				<id xsi:type="xs:decimal">0</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ЗаказДата</value>
+				<id xsi:type="xs:decimal">1</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ЗаказНомер</value>
+				<id xsi:type="xs:decimal">2</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">Идентификатор</value>
+				<id xsi:type="xs:decimal">3</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ИдентификаторИспр</value>
+				<id xsi:type="xs:decimal">4</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">Контрагент</value>
+				<id xsi:type="xs:decimal">5</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">Организация</value>
+				<id xsi:type="xs:decimal">6</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">Ссылка</value>
+				<id xsi:type="xs:decimal">7</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">Статус</value>
+				<id xsi:type="xs:decimal">8</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ФайлИмя</value>
+				<id xsi:type="xs:decimal">9</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ИдФайл</value>
+				<id xsi:type="xs:decimal">10</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ИдГрузОтпр</value>
+				<id xsi:type="xs:decimal">11</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ИдГрузПол</value>
+				<id xsi:type="xs:decimal">12</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ИдГрузПер</value>
+				<id xsi:type="xs:decimal">13</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">СвОЭДОтпр_НаимОрг</value>
+				<id xsi:type="xs:decimal">14</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">СвОЭДОтпр_ИННЮЛ</value>
+				<id xsi:type="xs:decimal">15</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">СвОЭДОтпр_ИдЭДО</value>
+				<id xsi:type="xs:decimal">16</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">Дата</value>
+				<id xsi:type="xs:decimal">17</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">Время</value>
+				<id xsi:type="xs:decimal">18</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ТипЭТРН</value>
+				<id xsi:type="xs:decimal">19</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">НомерЭТРН</value>
+				<id xsi:type="xs:decimal">20</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ДатаЭТРН</value>
+				<id xsi:type="xs:decimal">21</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ИдФайлПервичн</value>
+				<id xsi:type="xs:decimal">22</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">МассаБрутто</value>
+				<id xsi:type="xs:decimal">23</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ФактСостГруз</value>
+				<id xsi:type="xs:decimal">24</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">НаименМестаВыгруз</value>
+				<id xsi:type="xs:decimal">25</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">GLNТочкиПолучат</value>
+				<id xsi:type="xs:decimal">26</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ИнфВыгруз_Индекс</value>
+				<id xsi:type="xs:decimal">27</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ИнфВыгруз_КодРегион</value>
+				<id xsi:type="xs:decimal">28</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ИнфВыгруз_Район</value>
+				<id xsi:type="xs:decimal">29</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ИнфВыгруз_Город</value>
+				<id xsi:type="xs:decimal">30</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ИнфВыгруз_Улица</value>
+				<id xsi:type="xs:decimal">31</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ИнфВыгруз_Дом</value>
+				<id xsi:type="xs:decimal">32</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ИнфВыгруз_Корпус</value>
+				<id xsi:type="xs:decimal">33</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ИнфВыгруз_ДатаПодачиТС</value>
+				<id xsi:type="xs:decimal">34</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ИнфВыгруз_ВремяПодачиТС</value>
+				<id xsi:type="xs:decimal">35</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ИнфВыгруз_ФактДатаПриб</value>
+				<id xsi:type="xs:decimal">36</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ИнфВыгруз_ФактВремяПриб</value>
+				<id xsi:type="xs:decimal">37</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ИнфВыгруз_ФактВремяУбыт</value>
+				<id xsi:type="xs:decimal">38</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ИнфВыгруз_ФактДатаУбыт</value>
+				<id xsi:type="xs:decimal">39</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ИнфВыгруз_ФактКолГрузМест</value>
+				<id xsi:type="xs:decimal">40</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ПредставительГП_Фамилия</value>
+				<id xsi:type="xs:decimal">41</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ПредставительГП_Имя</value>
+				<id xsi:type="xs:decimal">42</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ПредставительГП_Отчество</value>
+				<id xsi:type="xs:decimal">43</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ПредставительГП_Дата</value>
+				<id xsi:type="xs:decimal">44</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ПредставительГП_Время</value>
+				<id xsi:type="xs:decimal">45</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ПредставительГП_ИдАрхиваДок</value>
+				<id xsi:type="xs:decimal">46</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">Приемщик_Должность</value>
+				<id xsi:type="xs:decimal">47</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">Приемщик_Фамилия</value>
+				<id xsi:type="xs:decimal">48</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">Приемщик_Имя</value>
+				<id xsi:type="xs:decimal">49</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">Приемщик_Отчество</value>
+				<id xsi:type="xs:decimal">50</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">Приемщик_Дата</value>
+				<id xsi:type="xs:decimal">51</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">Приемщик_Время</value>
+				<id xsi:type="xs:decimal">52</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ВодительВыгруз_ИдентифВодит</value>
+				<id xsi:type="xs:decimal">53</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ВодительВыгруз_Фамилия</value>
+				<id xsi:type="xs:decimal">54</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ВодительВыгруз_Имя</value>
+				<id xsi:type="xs:decimal">55</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ВодительВыгруз_Отчество</value>
+				<id xsi:type="xs:decimal">56</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ВодительВыгруз_Телефон</value>
+				<id xsi:type="xs:decimal">57</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ВодительВыгруз_ВУ</value>
+				<id xsi:type="xs:decimal">58</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ВодительВыгруз_Дата</value>
+				<id xsi:type="xs:decimal">59</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ВодительВыгруз_Время</value>
+				<id xsi:type="xs:decimal">60</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ВодительВыгруз_ФактСостГруза</value>
+				<id xsi:type="xs:decimal">61</id>
+			</item>
+		</Value>
+		<Value xsi:type="ValueListType">
+			<valueType/>
+			<lastId xsi:type="xs:decimal">-1</lastId>
+		</Value>
+		<Value xsi:type="xs:string"/>
+		<Value xsi:type="xs:decimal">0</Value>
+		<Value xsi:type="xs:decimal">0</Value>
+		<Value xsi:type="xs:boolean">true</Value>
+	</row>
+</ValueTree>
