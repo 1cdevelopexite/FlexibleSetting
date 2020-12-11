@@ -1,0 +1,1090 @@
+﻿<ValueTree xmlns="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ValueTree">
+	<column>
+		<Name xsi:type="xs:string">Использовать</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">Кнопка</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">Источник</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">Приемник</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">Служебные</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">Формула</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">СлужебныеТекст</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">Сохранение</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">Загрузка</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">КолонкаИсточника</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">КоллекцияТЧ</Name>
+		<ValueType/>
+	</column>
+	<row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">(не используется) Дата исправления исходного документа</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">(не используется) Номер исправления исходного документа</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">(не используется) С учетом исправления</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Аванс под 0%</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Валюта</Value>
+			<Value xsi:type="xs:string">Валюта</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Вид счета-фактуры</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Всего</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Всего увеличение</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Всего увеличение (комиссия)</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Всего уменьшение</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Всего уменьшение (комиссия)</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Выставлен</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Главный бухгалтер</Value>
+			<Value xsi:type="xs:string">Главный бухгалтер</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Дата</Value>
+			<Value xsi:type="xs:string">Дата</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Дата выставления</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Дата документа аванса комитента</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Дата платежно-расчетного документа</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Дата счета фактуры продавца</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Договор</Value>
+			<Value xsi:type="xs:string">Договор</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Договор комитента</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Документ-основание</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Возврат Источник.Ссылка;</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Идентификатор госконтракта</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Исправление</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Исправление номер</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Исправляемый счет-фактура</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">К счету-фактуре номер</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">К счету-фактуре от</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Код вида операции</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Код вида операции (уменьшение)</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Код способа выставления</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Комитент</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Комментарий</Value>
+			<Value xsi:type="xs:string">Комментарий</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Контрагент</Value>
+			<Value xsi:type="xs:string">Контрагент</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Корректировочного счета-фактуры дата</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Корректировочного счета-фактуры номер</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">КПП контрагента</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">КПП продавца</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">НДС (в т.ч.)</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">НДС увеличение</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">НДС увеличение (комиссия)</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">НДС уменьшение</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">НДС уменьшение (комиссия)</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Не выставляется</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Номер документа аванса комитента</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Номер платежно-расчетного документа</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Номер счета-фактуры продавца</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Организация</Value>
+			<Value xsi:type="xs:string">Организация</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Ответственный</Value>
+			<Value xsi:type="xs:string">Ответственный</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Представление номера</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Руководитель</Value>
+			<Value xsi:type="xs:string">Руководитель</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Ручная корректировка</Value>
+			<Value xsi:type="xs:string">Ручная корректировка</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Сводный комиссионный</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Сводный корректировочный</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Составлен от имени</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Ставка НДС</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Сумма НДС</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Сумма НДС документа (комиссия)</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Сумма НДС документа (комиссия)</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Сумма с НДС</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Сформирован при вводе начальных остатков НДС</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Счет на оплату</Value>
+			<Value xsi:type="xs:string">Счет на оплату</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Счет расчетов с комитентом</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Счет-фактура без НДС</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<Value xsi:type="xs:boolean">true</Value>
+		<Value xsi:type="xs:string">Создать счет-фактуру выданный</Value>
+		<Value xsi:type="xs:string">Реализация (акты, накладные)</Value>
+		<Value xsi:type="xs:string">Счет-фактура выданный</Value>
+		<Value xsi:type="xs:string">Сообщение = Новый СообщениеПользователю;
+
+Приемник.Заполнить(Источник.Ссылка);
+Если Приемник.ДокументыОснования.Количество() = 0 Тогда
+     НовСтрока = Приемник.ДокументыОснования.Добавить();
+     НовСтрока.ДокументОснование = Источник.Ссылка;
+КонецЕсли;
+
+ Попытка
+	    Приемник.Записать(РежимЗаписиДокумента.Проведение);
+					
+		ТекстСообщения = "Счет-фактура по ЭКОМ документу № " +
+	    Источник.Номер + " создана! Счет-фактура № " +
+		Приемник.Номер + " от " + Приемник.Дата;
+		ЗаписатьЛогСобытий(ЛогСобытий, ТекстСообщения);
+Исключение
+	    Приемник.Записать(РежимЗаписиДокумента.Запись);
+	    ТекстСообщения = "Счет-фактура не создана!";
+	    ЗаписатьЛогСобытий(ЛогСобытий, ТекстСообщения);					
+КонецПопытки;
+</Value>
+		<Value xsi:type="xs:string"/>
+		<Value xsi:type="xs:string"/>
+		<Value xsi:type="xs:decimal">0</Value>
+		<Value xsi:type="xs:decimal">0</Value>
+		<Value xsi:type="xs:string">ДокументРеализации</Value>
+		<Value xsi:type="ValueListType">
+			<valueType/>
+			<lastId xsi:type="xs:decimal">-1</lastId>
+		</Value>
+	</row>
+</ValueTree>
