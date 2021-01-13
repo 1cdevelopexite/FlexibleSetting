@@ -1,2 +1,2 @@
-#FlexibleSetting
+# FlexibleSetting
 Гибкие настройки для документов
