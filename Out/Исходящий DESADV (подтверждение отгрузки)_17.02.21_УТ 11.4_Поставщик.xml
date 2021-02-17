@@ -1364,6 +1364,7 @@
 		<Value xsi:type="xs:string">Запрос = Новый Запрос;
 Запрос.Текст = "ВЫБРАТЬ
                |    ЭКОМ_ЦепочкиДокументовПоставщика.Накладная.Ссылка КАК Ссылка,
+               |    ЭКОМ_ЦепочкиДокументовПоставщика.Накладная.Номер КАК Номер,
                |    ЭКОМ_ЦепочкиДокументовПоставщика.Накладная.Номер КАК NUMBER,
                |    ЭКОМ_ЦепочкиДокументовПоставщика.Накладная.Номер КАК DELIVERYNOTENUMBER,
                |    ЭКОМ_ЦепочкиДокументовПоставщика.Накладная.Номер КАК WAYBILLNUMBER,
@@ -1453,226 +1454,138 @@ EDIINTERCHANGEID = 0;
     Результат.Удалить(Строка);
 КонецЦикла;
 
-Возврат Результат;Запрос = Новый Запрос;
-Запрос.Текст = "ВЫБРАТЬ
-               |    ЭКОМ_ЦепочкиДокументовПоставщика.Накладная.Ссылка КАК Ссылка,
-               |    ЭКОМ_ЦепочкиДокументовПоставщика.Накладная.Номер КАК NUMBER,
-               |    ЭКОМ_ЦепочкиДокументовПоставщика.Накладная.Номер КАК DELIVERYNOTENUMBER,
-               |    ЭКОМ_ЦепочкиДокументовПоставщика.Накладная.Номер КАК WAYBILLNUMBER,
-               |    ЭКОМ_ЦепочкиДокументовПоставщика.Накладная.Дата КАК DATE_Знач,
-               |    ВЫРАЗИТЬ("""" КАК СТРОКА(20)) КАК DATE,
-               |    ВЫРАЗИТЬ("""" КАК СТРОКА(20)) КАК DELIVERYDATE,
-               |    ВЫРАЗИТЬ("""" КАК СТРОКА(20)) КАК DELIVERYNOTEDATE,
-               |    ВЫРАЗИТЬ("""" КАК СТРОКА(20)) КАК WAYBILLDATE,
-               |    ЭКОМ_ЦепочкиДокументовПоставщика.ORDERNUMBER КАК ORDERNUMBER,
-               |    ЭКОМ_ЦепочкиДокументовПоставщика.ORDERNUMBER КАК ЗаказНомер,
-               |    ЭКОМ_ЦепочкиДокументовПоставщика.ORDERDATE КАК ЗаказДата,
-               |    ВЫРАЗИТЬ("""" КАК СТРОКА(20)) КАК ORDERDATE,
-               |    ЭКОМ_ЦепочкиДокументовПоставщика.ORDER.НомерДоговораНаПоставку КАК CAMPAIGNNUMBER,
-               |    ЭКОМ_ЦепочкиДокументовПоставщика.xmlОрганизация КАК SUPPLIER,
-               |    ЭКОМ_ЦепочкиДокументовПоставщика.xmlОрганизация КАК SENDER,
-               |    ЭКОМ_ЦепочкиДокументовПоставщика.xmlКонтрагент КАК BUYER,
-               |    ЭКОМ_ЦепочкиДокументовПоставщика.xmlКонтрагент КАК RECIPIENT,
-               |    ЭКОМ_ЦепочкиДокументовПоставщика.xmlТочкаДоставки КАК DELIVERYPLACE,
-               |    ""O"" КАК DOCTYPE,
-               |    ВЫРАЗИТЬ("""" КАК СТРОКА(300)) КАК EDIMESSAGE,
-               |    ВЫРАЗИТЬ("""" КАК СТРОКА(20)) КАК EDIINTERCHANGEID,
-               |    ЭКОМ_ЦепочкиДокументовПоставщика.Организация КАК Организация,
-               |    ЭКОМ_ЦепочкиДокументовПоставщика.Контрагент КАК Контрагент,
-               |    ВЫРАЗИТЬ("""" КАК СТРОКА(300)) КАК ФайлИмя,
-               |    ВЫРАЗИТЬ("""" КАК СТРОКА(300)) КАК Идентификатор,
-               |    ЗНАЧЕНИЕ(Перечисление.ЭКОМ_Статусы.Отправлен) КАК Статус,
-               |    ЭКОМ_ЦепочкиДокументовПоставщика.ORDER КАК ЭлектронныйДокумент,
-               |    ""DESADV"" КАК ВидДокумента,
-               |    ""1"" КАК HIERARCHICALID
-               |ИЗ
-               |    РегистрСведений.ЭКОМ_ЦепочкиДокументовПоставщика КАК ЭКОМ_ЦепочкиДокументовПоставщика
-               |ГДЕ
-               |    ЭКОМ_ЦепочкиДокументовПоставщика.Накладная В(&amp;Документ)
-               |
-               |УПОРЯДОЧИТЬ ПО
-               |    ЭКОМ_ЦепочкиДокументовПоставщика.ДатаЗаписи УБЫВ";
-Запрос.УстановитьПараметр("Документ", Источник);
-РезультатЗапроса = Запрос.Выполнить(); 
-Результат = РезультатЗапроса.Выгрузить();
-
-EDIINTERCHANGEID = 0;
-
-СтрокиДляУдаления     = Новый Массив;
-ДокументРеализации     = Неопределено;
-
-ДатуВСтроку = Новый Соответствие;
-ДатуВСтроку.Вставить("DATE", "Строка.DATE_Знач");
-ДатуВСтроку.Вставить("DELIVERYDATE", "Строка.DATE_Знач");
-ДатуВСтроку.Вставить("DELIVERYNOTEDATE", "Строка.DATE_Знач");
-ДатуВСтроку.Вставить("WAYBILLDATE", "Строка.DATE_Знач");
-ДатуВСтроку.Вставить("ORDERDATE", "Строка.ЗаказДата");
-
-Для Каждого Строка Из Результат Цикл
-
-    Если ДокументРеализации = Строка.Ссылка Тогда
-        СтрокиДляУдаления.Добавить(Строка);
-        Продолжить;
-    КонецЕсли;
-    ДокументРеализации = Строка.Ссылка;
-
-     // Преобразование даты в строку и заполнение значения.
-    Для Каждого ЗаписьДатуВСтроку Из ДатуВСтроку Цикл
-        Строка[ЗаписьДатуВСтроку.Ключ] = Формат(Вычислить(ЗаписьДатуВСтроку.Значение), "ДФ=""гггг-ММ-дд""");
-    КонецЦикла;
-
-    EDIINTERCHANGEID = НовыйНомерТранзакции(EDIINTERCHANGEID);
-    Строка.EDIINTERCHANGEID = Формат(EDIINTERCHANGEID, "ЧГ=0");
-
-    // EDIMESSAGE.
-    ГСЧ                   = Новый ГенераторСлучайныхЧисел;
-    СлучЧисло             = ГСЧ.СлучайноеЧисло(100, 999);
-    Строка.EDIMESSAGE       = Формат(ТекущаяДата(), "ДФ=ггггММддЧЧммсс000") + СлучЧисло + "-OUT-" + Строка.EDIINTERCHANGEID;
-
-    Строка.ФайлИмя           = Строка.ВидДокумента + "_" + Строка.EDIMESSAGE + ".xml";
-    Строка.Идентификатор     = Строка.ВидДокумента + "_" + Строка.EDIMESSAGE;
-
-    // СокрЛП для всех строк.
-    Для Каждого Колонка Из Результат.Колонки Цикл
-        Если ТипЗнч(Строка[Колонка.Имя]) = Тип("Строка") Тогда
-            Строка[Колонка.Имя] = СокрЛП(Строка[Колонка.Имя]);
-        КонецЕсли;
-    КонецЦикла;
-
-КонецЦикла;
-
-Для Каждого Строка Из СтрокиДляУдаления Цикл
-    Результат.Удалить(Строка);
-КонецЦикла;
-
 Возврат Результат;</Value>
 		<Value xsi:type="ValueTable"/>
 		<Value xsi:type="ValueListType">
 			<valueType/>
-			<lastId xsi:type="xs:decimal">30</lastId>
+			<lastId xsi:type="xs:decimal">31</lastId>
 			<item>
 				<value xsi:type="xs:string">Ссылка</value>
 				<id xsi:type="xs:decimal">0</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">NUMBER</value>
+				<value xsi:type="xs:string">Номер</value>
 				<id xsi:type="xs:decimal">1</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">DELIVERYNOTENUMBER</value>
+				<value xsi:type="xs:string">NUMBER</value>
 				<id xsi:type="xs:decimal">2</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">WAYBILLNUMBER</value>
+				<value xsi:type="xs:string">DELIVERYNOTENUMBER</value>
 				<id xsi:type="xs:decimal">3</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">DATE_Знач</value>
+				<value xsi:type="xs:string">WAYBILLNUMBER</value>
 				<id xsi:type="xs:decimal">4</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">DATE</value>
+				<value xsi:type="xs:string">DATE_Знач</value>
 				<id xsi:type="xs:decimal">5</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">DELIVERYDATE</value>
+				<value xsi:type="xs:string">DATE</value>
 				<id xsi:type="xs:decimal">6</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">DELIVERYNOTEDATE</value>
+				<value xsi:type="xs:string">DELIVERYDATE</value>
 				<id xsi:type="xs:decimal">7</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">WAYBILLDATE</value>
+				<value xsi:type="xs:string">DELIVERYNOTEDATE</value>
 				<id xsi:type="xs:decimal">8</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ORDERNUMBER</value>
+				<value xsi:type="xs:string">WAYBILLDATE</value>
 				<id xsi:type="xs:decimal">9</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ЗаказНомер</value>
+				<value xsi:type="xs:string">ORDERNUMBER</value>
 				<id xsi:type="xs:decimal">10</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ЗаказДата</value>
+				<value xsi:type="xs:string">ЗаказНомер</value>
 				<id xsi:type="xs:decimal">11</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ORDERDATE</value>
+				<value xsi:type="xs:string">ЗаказДата</value>
 				<id xsi:type="xs:decimal">12</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">CAMPAIGNNUMBER</value>
+				<value xsi:type="xs:string">ORDERDATE</value>
 				<id xsi:type="xs:decimal">13</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">SUPPLIER</value>
+				<value xsi:type="xs:string">CAMPAIGNNUMBER</value>
 				<id xsi:type="xs:decimal">14</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">SENDER</value>
+				<value xsi:type="xs:string">SUPPLIER</value>
 				<id xsi:type="xs:decimal">15</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">BUYER</value>
+				<value xsi:type="xs:string">SENDER</value>
 				<id xsi:type="xs:decimal">16</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">RECIPIENT</value>
+				<value xsi:type="xs:string">BUYER</value>
 				<id xsi:type="xs:decimal">17</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">DELIVERYPLACE</value>
+				<value xsi:type="xs:string">RECIPIENT</value>
 				<id xsi:type="xs:decimal">18</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">DOCTYPE</value>
+				<value xsi:type="xs:string">DELIVERYPLACE</value>
 				<id xsi:type="xs:decimal">19</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">EDIMESSAGE</value>
+				<value xsi:type="xs:string">DOCTYPE</value>
 				<id xsi:type="xs:decimal">20</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">EDIINTERCHANGEID</value>
+				<value xsi:type="xs:string">EDIMESSAGE</value>
 				<id xsi:type="xs:decimal">21</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">Организация</value>
+				<value xsi:type="xs:string">EDIINTERCHANGEID</value>
 				<id xsi:type="xs:decimal">22</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">Контрагент</value>
+				<value xsi:type="xs:string">Организация</value>
 				<id xsi:type="xs:decimal">23</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ФайлИмя</value>
+				<value xsi:type="xs:string">Контрагент</value>
 				<id xsi:type="xs:decimal">24</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">Идентификатор</value>
+				<value xsi:type="xs:string">ФайлИмя</value>
 				<id xsi:type="xs:decimal">25</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">Статус</value>
+				<value xsi:type="xs:string">Идентификатор</value>
 				<id xsi:type="xs:decimal">26</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ЭлектронныйДокумент</value>
+				<value xsi:type="xs:string">Статус</value>
 				<id xsi:type="xs:decimal">27</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ВидДокумента</value>
+				<value xsi:type="xs:string">ЭлектронныйДокумент</value>
 				<id xsi:type="xs:decimal">28</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">HIERARCHICALID</value>
+				<value xsi:type="xs:string">ВидДокумента</value>
 				<id xsi:type="xs:decimal">29</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">НомерПоПорядку</value>
+				<value xsi:type="xs:string">HIERARCHICALID</value>
 				<id xsi:type="xs:decimal">30</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">НомерПоПорядку</value>
+				<id xsi:type="xs:decimal">31</id>
 			</item>
 		</Value>
 		<Value xsi:type="ValueListType">
