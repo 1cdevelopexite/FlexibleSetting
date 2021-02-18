@@ -302,7 +302,7 @@
 				<valueType/>
 				<lastId xsi:type="xs:decimal">-1</lastId>
 			</Value>
-			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">Документ.CAMPAIGNNUMBER</Value>
 			<Value xsi:type="ValueTable"/>
 			<Value xsi:type="ValueListType">
 				<valueType/>
