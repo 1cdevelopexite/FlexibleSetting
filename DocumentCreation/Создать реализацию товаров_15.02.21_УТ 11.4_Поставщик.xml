@@ -46,7 +46,7 @@
 	<row>
 		<Value xsi:type="xs:boolean">true</Value>
 		<Value xsi:type="xs:string">Создать реализацию товаров</Value>
-		<Value xsi:type="xs:string">ЭКОМ Документы</Value>
+		<Value xsi:type="xs:string">Заказ клиента</Value>
 		<Value xsi:type="xs:string">Реализация товаров и услуг</Value>
 		<Value xsi:type="xs:string">// Получение общих для всех документов значений.
 ПроводитьРеализацию        = Настройка_Параметр_Прочитать("ЭКОМ_СоздаватьДокументРеализация1СПроведенным");
@@ -467,7 +467,7 @@
 		<Value xsi:type="xs:string"/>
 		<Value xsi:type="xs:decimal">0</Value>
 		<Value xsi:type="xs:decimal">0</Value>
-		<Value xsi:type="xs:string">ЭКОМ_Документ_ORDER</Value>
+		<Value xsi:type="xs:string">ДокументЗаказа</Value>
 		<Value xsi:type="ValueListType">
 			<valueType/>
 			<lastId xsi:type="xs:decimal">3</lastId>
