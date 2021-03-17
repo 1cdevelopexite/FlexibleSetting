@@ -1,0 +1,184 @@
+﻿<ValueTree xmlns="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ValueTree">
+	<column>
+		<Name xsi:type="xs:string">Использовать</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">Кнопка</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">КолонкаИсточника</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">Источник</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">Приемник</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">СлужебныеТекст</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">Формула</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">Служебные</Name>
+		<ValueType/>
+	</column>
+	<row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+			<Value xsi:type="xs:string">Вид документа</Value>
+			<Value xsi:type="xs:string">Вид документа</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:type="xs:string">Возврат Перечисления.ВидыДокументов.СчетФактураПолученный;</Value>
+			<Value xsi:nil="true"/>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+			<Value xsi:type="xs:string">Дата</Value>
+			<Value xsi:type="xs:string">Дата</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:type="xs:string">Возврат ТекущаяДата();</Value>
+			<Value xsi:nil="true"/>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+			<Value xsi:type="xs:string">Документ основание</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:type="xs:string">Возврат Источник.Ссылка;</Value>
+			<Value xsi:nil="true"/>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+			<Value xsi:type="xs:string">Есть электронный документ</Value>
+			<Value xsi:type="xs:string">Есть электронный документ</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+			<Value xsi:type="xs:string">Комментарий</Value>
+			<Value xsi:type="xs:string">Комментарий</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+			<Value xsi:type="xs:string">Контрагент</Value>
+			<Value xsi:type="xs:string">Контрагент</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+			<Value xsi:type="xs:string">Корректировочный</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+			<Value xsi:type="xs:string">Организация</Value>
+			<Value xsi:type="xs:string">Организация</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+			<Value xsi:type="xs:string">Ответственный</Value>
+			<Value xsi:type="xs:string">Ответственный</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+			<Value xsi:type="xs:string">Подразделение</Value>
+			<Value xsi:type="xs:string">Подразделение</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+			<Value xsi:type="xs:string">Соответствует электронному документу</Value>
+			<Value xsi:type="xs:string">Соответствует электронному документу</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+			<Value xsi:type="xs:string">Сумма документа</Value>
+			<Value xsi:type="xs:string">Сумма документа</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+			<Value xsi:nil="true"/>
+			<Value xsi:type="xs:string">Приемник.Заполнить(Источник.Ссылка);</Value>
+			<Value xsi:nil="true"/>
+		</row>
+		<Value xsi:type="xs:boolean">true</Value>
+		<Value xsi:type="xs:string">Создать счет-фактуру полученный</Value>
+		<Value xsi:type="xs:string">ДокументПоступления</Value>
+		<Value xsi:type="xs:string">Приходная накладная</Value>
+		<Value xsi:type="xs:string">Счет фактура полученный</Value>
+		<Value xsi:nil="true"/>
+		<Value xsi:nil="true"/>
+		<Value xsi:type="xs:string">ИсточникОбъект = Источник.ПолучитьОбъект();
+Попытка
+	ИсточникОбъект.Записать(РежимЗаписиДокумента.Проведение); 
+    Приемник.Записать(РежимЗаписиДокумента.Проведение);
+Исключение
+КонецПопытки;
+
+
+
+
+</Value>
+	</row>
+</ValueTree>
