@@ -93,7 +93,9 @@
             СтрокаТоваров.КоличествоПоставляемое = СтрокаИзРТУ.Количество;
         КонецЕсли;
     КонецЕсли;
-КонецЦикла;</Value>
+КонецЦикла;
+
+Приемник.Проведен = Истина;</Value>
 		<Value xsi:type="xs:string"/>
 		<Value xsi:type="xs:decimal">0</Value>
 		<Value xsi:type="xs:decimal">0</Value>
