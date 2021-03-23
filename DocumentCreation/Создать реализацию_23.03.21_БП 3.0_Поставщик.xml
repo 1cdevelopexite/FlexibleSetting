@@ -381,7 +381,7 @@ ORDERDATE             = Выборка.ORDERDATE;
 		<Value xsi:type="xs:string"/>
 		<Value xsi:type="xs:decimal">0</Value>
 		<Value xsi:type="xs:decimal">0</Value>
-		<Value xsi:type="xs:string">ЭКОМ_Документ_ORDER</Value>
+		<Value xsi:type="xs:string">ДокументЗаказа</Value>
 		<Value xsi:type="ValueListType">
 			<valueType/>
 			<lastId xsi:type="xs:decimal">3</lastId>
