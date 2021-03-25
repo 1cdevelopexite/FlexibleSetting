@@ -991,6 +991,35 @@
 							<lastId xsi:type="xs:decimal">-1</lastId>
 						</Value>
 					</row>
+					<row>
+						<Value xsi:type="xs:boolean">true</Value>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="xs:string">INFO</Value>
+						<Value xsi:nil="true"/>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+						<Value xsi:type="xs:string">POSITION.INFO</Value>
+						<Value xsi:type="ValueTable"/>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+						<Value xsi:type="xs:decimal">0</Value>
+						<Value xsi:type="xs:decimal">0</Value>
+						<Value xsi:type="xs:boolean">false</Value>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+					</row>
 					<Value xsi:type="xs:boolean">true</Value>
 					<Value xsi:type="xs:string"/>
 					<Value xsi:type="xs:string"/>
@@ -1009,7 +1038,7 @@
 |	ЭКОМ_ЦепочкиДокументовПоставщика.ORDER КАК ORDER,
 |	РеализацияТоваровУслугТовары.НомерСтроки КАК НомерСтроки,
 |	РеализацияТоваровУслугТовары.Номенклатура.Код КАК НоменклатураКод,
-|	РеализацияТоваровУслугТовары.Количество КАК КоличествоПоставляемое,
+|	РеализацияТоваровУслугТовары.Количество КАК Количество,
 |	ВЫРАЗИТЬ("""" КАК СТРОКА(50)) КАК ORDERUNIT,
 |	РеализацияТоваровУслугТовары.Ссылка.СуммаВключаетНДС КАК СуммаВключаетНДС,
 |	РеализацияТоваровУслугТовары.Номенклатура КАК Номенклатура,
@@ -1039,7 +1068,7 @@
 |	ВТ.Ссылка КАК Ссылка,
 |	ВТ.НомерСтроки КАК НомерСтроки,
 |	ВТ.НоменклатураКод КАК НоменклатураКод,
-|	ВТ.КоличествоПоставляемое КАК КоличествоПоставляемое,
+|	ВТ.Количество КАК Количество,
 |	ЭКОМ_ДокументыТЧ_Товары.КоличествоЗаказанное КАК КоличествоЗаказанное,
 |	ЭКОМ_ДокументыТЧ_Товары.xmlЕдиницаИзмерения КАК ORDERUNIT,
 |	ЭКОМ_ДокументыТЧ_Товары.xmlЕдиницаИзмерения КАК DELIVEREDUNIT,
@@ -1104,7 +1133,7 @@
     Строка.PRICE             = Формат(ЦенаБезНДС , "ЧРД=.; ЧГ=0");
     Строка.PRICEWITHVAT      = Формат(Цена_с_НДС , "ЧРД=.; ЧГ=0");
     Строка.ORDEREDQUANTITY   = Формат(Строка.КоличествоЗаказанное  , "ЧРД=.; ЧГ=0");    
-   	Строка.DELIVEREDQUANTITY = Формат(Строка.КоличествоПоставляемое, "ЧРД=.; ЧГ=0");
+   	Строка.DELIVEREDQUANTITY = Формат(Строка.Количество, "ЧРД=.; ЧГ=0");
 	Строка.AMOUNT            = Формат(СуммаБезНДС, "ЧРД=.; ЧГ=0");
 	Строка.AMOUNTWITHVAT     = Формат(Сумма_с_НДС, "ЧРД=.; ЧГ=0");   
 	
@@ -1128,7 +1157,7 @@
 							<id xsi:type="xs:decimal">2</id>
 						</item>
 						<item>
-							<value xsi:type="xs:string">КоличествоПоставляемое</value>
+							<value xsi:type="xs:string">Количество</value>
 							<id xsi:type="xs:decimal">3</id>
 						</item>
 						<item>
