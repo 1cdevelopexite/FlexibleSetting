@@ -47,7 +47,7 @@
 		<Value xsi:type="xs:boolean">true</Value>
 		<Value xsi:type="xs:string">Создать заказ клиента</Value>
 		<Value xsi:type="xs:string">ЭКОМ Документы</Value>
-		<Value xsi:type="xs:string">Счет покупателю</Value>
+		<Value xsi:type="xs:string">СчетНаОплатуПокупателю</Value>
 		<Value xsi:type="xs:string">// Настройка создания дополнительных заказов
 СоблюдаетсяПравилоОдинКОдномуДляЗаказа=Истина;
 	

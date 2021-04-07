@@ -47,7 +47,7 @@
 		<Value xsi:type="xs:boolean">true</Value>
 		<Value xsi:type="xs:string">Создать корректировку реализации</Value>
 		<Value xsi:type="xs:string">Реализация товаров и услуг</Value>
-		<Value xsi:type="xs:string">Корректировка реализации</Value>
+		<Value xsi:type="xs:string">КорректировкаРеализации</Value>
 		<Value xsi:type="xs:string">  ИмяДокументаПрименика = "Корректировка 1С";
   ПроводитьРеализацию = Настройка_Параметр_Прочитать("ЭКОМ_СоздаватьДокументРеализация1СПроведенным");
   
