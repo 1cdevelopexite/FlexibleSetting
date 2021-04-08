@@ -618,6 +618,35 @@
 					<Value xsi:type="xs:string"/>
 					<Value xsi:type="xs:string"/>
 					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string">PRODUCTIDSUPPLIER</Value>
+					<Value xsi:type="xs:string">POSITION.PRODUCTIDSUPPLIER</Value>
+					<Value xsi:type="xs:boolean">false</Value>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:nil="true"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="ValueTable"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</row>
+				<row>
+					<Value xsi:type="xs:boolean">true</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string"/>
 					<Value xsi:type="xs:string">ORDEREDQUANTITY</Value>
 					<Value xsi:type="xs:string">POSITION.ORDEREDQUANTITY</Value>
 					<Value xsi:type="xs:boolean">true</Value>
@@ -797,6 +826,7 @@
                |	ЗаказПоставщику.Ссылка КАК Ссылка,
                |	ЗаказТовары.НомерСтроки КАК POSITIONNUMBER,
                |	ЗаказТовары.Номенклатура.Код КАК Артикул,
+               |	ЭКОМ_НоменклатураКонтрагентов.АртикулНоменклатурыКонтрагента,
                |	ЗаказТовары.Количество КАК Количество,
                |	ВЫБОР
                |		КОГДА ЗаказТовары.Номенклатура.БазоваяЕдиницаИзмерения.МеждународноеСокращение = """"
@@ -840,6 +870,9 @@
                |			СГРУППИРОВАТЬ ПО
                |				ШтрихкодыНоменклатуры.Владелец) КАК МаксимальныйШтриКод
                |			ПО ЗаказТовары.Номенклатура = МаксимальныйШтриКод.Номенклатура
+               |			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЭКОМ_НоменклатураКонтрагентов КАК ЭКОМ_НоменклатураКонтрагентов
+               |			ПО ЗаказТовары.Ссылка.Контрагент = ЭКОМ_НоменклатураКонтрагентов.Контрагент
+               |				И ЗаказТовары.Номенклатура = ЭКОМ_НоменклатураКонтрагентов.Номенклатура
                |		ПО ЗаказПоставщику.Ссылка = ЗаказТовары.Ссылка
                |ГДЕ
                |	ЗаказТовары.Ссылка В(&amp;Документ)
@@ -850,12 +883,13 @@
 РезультатЗапроса = Запрос.Выполнить(); 
 Результат = РезультатЗапроса.Выгрузить();
 
-Результат.Колонки.Добавить("PRODUCT"        , Новый ОписаниеТипов("Строка"));
-Результат.Колонки.Добавить("PRODUCTIDBUYER" , Новый ОписаниеТипов("Строка"));
-Результат.Колонки.Добавить("ORDEREDQUANTITY", Новый ОписаниеТипов("Строка"));
-Результат.Колонки.Добавить("ORDERPRICE"     , Новый ОписаниеТипов("Строка"));
-Результат.Колонки.Добавить("PRICEWITHVAT"   , Новый ОписаниеТипов("Строка"));
-Результат.Колонки.Добавить("VAT"           , Новый ОписаниеТипов("Строка"));
+Результат.Колонки.Добавить("PRODUCT", 			Новый ОписаниеТипов("Строка"));
+Результат.Колонки.Добавить("PRODUCTIDBUYER", 	Новый ОписаниеТипов("Строка"));
+Результат.Колонки.Добавить("PRODUCTIDSUPPLIER", Новый ОписаниеТипов("Строка"));
+Результат.Колонки.Добавить("ORDEREDQUANTITY", 	Новый ОписаниеТипов("Строка"));
+Результат.Колонки.Добавить("ORDERPRICE", 		Новый ОписаниеТипов("Строка"));
+Результат.Колонки.Добавить("PRICEWITHVAT", 		Новый ОписаниеТипов("Строка"));
+Результат.Колонки.Добавить("VAT", 				Новый ОписаниеТипов("Строка"));
 
 СтрокиДляУдаления = Новый Массив;
 Отказ = Ложь; // Ключевое слово - обозначает отказ от формирования документа в целом
@@ -880,6 +914,7 @@
     Строка.PRICEWITHVAT = Формат(ЦенаСНДС, "ЧДЦ=2; ЧРД=.; ЧН=0.00; ЧГ=0");
     Строка.PRODUCT = СокрЛП(Строка.Штрихкод);
     Строка.PRODUCTIDBUYER = СокрЛП(Строка.Артикул);
+	Строка.PRODUCTIDSUPPLIER = СокрЛП(Строка.АртикулНоменклатурыКонтрагента);
     Строка.ORDEREDQUANTITY = Формат(Строка.Количество, "ЧГ=0");
     Строка.VAT = Формат(Строка.СтавкаНДС, "ЧДЦ=; ЧГ=0");
 
@@ -894,7 +929,7 @@
 КонецЦикла;
 
 Возврат Результат;</Value>
-				<Value xsi:type="xs:boolean">false</Value>
+				<Value xsi:type="xs:boolean">true</Value>
 				<Value xsi:type="ValueListType">
 					<valueType/>
 					<lastId xsi:type="xs:decimal">-1</lastId>
@@ -914,7 +949,7 @@
 				<Value xsi:type="ValueTable"/>
 				<Value xsi:type="ValueListType">
 					<valueType/>
-					<lastId xsi:type="xs:decimal">18</lastId>
+					<lastId xsi:type="xs:decimal">20</lastId>
 					<item>
 						<value xsi:type="xs:string">Ссылка</value>
 						<id xsi:type="xs:decimal">0</id>
@@ -928,68 +963,76 @@
 						<id xsi:type="xs:decimal">2</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">Количество</value>
+						<value xsi:type="xs:string">АртикулНоменклатурыКонтрагента</value>
 						<id xsi:type="xs:decimal">3</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">ORDERUNIT</value>
+						<value xsi:type="xs:string">Количество</value>
 						<id xsi:type="xs:decimal">4</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">Цена</value>
+						<value xsi:type="xs:string">ORDERUNIT</value>
 						<id xsi:type="xs:decimal">5</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">СтавкаНДС</value>
+						<value xsi:type="xs:string">Цена</value>
 						<id xsi:type="xs:decimal">6</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">DESCRIPTION</value>
+						<value xsi:type="xs:string">СтавкаНДС</value>
 						<id xsi:type="xs:decimal">7</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">ШтрихКод</value>
+						<value xsi:type="xs:string">DESCRIPTION</value>
 						<id xsi:type="xs:decimal">8</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">Вес</value>
+						<value xsi:type="xs:string">ШтрихКод</value>
 						<id xsi:type="xs:decimal">9</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">СуммаВключаетНДС</value>
+						<value xsi:type="xs:string">Вес</value>
 						<id xsi:type="xs:decimal">10</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">НоменклатураНаименование</value>
+						<value xsi:type="xs:string">СуммаВключаетНДС</value>
 						<id xsi:type="xs:decimal">11</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">Представление</value>
+						<value xsi:type="xs:string">НоменклатураНаименование</value>
 						<id xsi:type="xs:decimal">12</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">PRODUCT</value>
+						<value xsi:type="xs:string">Представление</value>
 						<id xsi:type="xs:decimal">13</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">PRODUCTIDBUYER</value>
+						<value xsi:type="xs:string">PRODUCT</value>
 						<id xsi:type="xs:decimal">14</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">ORDEREDQUANTITY</value>
+						<value xsi:type="xs:string">PRODUCTIDBUYER</value>
 						<id xsi:type="xs:decimal">15</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">ORDERPRICE</value>
+						<value xsi:type="xs:string">PRODUCTIDSUPPLIER</value>
 						<id xsi:type="xs:decimal">16</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">PRICEWITHVAT</value>
+						<value xsi:type="xs:string">ORDEREDQUANTITY</value>
 						<id xsi:type="xs:decimal">17</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">VAT</value>
+						<value xsi:type="xs:string">ORDERPRICE</value>
 						<id xsi:type="xs:decimal">18</id>
+					</item>
+					<item>
+						<value xsi:type="xs:string">PRICEWITHVAT</value>
+						<id xsi:type="xs:decimal">19</id>
+					</item>
+					<item>
+						<value xsi:type="xs:string">VAT</value>
+						<id xsi:type="xs:decimal">20</id>
 					</item>
 				</Value>
 				<Value xsi:type="ValueListType">
@@ -1003,7 +1046,7 @@
 			<Value xsi:type="xs:string"/>
 			<Value xsi:type="xs:string">HEAD</Value>
 			<Value xsi:type="xs:string"/>
-			<Value xsi:type="xs:boolean">false</Value>
+			<Value xsi:type="xs:boolean">true</Value>
 			<Value xsi:type="ValueListType">
 				<valueType/>
 				<lastId xsi:type="xs:decimal">-1</lastId>
@@ -1100,7 +1143,7 @@ EDIINTERCHANGEID = 0;
 КонецЦикла;
 
 Возврат Результат;</Value>
-		<Value xsi:type="xs:boolean">false</Value>
+		<Value xsi:type="xs:boolean">true</Value>
 		<Value xsi:type="ValueListType">
 			<valueType/>
 			<lastId xsi:type="xs:decimal">-1</lastId>
