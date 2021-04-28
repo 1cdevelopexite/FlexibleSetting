@@ -2848,6 +2848,12 @@
 EDIINTERCHANGEID = 0;
 ГСЧ = Новый ГенераторСлучайныхЧисел;
 
+ФайлИмя = "PRICAT";
+ЭКОМ_ПодписыватьПрайсЛист = Настройка_Параметр_Прочитать("ЭКОМ_ПодписыватьПрайсЛист", Ложь);
+Если ЭКОМ_ПодписыватьПрайсЛист = Истина Тогда
+	 ФайлИмя = "PRICAT_EZP";
+КонецЕсли;
+	
 Для Каждого Строка Из Результат Цикл
 	
 	EDIINTERCHANGEID = НовыйНомерТранзакции(EDIINTERCHANGEID);
@@ -2858,7 +2864,7 @@ EDIINTERCHANGEID = 0;
 	Строка.EDIINTERCHANGEID = Формат(EDIINTERCHANGEID, "ЧГ=0");
 	СлучайноеЧисло = ГСЧ.СлучайноеЧисло(100, 999);
 	EDIMESSAGE = Формат(ТекущаяДата(), "ДФ=ггггММддЧЧммсс") + СлучайноеЧисло + "-OUT-" + Строка.EDIINTERCHANGEID;
-	Строка.ФайлИмя = Строка.ВидДокумента + "_" + EDIMESSAGE + ".xml";
+	Строка.ФайлИмя = ФайлИмя + "_" + EDIMESSAGE + ".xml";
 	Строка.Идентификатор = Строка.ВидДокумента + "_" + EDIMESSAGE;
 	
 КонецЦикла;
@@ -2874,7 +2880,7 @@ EDIINTERCHANGEID = 0;
 				<Value xsi:type="xs:string">Документ.ВидДокумента</Value>
 			</Property>
 			<Property name="ЗаказДата">
-				<Value xsi:type="xs:string">Документ.DATE</Value>
+				<Value xsi:type="xs:string">Документ.ФайлДата</Value>
 			</Property>
 			<Property name="ЗаказНомер">
 				<Value xsi:type="xs:string">Документ.NUMBER</Value>
