@@ -8,7 +8,7 @@
 		<ValueType/>
 	</column>
 	<column>
-		<Name xsi:type="xs:string">Кнопка</Name>
+		<Name xsi:type="xs:string">Служебные</Name>
 		<ValueType/>
 	</column>
 	<column>
@@ -24,7 +24,7 @@
 		<ValueType/>
 	</column>
 	<column>
-		<Name xsi:type="xs:string">Служебные</Name>
+		<Name xsi:type="xs:string">Кнопка</Name>
 		<ValueType/>
 	</column>
 	<column>
@@ -34,31 +34,7 @@
 	<row>
 		<Value xsi:type="xs:boolean">true</Value>
 		<Value xsi:type="xs:string">Входящий PRICAT</Value>
-		<Value xsi:type="xs:string">Входящий PRICAT</Value>
-		<Value xsi:type="xs:string"/>
-		<Value xsi:type="xs:decimal">0</Value>
-		<Value xsi:type="xs:decimal">0</Value>
-		<Value xsi:type="xs:string">Если Приемник.xmlВалюта = "RUB" Тогда
-	Валюта = Справочники.Валюты.НайтиПоКоду(643);
-ИначеЕсли Приемник.xmlВалюта = "UAH" Тогда
-	Валюта = Справочники.Валюты.НайтиПоКоду(980);
-ИначеЕсли Приемник.xmlВалюта = "USD" Тогда
-	Валюта = Справочники.Валюты.НайтиПоКоду(840);
-ИначеЕсли Приемник.xmlВалюта = "EUR" Тогда
-	Валюта = Справочники.Валюты.НайтиПоКоду(978);
-ИначеЕсли Приемник.xmlВалюта = "MDL" Тогда
-	Валюта = Справочники.Валюты.НайтиПоКоду(498);
-ИначеЕсли Приемник.xmlВалюта = "BYR" Тогда
-	Валюта = Справочники.Валюты.НайтиПоКоду(974);
-ИначеЕсли Приемник.xmlВалюта = "KZT" Тогда
-	Валюта = Справочники.Валюты.НайтиПоКоду(398);
-Иначе
-	Валюта = Справочники.Валюты.НайтиПоКоду(643);
-КонецЕсли;
-
-Приемник.Валюта = Валюта;
-
-ТипШтрихКода = "ШтрихкодыНоменклатуры";
+		<Value xsi:type="xs:string">ТипШтрихКода = "ШтрихкодыНоменклатуры";
 ОбъектШтрихкода = Метаданные.РегистрыСведений.Найти(ТипШтрихКода);
 Если ОбъектШтрихкода = Неопределено Тогда
 	ТипШтрихКода = "Штрихкоды";
@@ -108,6 +84,10 @@
      
 КонецЦикла;
 </Value>
+		<Value xsi:type="xs:string"/>
+		<Value xsi:type="xs:decimal">0</Value>
+		<Value xsi:type="xs:decimal">0</Value>
+		<Value xsi:type="xs:string">Входящий PRICAT</Value>
 		<Value xsi:type="ValueListType">
 			<valueType/>
 			<lastId xsi:type="xs:decimal">4</lastId>
