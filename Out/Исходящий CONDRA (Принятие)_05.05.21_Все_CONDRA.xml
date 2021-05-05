@@ -352,35 +352,6 @@
 				</Value>
 			</row>
 			<row>
-				<Value xsi:type="xs:boolean">true</Value>
-				<Value xsi:type="xs:string"/>
-				<Value xsi:type="xs:string"/>
-				<Value xsi:type="xs:string"/>
-				<Value xsi:type="xs:string">INFO</Value>
-				<Value xsi:type="xs:string">Документ.INFO</Value>
-				<Value xsi:type="xs:boolean">true</Value>
-				<Value xsi:type="ValueListType">
-					<valueType/>
-					<lastId xsi:type="xs:decimal">-1</lastId>
-				</Value>
-				<Value xsi:nil="true"/>
-				<Value xsi:type="ValueListType">
-					<valueType/>
-					<lastId xsi:type="xs:decimal">-1</lastId>
-				</Value>
-				<Value xsi:type="xs:decimal">0</Value>
-				<Value xsi:type="xs:decimal">0</Value>
-				<Value xsi:type="ValueTable"/>
-				<Value xsi:type="ValueListType">
-					<valueType/>
-					<lastId xsi:type="xs:decimal">-1</lastId>
-				</Value>
-				<Value xsi:type="ValueListType">
-					<valueType/>
-					<lastId xsi:type="xs:decimal">-1</lastId>
-				</Value>
-			</row>
-			<row>
 				<row>
 					<Value xsi:type="xs:boolean">true</Value>
 					<Value xsi:type="xs:string"/>
@@ -496,8 +467,8 @@
 			</Value>
 		</row>
 		<Value xsi:type="xs:boolean">true</Value>
-		<Value xsi:type="xs:string">Исходящий CONDRA (Отклонение)</Value>
-		<Value xsi:type="xs:string">Отклонить</Value>
+		<Value xsi:type="xs:string">Исходящий CONDRA (Принятие)</Value>
+		<Value xsi:type="xs:string">Принять</Value>
 		<Value xsi:type="xs:string">ДокументОригинала</Value>
 		<Value xsi:type="xs:string">CONDRA</Value>
 		<Value xsi:type="xs:string">Запрос = Новый Запрос;
@@ -508,20 +479,20 @@
 |	ЭКОМ_Документы.ФайлНомер КАК NUMBER,
 |	ВЫРАЗИТЬ("""" КАК СТРОКА(13)) КАК DATE,
 |	ЭКОМ_Документы.ТипДокумента КАК DOCTYPE,
-|	""3"" КАК TYPE,
+|	""2"" КАК TYPE,
 |	ЭКОМ_Документы.xmlОрганизация КАК SENDER,
 |	ЭКОМ_GLN_Организация.Ид_ОЭД КАК SENDERGUID,
 |	ЭКОМ_Документы.xmlКонтрагент КАК RECIPIENT,
 |	ЭКОМ_GLN_Контрагент.Ид_ОЭД КАК RECIPIENTGUID,
-|	ЭКОМ_Документы.DOCGUID,
+|	ВЫРАЗИТЬ("""" КАК СТРОКА(36)) КАК DOCGUID,
 |	ЭКОМ_Документы.TRANSGUID,
 |	ЭКОМ_Документы.ИмяФайла КАК FILENAME,
 |	ВЫРАЗИТЬ("""" КАК СТРОКА(100)) КАК SIGNNAME,
 |	ЭКОМ_ЦепочкиНеструктурированныхДокументов.INFO,
 |	ЭКОМ_Документы.ФайлДата КАК Дата,
-|	ЭКОМ_Документы.Контрагент КАК Контрагент,
 |	ЭКОМ_Документы.Организация КАК Организация,
-|	ЗНАЧЕНИЕ(Перечисление.ЭКОМ_СтатусыCONDRA.Отклонён) КАК Статус,
+|	ЭКОМ_Документы.Контрагент КАК Контрагент,
+|	ЗНАЧЕНИЕ(Перечисление.ЭКОМ_СтатусыCONDRA.Принят) КАК Статус,
 |	ВЫРАЗИТЬ("""" КАК СТРОКА(300)) КАК ФайлИмя
 |ИЗ
 |	Документ.ЭКОМ_Документы КАК ЭКОМ_Документы
@@ -546,10 +517,12 @@ EDIINTERCHANGEID = 0;
 Для Каждого Строка Из Результат Цикл
 	
 	Строка.DATE 		= Формат(Строка.Дата,"ДФ=гггг-ММ-дд");
+	Строка.DOCGUID		= Строка(Новый УникальныйИдентификатор);
 	EDIINTERCHANGEID 	= НовыйНомерТранзакции(EDIINTERCHANGEID);
-    EDIMESSAGE 			= Формат(ТекущаяДата(), "ДФ=""ггггММддЧЧммсс""") + "-OUT-" +  Формат(EDIINTERCHANGEID, "ЧГ=0");
+    EDIMESSAGE = Формат(ТекущаяДата(), "ДФ=""ггггММддЧЧммсс""") + "-OUT-" +  Формат(EDIINTERCHANGEID, "ЧГ=0");
 	Строка.ФайлИмя		= "condra" + "_" + EDIMESSAGE + ".xml";
 	Строка.SIGNNAME 	= "condra" + "_" + EDIMESSAGE + ".bin";
+	
 	   
 КонецЦикла;
 
@@ -672,11 +645,11 @@ EDIINTERCHANGEID = 0;
 				<id xsi:type="xs:decimal">15</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">Контрагент</value>
+				<value xsi:type="xs:string">Организация</value>
 				<id xsi:type="xs:decimal">16</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">Организация</value>
+				<value xsi:type="xs:string">Контрагент</value>
 				<id xsi:type="xs:decimal">17</id>
 			</item>
 			<item>
