@@ -438,6 +438,35 @@
 			</Value>
 		</row>
 		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">FRESH</Value>
+			<Value xsi:type="xs:string">Документ.FRESH</Value>
+			<Value xsi:type="xs:boolean">false</Value>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="ValueTable"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
 			<row>
 				<Value xsi:type="xs:boolean">true</Value>
 				<Value xsi:type="xs:string"/>
@@ -2485,6 +2514,7 @@
 Результат.Колонки.Добавить("SELFSHIPMENT");
 Результат.Колонки.Добавить("TRANSPORTERNAME");
 Результат.Колонки.Добавить("TRANSPORTID");
+Результат.Колонки.Добавить("FRESH");
 
 EDIINTERCHANGEID = 0;
 
@@ -2500,6 +2530,7 @@ EDIINTERCHANGEID = 0;
 	
 	EDIINTERCHANGEID 	= НовыйНомерТранзакции(EDIINTERCHANGEID);
 	
+	Строка.FRESH           = "0";  // 1 - Да 0 - Нет 
 	Строка.TRANSPORTID     = СокрЛП(Строка.НомерТС);
 	Строка.TRANSPORTERNAME = СокрЛП(Строка.ВодительФамилия) + СокрЛП(Строка.ВодительИмя) + СокрЛП(Строка.ВодительОтчество);
 	Строка.NUMBER 		= Эком_ПолучитьНомерНаПечать(Строка.Ссылка);
@@ -2573,7 +2604,7 @@ EDIINTERCHANGEID = 0;
 		<Value xsi:type="ValueTable"/>
 		<Value xsi:type="ValueListType">
 			<valueType/>
-			<lastId xsi:type="xs:decimal">40</lastId>
+			<lastId xsi:type="xs:decimal">41</lastId>
 			<item>
 				<value xsi:type="xs:string">Ссылка</value>
 				<id xsi:type="xs:decimal">0</id>
@@ -2737,6 +2768,10 @@ EDIINTERCHANGEID = 0;
 			<item>
 				<value xsi:type="xs:string">TRANSPORTID</value>
 				<id xsi:type="xs:decimal">40</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">FRESH</value>
+				<id xsi:type="xs:decimal">41</id>
 			</item>
 		</Value>
 		<Value xsi:type="ValueListType">
