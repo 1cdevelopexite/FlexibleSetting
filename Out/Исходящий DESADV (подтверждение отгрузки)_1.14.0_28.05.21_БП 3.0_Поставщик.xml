@@ -1054,12 +1054,12 @@
 |ИЗ
 |	Документ.РеализацияТоваровУслуг.Товары КАК РеализацияТоваровУслугТовары
 |		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЭКОМ_НоменклатураКонтрагентов КАК ЭКОМ_НоменклатураКонтрагентов
-|		ПО (РеализацияТоваровУслугТовары.Номенклатура = ЭКОМ_НоменклатураКонтрагентов.Номенклатура)
-|			И (РеализацияТоваровУслугТовары.Ссылка.Контрагент = ЭКОМ_НоменклатураКонтрагентов.Контрагент)
+|		ПО РеализацияТоваровУслугТовары.Номенклатура = ЭКОМ_НоменклатураКонтрагентов.Номенклатура
+|			И РеализацияТоваровУслугТовары.Ссылка.Контрагент = ЭКОМ_НоменклатураКонтрагентов.Контрагент
 |		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЭКОМ_ЦепочкиДокументовПоставщика КАК ЭКОМ_ЦепочкиДокументовПоставщика
-|		ПО (РеализацияТоваровУслугТовары.Ссылка = ЭКОМ_ЦепочкиДокументовПоставщика.Накладная)
+|		ПО РеализацияТоваровУслугТовары.Ссылка = ЭКОМ_ЦепочкиДокументовПоставщика.Накладная
 |ГДЕ
-|	РеализацияТоваровУслугТовары.Ссылка В (&amp;Документ)
+|	РеализацияТоваровУслугТовары.Ссылка В(&amp;Документ)
 |;
 |
 |////////////////////////////////////////////////////////////////////////////////
@@ -1080,7 +1080,11 @@
 |	ВТ.Штрихкод КАК Штрихкод,
 |	ВТ.КодНоменклатурыКонтрагента КАК КодНоменклатурыКонтрагента,
 |	ВТ.DESCRIPTION КАК DESCRIPTION,
-|	ВТ.СуммаНДС КАК СуммаНДС
+|	ВТ.СуммаНДС КАК СуммаНДС,
+|	ЭКОМ_ДокументыТЧ_Товары.КалибрУпаковки КАК КалибрУпаковки,
+|	ЭКОМ_ДокументыТЧ_Товары.ТипФасовки КАК ТипФасовки,
+|	ЭКОМ_ДокументыТЧ_Товары.КоличествоВФасовке КАК КоличествоВФасовке,
+|	ЭКОМ_ДокументыТЧ_Товары.БазоваяЕдиницаТовара КАК БазоваяЕдиницаТовара
 |ИЗ
 |	ВТ КАК ВТ
 |		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ЭКОМ_Документы.ТЧ_Товары КАК ЭКОМ_ДокументыТЧ_Товары
@@ -1106,6 +1110,10 @@
 Результат.Колонки.Добавить("AMOUNT"           , Новый ОписаниеТипов("Строка"));
 Результат.Колонки.Добавить("AMOUNTWITHVAT"    , Новый ОписаниеТипов("Строка"));
 Результат.Колонки.Добавить("TAXRATE"          , Новый ОписаниеТипов("Строка"));
+Результат.Колонки.Добавить("CALIBRE",         Новый ОписаниеТипов("Строка"));
+Результат.Колонки.Добавить("PACKINGTYPE",     Новый ОписаниеТипов("Строка"));
+Результат.Колонки.Добавить("PACKINGQUANTITY", Новый ОписаниеТипов("Строка"));
+Результат.Колонки.Добавить("PACKINGUNIT",     Новый ОписаниеТипов("Строка"));
 
 Для Каждого Строка Из Результат Цикл
 
@@ -1134,6 +1142,10 @@
    	Строка.DELIVEREDQUANTITY = Формат(Строка.Количество, "ЧРД=.; ЧГ=0");
 	Строка.AMOUNT            = Формат(СуммаБезНДС, "ЧДЦ=2; ЧРД=.; ЧГ=0");
 	Строка.AMOUNTWITHVAT     = Формат(Сумма_с_НДС, "ЧДЦ=2; ЧРД=.; ЧГ=0");   
+	Строка.CALIBRE          = Строка.КалибрУпаковки;
+	Строка.PACKINGTYPE      = Строка.ТипФасовки;
+	Строка.PACKINGQUANTITY  = Формат(Строка.КоличествоВФасовке, "ЧДЦ=2; ЧРД=.; ЧГ=0");
+	Строка.PACKINGUNIT      = Строка.БазоваяЕдиницаТовара;	
 	
 КонецЦикла;
 
@@ -1141,7 +1153,7 @@
 					<Value xsi:type="ValueTable"/>
 					<Value xsi:type="ValueListType">
 						<valueType/>
-						<lastId xsi:type="xs:decimal">29</lastId>
+						<lastId xsi:type="xs:decimal">37</lastId>
 						<item>
 							<value xsi:type="xs:string">Ссылка</value>
 							<id xsi:type="xs:decimal">0</id>
@@ -1211,56 +1223,88 @@
 							<id xsi:type="xs:decimal">16</id>
 						</item>
 						<item>
-							<value xsi:type="xs:string">PRODUCT</value>
+							<value xsi:type="xs:string">КалибрУпаковки</value>
 							<id xsi:type="xs:decimal">17</id>
 						</item>
 						<item>
-							<value xsi:type="xs:string">PRODUCTIDBUYER</value>
+							<value xsi:type="xs:string">ТипФасовки</value>
 							<id xsi:type="xs:decimal">18</id>
 						</item>
 						<item>
-							<value xsi:type="xs:string">PRODUCTIDSUPPLIER</value>
+							<value xsi:type="xs:string">КоличествоВФасовке</value>
 							<id xsi:type="xs:decimal">19</id>
 						</item>
 						<item>
-							<value xsi:type="xs:string">PRICE</value>
+							<value xsi:type="xs:string">БазоваяЕдиницаТовара</value>
 							<id xsi:type="xs:decimal">20</id>
 						</item>
 						<item>
-							<value xsi:type="xs:string">PRICEWITHVAT</value>
+							<value xsi:type="xs:string">PRODUCT</value>
 							<id xsi:type="xs:decimal">21</id>
 						</item>
 						<item>
-							<value xsi:type="xs:string">INFO</value>
+							<value xsi:type="xs:string">PRODUCTIDBUYER</value>
 							<id xsi:type="xs:decimal">22</id>
 						</item>
 						<item>
-							<value xsi:type="xs:string">POSITIONNUMBER</value>
+							<value xsi:type="xs:string">PRODUCTIDSUPPLIER</value>
 							<id xsi:type="xs:decimal">23</id>
 						</item>
 						<item>
-							<value xsi:type="xs:string">ORDEREDQUANTITY</value>
+							<value xsi:type="xs:string">PRICE</value>
 							<id xsi:type="xs:decimal">24</id>
 						</item>
 						<item>
-							<value xsi:type="xs:string">DELIVEREDQUANTITY</value>
+							<value xsi:type="xs:string">PRICEWITHVAT</value>
 							<id xsi:type="xs:decimal">25</id>
 						</item>
 						<item>
-							<value xsi:type="xs:string">AMOUNT</value>
+							<value xsi:type="xs:string">INFO</value>
 							<id xsi:type="xs:decimal">26</id>
 						</item>
 						<item>
-							<value xsi:type="xs:string">AMOUNTWITHVAT</value>
+							<value xsi:type="xs:string">POSITIONNUMBER</value>
 							<id xsi:type="xs:decimal">27</id>
 						</item>
 						<item>
-							<value xsi:type="xs:string">TAXRATE</value>
+							<value xsi:type="xs:string">ORDEREDQUANTITY</value>
 							<id xsi:type="xs:decimal">28</id>
 						</item>
 						<item>
-							<value xsi:type="xs:string">НомерПоПорядку</value>
+							<value xsi:type="xs:string">DELIVEREDQUANTITY</value>
 							<id xsi:type="xs:decimal">29</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">AMOUNT</value>
+							<id xsi:type="xs:decimal">30</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">AMOUNTWITHVAT</value>
+							<id xsi:type="xs:decimal">31</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">TAXRATE</value>
+							<id xsi:type="xs:decimal">32</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">CALIBRE</value>
+							<id xsi:type="xs:decimal">33</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">PACKINGTYPE</value>
+							<id xsi:type="xs:decimal">34</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">PACKINGQUANTITY</value>
+							<id xsi:type="xs:decimal">35</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">PACKINGUNIT</value>
+							<id xsi:type="xs:decimal">36</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">НомерПоПорядку</value>
+							<id xsi:type="xs:decimal">37</id>
 						</item>
 					</Value>
 					<Value xsi:type="ValueListType">
