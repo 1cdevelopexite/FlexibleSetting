@@ -4128,7 +4128,8 @@
 				<Value xsi:type="xs:string"/>
 				<Value xsi:type="xs:string"/>
 				<Value xsi:type="xs:string">СодФХЖ3</Value>
-				<Value xsi:type="xs:string">Возврат Документ.ТипФайла = "ON_KORSCHFDOPPR";</Value>
+				<Value xsi:type="xs:string">// Для старого формата ON_KORSCHFDOPPR
+Возврат Документ.ТипФайла = "ON_KORSCHFDOPPR";</Value>
 				<Value xsi:type="ValueListType">
 					<valueType/>
 					<lastId xsi:type="xs:decimal">1</lastId>
@@ -4137,6 +4138,129 @@
 						<presentation>Документ.ПередатДокум</presentation>
 						<id xsi:type="xs:decimal">0</id>
 					</item>
+					<item>
+						<value xsi:type="xs:string">СодОпер</value>
+						<presentation>Документ.СодОпер</presentation>
+						<id xsi:type="xs:decimal">1</id>
+					</item>
+				</Value>
+				<Value xsi:type="xs:string"/>
+				<Value xsi:type="ValueTable"/>
+				<Value xsi:type="ValueListType">
+					<valueType/>
+					<lastId xsi:type="xs:decimal">-1</lastId>
+				</Value>
+				<Value xsi:type="ValueListType">
+					<valueType/>
+					<lastId xsi:type="xs:decimal">-1</lastId>
+				</Value>
+				<Value xsi:type="xs:decimal">0</Value>
+				<Value xsi:type="xs:decimal">0</Value>
+				<Value xsi:type="xs:boolean">false</Value>
+				<Value xsi:type="xs:string"/>
+				<Value xsi:type="ValueListType">
+					<valueType/>
+					<lastId xsi:type="xs:decimal">-1</lastId>
+				</Value>
+			</row>
+			<row>
+				<row>
+					<Value xsi:type="xs:boolean">true</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string">ПередатДокум</Value>
+					<Value xsi:nil="true"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">2</lastId>
+						<item>
+							<value xsi:type="xs:string">НаимОсн</value>
+							<presentation>Документ.ПередатДокум</presentation>
+							<id xsi:type="xs:decimal">0</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">НомОсн</value>
+							<presentation>Документ.НомерОснования</presentation>
+							<id xsi:type="xs:decimal">1</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">ДатаОсн</value>
+							<presentation>Документ.ДатаОснования</presentation>
+							<id xsi:type="xs:decimal">2</id>
+						</item>
+					</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="ValueTable"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:boolean">false</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</row>
+				<row>
+					<Value xsi:type="xs:boolean">true</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string">ДокумОснКор</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">2</lastId>
+						<item>
+							<value xsi:type="xs:string">НаимОсн</value>
+							<presentation>Документ.НаименованиеОснования</presentation>
+							<id xsi:type="xs:decimal">0</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">НомОсн</value>
+							<presentation>Документ.НомерРасходной</presentation>
+							<id xsi:type="xs:decimal">1</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">ДатаОсн</value>
+							<presentation>Документ.ДатаРасходной</presentation>
+							<id xsi:type="xs:decimal">2</id>
+						</item>
+					</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="ValueTable"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:boolean">false</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</row>
+				<Value xsi:type="xs:boolean">true</Value>
+				<Value xsi:type="xs:string"/>
+				<Value xsi:type="xs:string"/>
+				<Value xsi:type="xs:string">СодФХЖ3</Value>
+				<Value xsi:type="xs:string">// Для нового формата ON_NKORSCHFDOPPRХХХХ
+Возврат Найти(Документ.ТипФайла, "ON_NKORSCHFDOPPR") &gt; 0;</Value>
+				<Value xsi:type="ValueListType">
+					<valueType/>
+					<lastId xsi:type="xs:decimal">1</lastId>
 					<item>
 						<value xsi:type="xs:string">СодОпер</value>
 						<presentation>Документ.СодОпер</presentation>
