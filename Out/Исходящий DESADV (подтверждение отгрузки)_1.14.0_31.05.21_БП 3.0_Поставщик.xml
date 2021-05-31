@@ -380,6 +380,35 @@
 			</Value>
 		</row>
 		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">FRESH</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+			<Value xsi:type="xs:string">Документ.FRESH</Value>
+			<Value xsi:type="ValueTable"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:boolean">false</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
 			<row>
 				<Value xsi:type="xs:boolean">true</Value>
 				<Value xsi:type="xs:string"/>
@@ -1594,9 +1623,13 @@
                |	ЭКОМ_ЦепочкиДокументовПоставщика.Контрагент КАК Контрагент,
                |	ЗНАЧЕНИЕ(Перечисление.ЭКОМ_Статусы.Отправлен) КАК Статус,
                |	""DESADV"" КАК ВидДокумента,
-               |	""1"" КАК HIERARCHICALID
+               |	""1"" КАК HIERARCHICALID,
+               |	ЭКОМ_Объекты_СобытияORDER.СтруктураФайла КАК СтруктураФайлаORDER
                |ИЗ
                |	РегистрСведений.ЭКОМ_ЦепочкиДокументовПоставщика КАК ЭКОМ_ЦепочкиДокументовПоставщика
+               |		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЭКОМ_Объекты_События КАК ЭКОМ_Объекты_СобытияORDER
+               |		ПО ЭКОМ_ЦепочкиДокументовПоставщика.ORDER = ЭКОМ_Объекты_СобытияORDER.Документ_Основание
+               |			И (ЭКОМ_Объекты_СобытияORDER.ВидДокумента = ЗНАЧЕНИЕ(Перечисление.ЭКОМ_ВидыДокументов.ORDER_Входящий))
                |ГДЕ
                |	ЭКОМ_ЦепочкиДокументовПоставщика.Накладная В(&amp;Документ)
                |
@@ -1614,6 +1647,7 @@
 Результат.Колонки.Добавить("EDIINTERCHANGEID", Новый ОписаниеТипов("Строка"));
 Результат.Колонки.Добавить("ФайлИмя"         , Новый ОписаниеТипов("Строка"));
 Результат.Колонки.Добавить("Идентификатор"   , Новый ОписаниеТипов("Строка"));
+Результат.Колонки.Добавить("FRESH",            Новый ОписаниеТипов("Строка"));
 
 EDIINTERCHANGEID = 0;
 
@@ -1638,6 +1672,15 @@ EDIINTERCHANGEID = 0;
     Строка.ФайлИмя          = Строка.ВидДокумента + "_" + Строка.EDIMESSAGE + ".xml";
     Строка.Идентификатор    = Строка.ВидДокумента + "_" + Строка.EDIMESSAGE;
 
+    FRESH = "0";  // 1 - Да 0 - Нет
+	Если ТипЗнч(Строка.СтруктураФайлаORDER) = Тип("ХранилищеЗначения")  Тогда
+	     СтруктураФайла = Строка.СтруктураФайлаORDER.Получить();
+		 Если СтруктураФайла.Свойство("FRESH") = Истина Тогда
+		      FRESH = СтруктураФайла.FRESH; 
+		 КонецЕсли;
+	КонецЕсли;
+	Строка.FRESH = FRESH;
+
     // СокрЛП для всех строк.
     Для Каждого Колонка Из Результат.Колонки Цикл
         Если ТипЗнч(Строка[Колонка.Имя]) = Тип("Строка") Тогда
@@ -1654,7 +1697,7 @@ EDIINTERCHANGEID = 0;
 		<Value xsi:type="ValueTable"/>
 		<Value xsi:type="ValueListType">
 			<valueType/>
-			<lastId xsi:type="xs:decimal">30</lastId>
+			<lastId xsi:type="xs:decimal">32</lastId>
 			<item>
 				<value xsi:type="xs:string">Ссылка</value>
 				<id xsi:type="xs:decimal">0</id>
@@ -1740,44 +1783,52 @@ EDIINTERCHANGEID = 0;
 				<id xsi:type="xs:decimal">20</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">DATE</value>
+				<value xsi:type="xs:string">СтруктураФайлаORDER</value>
 				<id xsi:type="xs:decimal">21</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">DELIVERYDATE</value>
+				<value xsi:type="xs:string">DATE</value>
 				<id xsi:type="xs:decimal">22</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">DELIVERYNOTEDATE</value>
+				<value xsi:type="xs:string">DELIVERYDATE</value>
 				<id xsi:type="xs:decimal">23</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">WAYBILLDATE</value>
+				<value xsi:type="xs:string">DELIVERYNOTEDATE</value>
 				<id xsi:type="xs:decimal">24</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ORDERDATE</value>
+				<value xsi:type="xs:string">WAYBILLDATE</value>
 				<id xsi:type="xs:decimal">25</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">EDIMESSAGE</value>
+				<value xsi:type="xs:string">ORDERDATE</value>
 				<id xsi:type="xs:decimal">26</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">EDIINTERCHANGEID</value>
+				<value xsi:type="xs:string">EDIMESSAGE</value>
 				<id xsi:type="xs:decimal">27</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ФайлИмя</value>
+				<value xsi:type="xs:string">EDIINTERCHANGEID</value>
 				<id xsi:type="xs:decimal">28</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">Идентификатор</value>
+				<value xsi:type="xs:string">ФайлИмя</value>
 				<id xsi:type="xs:decimal">29</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">НомерПоПорядку</value>
+				<value xsi:type="xs:string">Идентификатор</value>
 				<id xsi:type="xs:decimal">30</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">FRESH</value>
+				<id xsi:type="xs:decimal">31</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">НомерПоПорядку</value>
+				<id xsi:type="xs:decimal">32</id>
 			</item>
 		</Value>
 		<Value xsi:type="ValueListType">
