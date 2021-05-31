@@ -380,6 +380,35 @@
 			</Value>
 		</row>
 		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">FRESH</Value>
+			<Value xsi:type="xs:string">Документ.FRESH</Value>
+			<Value xsi:type="xs:boolean">false</Value>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="ValueTable"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
 			<row>
 				<Value xsi:type="xs:boolean">true</Value>
 				<Value xsi:type="xs:string"/>
@@ -1431,8 +1460,8 @@
                |	ВЫРАЗИТЬ("""" КАК СТРОКА(300)) КАК EDIMESSAGE,
                |	ВЫРАЗИТЬ("""" КАК СТРОКА(20)) КАК EDIINTERCHANGEID,
                |	ЭКОМ_ЦепочкиДокументовПоставщика.ORDER.НомерДоговораНаПоставку КАК CAMPAIGNNUMBER,
-               |	ЭКОМ_Объекты_События.Документ_Основание.ЗаказДата КАК ЗаказДата,
-               |	ЭКОМ_Объекты_События.Документ_Основание.ЗаказНомер КАК ЗаказНомер,
+               |	ЭКОМ_Объекты_СобытияORDER.Документ_Основание.ЗаказДата КАК ЗаказДата,
+               |	ЭКОМ_Объекты_СобытияORDER.Документ_Основание.ЗаказНомер КАК ЗаказНомер,
                |	ЭКОМ_ЦепочкиДокументовПоставщика.Заказ.Номер КАК Номер,
                |	ЭКОМ_ЦепочкиДокументовПоставщика.Заказ.Контрагент КАК Контрагент,
                |	ЭКОМ_ЦепочкиДокументовПоставщика.Заказ.Организация КАК Организация,
@@ -1442,21 +1471,23 @@
                |	ЭКОМ_ЦепочкиДокументовПоставщика.ORDER.Ссылка КАК ЭлектронныйДокумент,
                |	""ORDRSP"" КАК ВидДокумента,
                |	ЭКОМ_ЦепочкиДокументовПоставщика.xmlТочкаДоставки КАК DELIVERYPLACE,
-               |	""O"" КАК DOCTYPE
+               |	""O"" КАК DOCTYPE,
+               |	ЭКОМ_Объекты_СобытияORDER.СтруктураФайла КАК СтруктураФайлаORDER
                |ИЗ
                |	РегистрСведений.ЭКОМ_ЦепочкиДокументовПоставщика КАК ЭКОМ_ЦепочкиДокументовПоставщика
-               |		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЭКОМ_Объекты_События КАК ЭКОМ_Объекты_События
-               |		ПО ЭКОМ_ЦепочкиДокументовПоставщика.ORDER = ЭКОМ_Объекты_События.Документ_Основание
-               |			И (ЭКОМ_Объекты_События.ВидДокумента = ЗНАЧЕНИЕ(Перечисление.ЭКОМ_ВидыДокументов.ORDER_Входящий))
+               |		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЭКОМ_Объекты_События КАК ЭКОМ_Объекты_СобытияORDER
+               |		ПО ЭКОМ_ЦепочкиДокументовПоставщика.ORDER = ЭКОМ_Объекты_СобытияORDER.Документ_Основание
+               |			И (ЭКОМ_Объекты_СобытияORDER.ВидДокумента = ЗНАЧЕНИЕ(Перечисление.ЭКОМ_ВидыДокументов.ORDER_Входящий))
                |ГДЕ
                |	ЭКОМ_ЦепочкиДокументовПоставщика.Заказ В(&amp;Документ)
                |
                |УПОРЯДОЧИТЬ ПО
                |	Ссылка,
-               |	ЭКОМ_Объекты_События.ДатаЗаписи УБЫВ";
+               |	ЭКОМ_Объекты_СобытияORDER.ДатаЗаписи УБЫВ";
 Запрос.УстановитьПараметр("Документ", Источник);
 РезультатЗапроса = Запрос.Выполнить(); 
 Результат = РезультатЗапроса.Выгрузить();
+Результат.Колонки.Добавить("FRESH", Новый ОписаниеТипов("Строка"));
 
 Запрос = Новый Запрос;
 Запрос.Текст = 
@@ -1474,6 +1505,8 @@
 Запрос.УстановитьПараметр("Документ", Источник);
 РезультатЗапроса = Запрос.Выполнить();
 РезультатТовары = РезультатЗапроса.Выгрузить();
+
+
 
 EDIINTERCHANGEID = 0;
 Удалить = Новый Массив;
@@ -1500,6 +1533,15 @@ EDIINTERCHANGEID = 0;
     ИначеЕсли ЕстьРасхождения Тогда
         Строка.ACTION = "4";
     КонецЕсли;
+
+	FRESH = "0";  // 1 - Да 0 - Нет
+	Если ТипЗнч(Строка.СтруктураФайлаORDER) = Тип("ХранилищеЗначения")  Тогда
+	     СтруктураФайла = Строка.СтруктураФайлаORDER.Получить();
+		 Если СтруктураФайла.Свойство("FRESH") = Истина Тогда
+		      FRESH = СтруктураФайла.FRESH; 
+		 КонецЕсли;
+	КонецЕсли;
+	Строка.FRESH = FRESH;
 
     Строка.DATE				= Формат(Строка.Дата, "ДФ=yyyy-MM-dd");
     Строка.TIME				= Формат(Строка.Дата, "ДФ=HH-mm");
@@ -1569,7 +1611,7 @@ EDIINTERCHANGEID = 0;
 		<Value xsi:type="ValueTable"/>
 		<Value xsi:type="ValueListType">
 			<valueType/>
-			<lastId xsi:type="xs:decimal">31</lastId>
+			<lastId xsi:type="xs:decimal">33</lastId>
 			<item>
 				<value xsi:type="xs:string">Ссылка</value>
 				<id xsi:type="xs:decimal">0</id>
@@ -1697,6 +1739,14 @@ EDIINTERCHANGEID = 0;
 			<item>
 				<value xsi:type="xs:string">DOCTYPE</value>
 				<id xsi:type="xs:decimal">31</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">СтруктураФайлаORDER</value>
+				<id xsi:type="xs:decimal">32</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">FRESH</value>
+				<id xsi:type="xs:decimal">33</id>
 			</item>
 		</Value>
 		<Value xsi:type="ValueListType">
