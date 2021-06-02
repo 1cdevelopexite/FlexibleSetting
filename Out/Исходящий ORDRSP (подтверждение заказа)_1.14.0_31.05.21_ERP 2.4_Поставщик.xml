@@ -380,6 +380,35 @@
 			</Value>
 		</row>
 		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">FRESH</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+			<Value xsi:type="xs:string">Документ.FRESH</Value>
+			<Value xsi:type="ValueTable"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:boolean">false</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
 			<row>
 				<Value xsi:type="xs:boolean">true</Value>
 				<Value xsi:type="xs:string"/>
@@ -903,6 +932,151 @@
 						<lastId xsi:type="xs:decimal">-1</lastId>
 					</Value>
 				</row>
+				<row>
+					<Value xsi:type="xs:boolean">true</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string">CALIBRE</Value>
+					<Value xsi:nil="true"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="xs:string">POSITION.CALIBRE</Value>
+					<Value xsi:type="ValueTable"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:boolean">false</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</row>
+				<row>
+					<row>
+						<Value xsi:type="xs:boolean">true</Value>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="xs:string">PACKINGTYPE</Value>
+						<Value xsi:nil="true"/>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+						<Value xsi:type="xs:string">POSITION.PACKINGTYPE</Value>
+						<Value xsi:type="ValueTable"/>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+						<Value xsi:type="xs:decimal">0</Value>
+						<Value xsi:type="xs:decimal">0</Value>
+						<Value xsi:type="xs:boolean">false</Value>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+					</row>
+					<row>
+						<Value xsi:type="xs:boolean">true</Value>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="xs:string">PACKINGQUANTITY</Value>
+						<Value xsi:nil="true"/>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+						<Value xsi:type="xs:string">POSITION.PACKINGQUANTITY</Value>
+						<Value xsi:type="ValueTable"/>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+						<Value xsi:type="xs:decimal">0</Value>
+						<Value xsi:type="xs:decimal">0</Value>
+						<Value xsi:type="xs:boolean">false</Value>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+					</row>
+					<row>
+						<Value xsi:type="xs:boolean">true</Value>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="xs:string">PACKINGUNIT</Value>
+						<Value xsi:nil="true"/>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+						<Value xsi:type="xs:string">POSITION.PACKINGUNIT</Value>
+						<Value xsi:type="ValueTable"/>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+						<Value xsi:type="xs:decimal">0</Value>
+						<Value xsi:type="xs:decimal">0</Value>
+						<Value xsi:type="xs:boolean">false</Value>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+					</row>
+					<Value xsi:type="xs:boolean">true</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string">PACKING</Value>
+					<Value xsi:nil="true"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="ValueTable"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:boolean">false</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</row>
 				<Value xsi:type="xs:boolean">true</Value>
 				<Value xsi:type="xs:string"/>
 				<Value xsi:type="xs:string"/>
@@ -912,7 +1086,7 @@
 					<valueType/>
 					<lastId xsi:type="xs:decimal">-1</lastId>
 				</Value>
-				<Value xsi:type="xs:string">ВыполнитьГибкиеНастройки(,Источник);
+				<Value xsi:type="xs:string">// ВыполнитьГибкиеНастройки(,Источник);  // Для тестирования
 
 Запрос = Новый Запрос;
 Запрос.Текст = "ВЫБРАТЬ
@@ -944,7 +1118,11 @@
                |			ТОГДА 0
                |		ИНАЧЕ ЭКОМ_ДокументыТЧ_Товары.КоличествоПоставляемое
                |	КОНЕЦ КАК КоличествоПоставляемое,
-               |	ТоварыИзЗаказа.Штрихкод КАК Штрихкод
+               |	ТоварыИзЗаказа.Штрихкод КАК Штрихкод,
+               |	ЭКОМ_ДокументыТЧ_Товары.КалибрУпаковки КАК КалибрУпаковки,
+               |	ЭКОМ_ДокументыТЧ_Товары.ТипФасовки КАК ТипФасовки,
+               |	ЭКОМ_ДокументыТЧ_Товары.КоличествоВФасовке КАК КоличествоВФасовке,
+               |	ЭКОМ_ДокументыТЧ_Товары.БазоваяЕдиницаТовара КАК БазоваяЕдиницаТовара
                |ИЗ
                |	(ВЫБРАТЬ РАЗЛИЧНЫЕ
                |		ЗаказТовары.Ссылка КАК Заказ,
@@ -979,8 +1157,8 @@
                |		ЭКОМ_ЦепочкиДокументовПоставщика.Заказ В(&amp;Документ)
                |		И НЕ ЭКОМ_ЦепочкиДокументовПоставщика.Заказ = ЗНАЧЕНИЕ(Документ.ЗаказКлиента.ПустаяСсылка)) КАК ТоварыИзЗаказа
                |		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ЭКОМ_Документы.ТЧ_Товары КАК ЭКОМ_ДокументыТЧ_Товары
-               |		ПО ТоварыИзЗаказа.ORDER = ЭКОМ_ДокументыТЧ_Товары.Ссылка
-               |			И ТоварыИзЗаказа.Номенклатура = ЭКОМ_ДокументыТЧ_Товары.Номенклатура
+               |		ПО (ТоварыИзЗаказа.ORDER = ЭКОМ_ДокументыТЧ_Товары.Ссылка)
+               |			И (ТоварыИзЗаказа.Номенклатура = ЭКОМ_ДокументыТЧ_Товары.Номенклатура)
                |
                |УПОРЯДОЧИТЬ ПО
                |	НомерСтроки";
@@ -995,6 +1173,10 @@
 Результат.Колонки.Добавить("PRICEWITHVAT");
 Результат.Колонки.Добавить("VAT");
 Результат.Колонки.Добавить("INFO");
+Результат.Колонки.Добавить("CALIBRE",         Новый ОписаниеТипов("Строка"));
+Результат.Колонки.Добавить("PACKINGTYPE",     Новый ОписаниеТипов("Строка"));
+Результат.Колонки.Добавить("PACKINGQUANTITY", Новый ОписаниеТипов("Строка"));
+Результат.Колонки.Добавить("PACKINGUNIT",     Новый ОписаниеТипов("Строка"));
 
 // Список для преобразования числа в строку: Значение – реквизит в результате; Представление - путь, где хранится число;
 // Пометка при Истина усекает число до целых, а Ложь - 2 знака в дробной части
@@ -1035,14 +1217,19 @@
         КонецЕсли;
         Строка[ЗаписьЧислоВСтроку.Значение] = ЗначениеСтрокой;
     КонецЦикла;
-
+    
+    Строка.CALIBRE          = Строка.КалибрУпаковки;
+	Строка.PACKINGTYPE      = Строка.ТипФасовки;
+	Строка.PACKINGQUANTITY  = Формат(Строка.КоличествоВФасовке, "ЧДЦ=2; ЧРД=.; ЧГ=0");
+	Строка.PACKINGUNIT      = Строка.БазоваяЕдиницаТовара;	
+	
 КонецЦикла;
 
 Возврат Результат;</Value>
 				<Value xsi:type="ValueTable"/>
 				<Value xsi:type="ValueListType">
 					<valueType/>
-					<lastId xsi:type="xs:decimal">23</lastId>
+					<lastId xsi:type="xs:decimal">31</lastId>
 					<item>
 						<value xsi:type="xs:string">Ссылка</value>
 						<id xsi:type="xs:decimal">0</id>
@@ -1112,32 +1299,64 @@
 						<id xsi:type="xs:decimal">16</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">PRODUCT</value>
+						<value xsi:type="xs:string">КалибрУпаковки</value>
 						<id xsi:type="xs:decimal">17</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">PRODUCTIDBUYER</value>
+						<value xsi:type="xs:string">ТипФасовки</value>
 						<id xsi:type="xs:decimal">18</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">PRICE</value>
+						<value xsi:type="xs:string">КоличествоВФасовке</value>
 						<id xsi:type="xs:decimal">19</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">PRICEWITHVAT</value>
+						<value xsi:type="xs:string">БазоваяЕдиницаТовара</value>
 						<id xsi:type="xs:decimal">20</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">VAT</value>
+						<value xsi:type="xs:string">PRODUCT</value>
 						<id xsi:type="xs:decimal">21</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">INFO</value>
+						<value xsi:type="xs:string">PRODUCTIDBUYER</value>
 						<id xsi:type="xs:decimal">22</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">НомерПоПорядку</value>
+						<value xsi:type="xs:string">PRICE</value>
 						<id xsi:type="xs:decimal">23</id>
+					</item>
+					<item>
+						<value xsi:type="xs:string">PRICEWITHVAT</value>
+						<id xsi:type="xs:decimal">24</id>
+					</item>
+					<item>
+						<value xsi:type="xs:string">VAT</value>
+						<id xsi:type="xs:decimal">25</id>
+					</item>
+					<item>
+						<value xsi:type="xs:string">INFO</value>
+						<id xsi:type="xs:decimal">26</id>
+					</item>
+					<item>
+						<value xsi:type="xs:string">CALIBRE</value>
+						<id xsi:type="xs:decimal">27</id>
+					</item>
+					<item>
+						<value xsi:type="xs:string">PACKINGTYPE</value>
+						<id xsi:type="xs:decimal">28</id>
+					</item>
+					<item>
+						<value xsi:type="xs:string">PACKINGQUANTITY</value>
+						<id xsi:type="xs:decimal">29</id>
+					</item>
+					<item>
+						<value xsi:type="xs:string">PACKINGUNIT</value>
+						<id xsi:type="xs:decimal">30</id>
+					</item>
+					<item>
+						<value xsi:type="xs:string">НомерПоПорядку</value>
+						<id xsi:type="xs:decimal">31</id>
 					</item>
 				</Value>
 				<Value xsi:type="ValueListType">
@@ -1254,8 +1473,8 @@
                |	ВЫРАЗИТЬ("""" КАК СТРОКА(300)) КАК EDIMESSAGE,
                |	ВЫРАЗИТЬ("""" КАК СТРОКА(20)) КАК EDIINTERCHANGEID,
                |	ЭКОМ_Документы.НомерДоговораНаПоставку КАК CAMPAIGNNUMBER,
-               |	ЭКОМ_Объекты_События.Документ_Основание.ЗаказДата КАК ЗаказДата,
-               |	ЭКОМ_Объекты_События.Документ_Основание.ЗаказНомер КАК ЗаказНомер,
+               |	ЭКОМ_Объекты_СобытияORDER.Документ_Основание.ЗаказДата КАК ЗаказДата,
+               |	ЭКОМ_Объекты_СобытияORDER.Документ_Основание.ЗаказНомер КАК ЗаказНомер,
                |	ЗаказКлиента.Номер КАК Номер,
                |	ЗаказКлиента.Контрагент КАК Контрагент,
                |	ЗаказКлиента.Организация КАК Организация,
@@ -1265,32 +1484,34 @@
                |	ЭКОМ_Документы.Ссылка КАК ЭлектронныйДокумент,
                |	""ORDRSP"" КАК ВидДокумента,
                |	ЭКОМ_ТочкиДоставки.GLN КАК DELIVERYPLACE,
-               |	""O"" КАК DOCTYPE
+               |	""O"" КАК DOCTYPE,
+               |	ЭКОМ_Объекты_СобытияORDER.СтруктураФайла КАК СтруктураФайлаORDER
                |ИЗ
                |	Документ.ЗаказКлиента КАК ЗаказКлиента
                |		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЭКОМ_GLN КАК ЭКОМ_GLN_Контрагент
-               |		ПО ЗаказКлиента.Контрагент = ЭКОМ_GLN_Контрагент.Объект
+               |		ПО (ЗаказКлиента.Контрагент = ЭКОМ_GLN_Контрагент.Объект)
                |		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЭКОМ_GLN КАК ЭКОМ_GLN_Организация
-               |		ПО ЗаказКлиента.Организация = ЭКОМ_GLN_Организация.Объект
+               |		ПО (ЗаказКлиента.Организация = ЭКОМ_GLN_Организация.Объект)
                |		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЭКОМ_ТочкиДоставки КАК ЭКОМ_ТочкиДоставки
                |		ПО (ЗаказКлиента.Партнер = ЭКОМ_ТочкиДоставки.Объект
                |				ИЛИ ЗаказКлиента.Контрагент = ЭКОМ_ТочкиДоставки.Объект
                |				ИЛИ ЗаказКлиента.Грузополучатель = ЭКОМ_ТочкиДоставки.Объект)
-               |		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЭКОМ_Объекты_События КАК ЭКОМ_Объекты_События
-               |		ПО ЗаказКлиента.Ссылка = ЭКОМ_Объекты_События.Документ_Основание.Документ1С
-               |			И (ЭКОМ_Объекты_События.ВидДокумента = ЗНАЧЕНИЕ(Перечисление.ЭКОМ_ВидыДокументов.ORDER_Входящий))
+               |		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЭКОМ_Объекты_События КАК ЭКОМ_Объекты_СобытияORDER
+               |		ПО (ЗаказКлиента.Ссылка = ЭКОМ_Объекты_СобытияORDER.Документ_Основание.Документ1С)
+               |			И (ЭКОМ_Объекты_СобытияORDER.ВидДокумента = ЗНАЧЕНИЕ(Перечисление.ЭКОМ_ВидыДокументов.ORDER_Входящий))
                |		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ЭКОМ_Документы КАК ЭКОМ_Документы
-               |		ПО ЗаказКлиента.Ссылка = ЭКОМ_Документы.Документ1С
+               |		ПО (ЗаказКлиента.Ссылка = ЭКОМ_Документы.Документ1С)
                |			И (ЭКОМ_Документы.ВидДокумента = ЗНАЧЕНИЕ(Перечисление.ЭКОМ_ВидыДокументов.ORDER_Входящий))
                |ГДЕ
-               |	ЗаказКлиента.Ссылка В(&amp;Документ)
+               |	ЗаказКлиента.Ссылка В (&amp;Документ)
                |
                |УПОРЯДОЧИТЬ ПО
                |	Ссылка,
-               |	ЭКОМ_Объекты_События.ДатаЗаписи УБЫВ";
+               |	ЭКОМ_Объекты_СобытияORDER.ДатаЗаписи УБЫВ";
 Запрос.УстановитьПараметр("Документ", Источник);
 РезультатЗапроса = Запрос.Выполнить(); 
 Результат = РезультатЗапроса.Выгрузить();
+Результат.Колонки.Добавить("FRESH", Новый ОписаниеТипов("Строка"));
 
 Запрос = Новый Запрос;
 Запрос.Текст = 
@@ -1333,6 +1554,15 @@ EDIINTERCHANGEID = 0;
         Строка.ACTION = "4";
     КонецЕсли;
 
+    FRESH = "0";  // 1 - Да 0 - Нет
+	Если ТипЗнч(Строка.СтруктураФайлаORDER) = Тип("ХранилищеЗначения")  Тогда
+	     СтруктураФайла = Строка.СтруктураФайлаORDER.Получить();
+		 Если СтруктураФайла.Свойство("FRESH") = Истина Тогда
+		      FRESH = СтруктураФайла.FRESH; 
+		 КонецЕсли;
+	КонецЕсли;
+	Строка.FRESH = FRESH;
+
     Строка.DATE                = Формат(Строка.Дата, "ДФ=yyyy-MM-dd");
     Строка.TIME                = Формат(Строка.Дата, "ДФ=HH-mm");
     Строка.ORDERDATE        = Формат(Строка.ДатаЗаказа, "ДФ=yyyy-MM-dd");
@@ -1352,7 +1582,7 @@ EDIINTERCHANGEID = 0;
 		<Value xsi:type="ValueTable"/>
 		<Value xsi:type="ValueListType">
 			<valueType/>
-			<lastId xsi:type="xs:decimal">32</lastId>
+			<lastId xsi:type="xs:decimal">34</lastId>
 			<item>
 				<value xsi:type="xs:string">Ссылка</value>
 				<id xsi:type="xs:decimal">0</id>
@@ -1482,8 +1712,16 @@ EDIINTERCHANGEID = 0;
 				<id xsi:type="xs:decimal">31</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">НомерПоПорядку</value>
+				<value xsi:type="xs:string">СтруктураФайлаORDER</value>
 				<id xsi:type="xs:decimal">32</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">FRESH</value>
+				<id xsi:type="xs:decimal">33</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">НомерПоПорядку</value>
+				<id xsi:type="xs:decimal">34</id>
 			</item>
 		</Value>
 		<Value xsi:type="ValueListType">
