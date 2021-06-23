@@ -67,7 +67,7 @@
 					<Value xsi:type="xs:string"/>
 					<Value xsi:type="xs:string"/>
 					<Value xsi:type="xs:string">ЮЛ</Value>
-					<Value xsi:nil="true"/>
+					<Value xsi:type="xs:string"/>
 					<Value xsi:type="ValueListType">
 						<valueType/>
 						<lastId xsi:type="xs:decimal">5</lastId>
@@ -102,7 +102,7 @@
 					</Value>
 					<Value xsi:type="xs:decimal">0</Value>
 					<Value xsi:type="xs:decimal">0</Value>
-					<Value xsi:type="xs:boolean">false</Value>
+					<Value xsi:type="xs:boolean">true</Value>
 					<Value xsi:type="xs:string"/>
 					<Value xsi:type="ValueListType">
 						<valueType/>
@@ -149,13 +149,13 @@
 						<Value xsi:type="xs:boolean">true</Value>
 						<Value xsi:type="xs:string"/>
 						<Value xsi:type="xs:string"/>
-						<Value xsi:type="xs:string">ЭЦППолФайл</Value>
+						<Value xsi:type="xs:string">ЭЦПАнФайл</Value>
 						<Value xsi:nil="true"/>
 						<Value xsi:type="ValueListType">
 							<valueType/>
 							<lastId xsi:type="xs:decimal">-1</lastId>
 						</Value>
-						<Value xsi:type="xs:string">Документ.ЭЦППолФайл</Value>
+						<Value xsi:type="xs:string">Документ.ЭЦПАнФайл</Value>
 						<Value xsi:type="ValueTable"/>
 						<Value xsi:type="ValueListType">
 							<valueType/>
@@ -177,14 +177,14 @@
 					<Value xsi:type="xs:boolean">true</Value>
 					<Value xsi:type="xs:string"/>
 					<Value xsi:type="xs:string"/>
-					<Value xsi:type="xs:string">СведПолФайл</Value>
+					<Value xsi:type="xs:string">СведАнФайл</Value>
 					<Value xsi:nil="true"/>
 					<Value xsi:type="ValueListType">
 						<valueType/>
 						<lastId xsi:type="xs:decimal">1</lastId>
 						<item>
-							<value xsi:type="xs:string">ИмяПостФайла</value>
-							<presentation>Документ.ИмяПостФайла</presentation>
+							<value xsi:type="xs:string">ИмяАнФайла</value>
+							<presentation>Документ.ИмяАнФайла</presentation>
 							<checkState>1</checkState>
 							<id xsi:type="xs:decimal">1</id>
 						</item>
@@ -212,13 +212,13 @@
 					<Value xsi:type="xs:boolean">true</Value>
 					<Value xsi:type="xs:string"/>
 					<Value xsi:type="xs:string"/>
-					<Value xsi:type="xs:string">ТекстУведУточ</Value>
+					<Value xsi:type="xs:string">ТекстПредАн</Value>
 					<Value xsi:nil="true"/>
 					<Value xsi:type="ValueListType">
 						<valueType/>
 						<lastId xsi:type="xs:decimal">-1</lastId>
 					</Value>
-					<Value xsi:type="xs:string">Документ.ТекстУведУточ</Value>
+					<Value xsi:type="xs:string">Документ.ТекстПредАн</Value>
 					<Value xsi:type="ValueTable"/>
 					<Value xsi:type="ValueListType">
 						<valueType/>
@@ -230,7 +230,7 @@
 					</Value>
 					<Value xsi:type="xs:decimal">0</Value>
 					<Value xsi:type="xs:decimal">0</Value>
-					<Value xsi:type="xs:boolean">false</Value>
+					<Value xsi:type="xs:boolean">true</Value>
 					<Value xsi:type="xs:string"/>
 					<Value xsi:type="ValueListType">
 						<valueType/>
@@ -240,21 +240,11 @@
 				<Value xsi:type="xs:boolean">true</Value>
 				<Value xsi:type="xs:string"/>
 				<Value xsi:type="xs:string"/>
-				<Value xsi:type="xs:string">СвУведУточ</Value>
+				<Value xsi:type="xs:string">СвПредАн</Value>
 				<Value xsi:nil="true"/>
 				<Value xsi:type="ValueListType">
 					<valueType/>
-					<lastId xsi:type="xs:decimal">3</lastId>
-					<item>
-						<value xsi:type="xs:string">ДатаПол</value>
-						<presentation>Документ.ДатаПол</presentation>
-						<id xsi:type="xs:decimal">2</id>
-					</item>
-					<item>
-						<value xsi:type="xs:string">ВремяПол</value>
-						<presentation>Документ.ВремяПол</presentation>
-						<id xsi:type="xs:decimal">3</id>
-					</item>
+					<lastId xsi:type="xs:decimal">-1</lastId>
 				</Value>
 				<Value xsi:type="xs:string"/>
 				<Value xsi:type="ValueTable"/>
@@ -281,24 +271,116 @@
 					<Value xsi:type="xs:string"/>
 					<Value xsi:type="xs:string"/>
 					<Value xsi:type="xs:string">ЮЛ</Value>
-					<Value xsi:nil="true"/>
+					<Value xsi:type="xs:string">ИспользоватьСтрокуДерева = Ложь;
+Если  Документ.ТипПолучателя = "ЮЛ" Тогда
+	ИспользоватьСтрокуДерева = Истина;
+КонецЕсли;
+
+Возврат ИспользоватьСтрокуДерева;</Value>
 					<Value xsi:type="ValueListType">
 						<valueType/>
-						<lastId xsi:type="xs:decimal">5</lastId>
+						<lastId xsi:type="xs:decimal">11</lastId>
 						<item>
 							<value xsi:type="xs:string">НаимОрг</value>
-							<presentation>Документ.ОтпрДок_НаимОрг</presentation>
-							<id xsi:type="xs:decimal">3</id>
+							<presentation>Документ.НапрПредАн_НаимОрг</presentation>
+							<checkState>1</checkState>
+							<id xsi:type="xs:decimal">9</id>
 						</item>
 						<item>
 							<value xsi:type="xs:string">ИННЮЛ</value>
-							<presentation>Документ.ОтпрДок_ИННЮЛ</presentation>
-							<id xsi:type="xs:decimal">4</id>
+							<presentation>Документ.НапрПредАн_ИННЮЛ</presentation>
+							<checkState>1</checkState>
+							<id xsi:type="xs:decimal">10</id>
 						</item>
 						<item>
 							<value xsi:type="xs:string">КПП</value>
-							<presentation>Документ.ОтпрДок_КПП</presentation>
-							<id xsi:type="xs:decimal">5</id>
+							<presentation>Документ.НапрПредАн_КПП</presentation>
+							<checkState>1</checkState>
+							<id xsi:type="xs:decimal">11</id>
+						</item>
+					</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="ValueTable"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:boolean">false</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</row>
+				<row>
+					<row>
+						<Value xsi:type="xs:boolean">true</Value>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="xs:string">ФИО</Value>
+						<Value xsi:nil="true"/>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">11</lastId>
+							<item>
+								<value xsi:type="xs:string">Фамилия</value>
+								<presentation>Документ.НапрПредАн_ФамилияФЛ</presentation>
+								<id xsi:type="xs:decimal">9</id>
+							</item>
+							<item>
+								<value xsi:type="xs:string">Имя</value>
+								<presentation>Документ.НапрПредАн_ИмяФЛ</presentation>
+								<id xsi:type="xs:decimal">10</id>
+							</item>
+							<item>
+								<value xsi:type="xs:string">Отчество</value>
+								<presentation>Документ.НапрПредАн_ОтчествоФЛ</presentation>
+								<id xsi:type="xs:decimal">11</id>
+							</item>
+						</Value>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="ValueTable"/>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+						<Value xsi:type="xs:decimal">0</Value>
+						<Value xsi:type="xs:decimal">0</Value>
+						<Value xsi:type="xs:boolean">false</Value>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+					</row>
+					<Value xsi:type="xs:boolean">true</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string">ИП</Value>
+					<Value xsi:type="xs:string">ИспользоватьСтрокуДерева = Ложь;
+Если  Документ.ТипПолучателя = "ИП" Тогда
+	ИспользоватьСтрокуДерева = Истина;
+КонецЕсли;
+
+Возврат ИспользоватьСтрокуДерева;</Value>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">2</lastId>
+						<item>
+							<value xsi:type="xs:string">ИННФЛ</value>
+							<presentation>Документ.НапрПредАн_ИННЮЛ</presentation>
+							<checkState>1</checkState>
+							<id xsi:type="xs:decimal">2</id>
 						</item>
 					</Value>
 					<Value xsi:type="xs:string"/>
@@ -323,14 +405,95 @@
 				<Value xsi:type="xs:boolean">true</Value>
 				<Value xsi:type="xs:string"/>
 				<Value xsi:type="xs:string"/>
-				<Value xsi:type="xs:string">ОтпрДок</Value>
+				<Value xsi:type="xs:string">НапрПредАн</Value>
 				<Value xsi:nil="true"/>
 				<Value xsi:type="ValueListType">
 					<valueType/>
 					<lastId xsi:type="xs:decimal">1</lastId>
 					<item>
 						<value xsi:type="xs:string">ИдУчастЭДО</value>
-						<presentation>Документ.ОтпрДок_ИдУчастЭДО</presentation>
+						<presentation>Документ.НапрПредАн_ИдУчастЭДО</presentation>
+						<checkState>1</checkState>
+						<id xsi:type="xs:decimal">1</id>
+					</item>
+				</Value>
+				<Value xsi:type="xs:string"/>
+				<Value xsi:type="ValueTable"/>
+				<Value xsi:type="ValueListType">
+					<valueType/>
+					<lastId xsi:type="xs:decimal">-1</lastId>
+				</Value>
+				<Value xsi:type="ValueListType">
+					<valueType/>
+					<lastId xsi:type="xs:decimal">-1</lastId>
+				</Value>
+				<Value xsi:type="xs:decimal">0</Value>
+				<Value xsi:type="xs:decimal">0</Value>
+				<Value xsi:type="xs:boolean">false</Value>
+				<Value xsi:type="xs:string"/>
+				<Value xsi:type="ValueListType">
+					<valueType/>
+					<lastId xsi:type="xs:decimal">-1</lastId>
+				</Value>
+			</row>
+			<row>
+				<row>
+					<Value xsi:type="xs:boolean">true</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string">ФИО</Value>
+					<Value xsi:nil="true"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">4</lastId>
+						<item>
+							<value xsi:type="xs:string">Имя</value>
+							<presentation>Документ.Подписант_Имя</presentation>
+							<checkState>1</checkState>
+							<id xsi:type="xs:decimal">2</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">Фамилия</value>
+							<presentation>Документ.Подписант_Фамилия</presentation>
+							<checkState>1</checkState>
+							<id xsi:type="xs:decimal">3</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">Отчество</value>
+							<presentation>Документ.Подписант_Отчество</presentation>
+							<id xsi:type="xs:decimal">4</id>
+						</item>
+					</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="ValueTable"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:boolean">true</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</row>
+				<Value xsi:type="xs:boolean">true</Value>
+				<Value xsi:type="xs:string"/>
+				<Value xsi:type="xs:string"/>
+				<Value xsi:type="xs:string">Подписант</Value>
+				<Value xsi:nil="true"/>
+				<Value xsi:type="ValueListType">
+					<valueType/>
+					<lastId xsi:type="xs:decimal">1</lastId>
+					<item>
+						<value xsi:type="xs:string">Должность</value>
+						<presentation>Документ.Подписант_Должность</presentation>
 						<checkState>1</checkState>
 						<id xsi:type="xs:decimal">1</id>
 					</item>
@@ -354,85 +517,6 @@
 					<lastId xsi:type="xs:decimal">-1</lastId>
 				</Value>
 			</row>
-			<row>
-				<row>
-					<Value xsi:type="xs:boolean">true</Value>
-					<Value xsi:type="xs:string"/>
-					<Value xsi:type="xs:string"/>
-					<Value xsi:type="xs:string">ФИО</Value>
-					<Value xsi:nil="true"/>
-					<Value xsi:type="ValueListType">
-						<valueType/>
-						<lastId xsi:type="xs:decimal">5</lastId>
-						<item>
-							<value xsi:type="xs:string">Имя</value>
-							<presentation>Документ.Подписант_Имя</presentation>
-							<id xsi:type="xs:decimal">3</id>
-						</item>
-						<item>
-							<value xsi:type="xs:string">Фамилия</value>
-							<presentation>Документ.Подписант_Фамилия</presentation>
-							<checkState>1</checkState>
-							<id xsi:type="xs:decimal">4</id>
-						</item>
-						<item>
-							<value xsi:type="xs:string">Отчество</value>
-							<presentation>Документ.Подписант_Отчество</presentation>
-							<id xsi:type="xs:decimal">5</id>
-						</item>
-					</Value>
-					<Value xsi:type="xs:string"/>
-					<Value xsi:type="ValueTable"/>
-					<Value xsi:type="ValueListType">
-						<valueType/>
-						<lastId xsi:type="xs:decimal">-1</lastId>
-					</Value>
-					<Value xsi:type="ValueListType">
-						<valueType/>
-						<lastId xsi:type="xs:decimal">-1</lastId>
-					</Value>
-					<Value xsi:type="xs:decimal">0</Value>
-					<Value xsi:type="xs:decimal">0</Value>
-					<Value xsi:type="xs:boolean">false</Value>
-					<Value xsi:type="xs:string"/>
-					<Value xsi:type="ValueListType">
-						<valueType/>
-						<lastId xsi:type="xs:decimal">-1</lastId>
-					</Value>
-				</row>
-				<Value xsi:type="xs:boolean">true</Value>
-				<Value xsi:type="xs:string"/>
-				<Value xsi:type="xs:string"/>
-				<Value xsi:type="xs:string">Подписант</Value>
-				<Value xsi:nil="true"/>
-				<Value xsi:type="ValueListType">
-					<valueType/>
-					<lastId xsi:type="xs:decimal">1</lastId>
-					<item>
-						<value xsi:type="xs:string">Должность</value>
-						<presentation>Документ.Подписант_Должность</presentation>
-						<id xsi:type="xs:decimal">1</id>
-					</item>
-				</Value>
-				<Value xsi:type="xs:string"/>
-				<Value xsi:type="ValueTable"/>
-				<Value xsi:type="ValueListType">
-					<valueType/>
-					<lastId xsi:type="xs:decimal">-1</lastId>
-				</Value>
-				<Value xsi:type="ValueListType">
-					<valueType/>
-					<lastId xsi:type="xs:decimal">-1</lastId>
-				</Value>
-				<Value xsi:type="xs:decimal">0</Value>
-				<Value xsi:type="xs:decimal">0</Value>
-				<Value xsi:type="xs:boolean">false</Value>
-				<Value xsi:type="xs:string"/>
-				<Value xsi:type="ValueListType">
-					<valueType/>
-					<lastId xsi:type="xs:decimal">-1</lastId>
-				</Value>
-			</row>
 			<Value xsi:type="xs:boolean">true</Value>
 			<Value xsi:type="xs:string"/>
 			<Value xsi:type="xs:string"/>
@@ -440,13 +524,7 @@
 			<Value xsi:nil="true"/>
 			<Value xsi:type="ValueListType">
 				<valueType/>
-				<lastId xsi:type="xs:decimal">1</lastId>
-				<item>
-					<value xsi:type="xs:string">КНД</value>
-					<presentation>Документ.КНД</presentation>
-					<checkState>1</checkState>
-					<id xsi:type="xs:decimal">1</id>
-				</item>
+				<lastId xsi:type="xs:decimal">-1</lastId>
 			</Value>
 			<Value xsi:type="xs:string"/>
 			<Value xsi:type="ValueTable"/>
@@ -468,7 +546,7 @@
 			</Value>
 		</row>
 		<Value xsi:type="xs:boolean">true</Value>
-		<Value xsi:type="xs:string">Исходящий DP_UVUTOCH_14 (отклонение аннулирования)</Value>
+		<Value xsi:type="xs:string">Исходящий DP_PRANNUL (покупатель - аннулирование)</Value>
 		<Value xsi:type="xs:string">ДокументЭКОМ_ЮЗД</Value>
 		<Value xsi:type="xs:string">Файл</Value>
 		<Value xsi:type="Structure">
@@ -491,7 +569,7 @@
 				<Value xsi:type="xs:string">Документ.Контрагент</Value>
 			</Property>
 			<Property name="Номер">
-				<Value xsi:nil="true"/>
+				<Value xsi:type="xs:string"/>
 			</Property>
 			<Property name="Организация">
 				<Value xsi:type="xs:string">Документ.Организация</Value>
@@ -533,44 +611,41 @@
 		</Value>
 		<Value xsi:type="xs:string">Запрос = Новый Запрос;
 Запрос.Текст = "ВЫБРАТЬ
-               |	ЭКОМ_Объекты_СобытияDP_PRANNUL.Документ_Основание КАК Ссылка,
-               |	ЗНАЧЕНИЕ(Перечисление.ЭКОМ_ВидыДокументов.DP_UVUTOCH_14) КАК ВидДокумента,
-               |	ЭКОМ_Объекты_СобытияDP_PRANNUL.ЗаказДата КАК ЗаказДата,
-               |	ЭКОМ_Объекты_СобытияDP_PRANNUL.ЗаказНомер КАК ЗаказНомер,
-               |	ЭКОМ_Объекты_СобытияDP_PRANNUL.Идентификатор КАК ИдентификаторОснование,
-               |	ЭКОМ_Объекты_СобытияDP_PRANNUL.Контрагент КАК Контрагент,
-               |	ЭКОМ_Объекты_СобытияDP_PRANNUL.Организация КАК Организация,
-               |	ЗНАЧЕНИЕ(Перечисление.ЭКОМ_Статусы.ОтклоненоАннулирование) КАК Статус,
-               |	ЭКОМ_GLN_Контрагент.Ид_ОЭД КАК ИдКонтрагента,
-               |	ЭКОМ_GLN_Организация.Ид_ОЭД КАК ИдОрганизации,
-               |	ЭКОМ_GLN_Контрагент.Партнер.Идентификатор КАК ИдОператораКонтрагента,
-               |	ЭКОМ_GLN_Организация.Партнер.Идентификатор КАК ИдОператораОрганизации,
-               |	ЭКОМ_GLN_Контрагент.Объект.ИНН КАК КонтрагентИНН,
-               |	ЭКОМ_GLN_Контрагент.Объект.КПП КАК КонтрагентКПП,
-               |	ЭКОМ_GLN_Контрагент.Объект.Наименование КАК КонтрагентНаименование,
-               |	ЭКОМ_GLN_Организация.Объект.ИНН КАК ОрганизацияИНН,
-               |	ЭКОМ_GLN_Организация.Объект.КПП КАК ОрганизацияКПП,
-               |	ЭКОМ_GLN_Организация.Объект.Наименование КАК ОрганизацияНаименование,
-               |	ЭКОМ_GLN_Организация.Сертификат.ДолжностьПодписанта КАК СертификатДолжностьПодписанта,
-               |	ЭКОМ_GLN_Организация.Сертификат.ФамилияПодписанта КАК СертификатФамилияПодписанта,
-               |	ЭКОМ_GLN_Организация.Сертификат.ИмяПодписанта КАК СертификатИмяПодписанта,
-               |	ЭКОМ_GLN_Организация.Сертификат.ОтчествоПодписанта КАК СертификатОтчествоПодписанта,
-               |	ЭКОМ_Объекты_СобытияDP_PRANNUL.ЭЦП КАК ЭЦП_ФайлаОснования,
-               |	ЭКОМ_Объекты_СобытияDP_PRANNUL.СтруктураФайла КАК СтруктураФайлаОснования,
-               |	ЭКОМ_ЦепочкиДокументовПокупателя.ТекстОтклоненияАннулирования КАК ТекстОтклоненияАннулирования,
-               |	ЭКОМ_Объекты_СобытияDP_PRANNUL.ДатаЗаписи КАК ДатаЗаписи
+               |	ЭКОМ_ДокументыЮЗД.Ссылка КАК Ссылка,
+               |	ЗНАЧЕНИЕ(Перечисление.ЭКОМ_ВидыДокументов.DP_PRANNUL_22) КАК ВидДокумента,
+               |	ЭКОМ_ДокументыЮЗД.ЗаказДата КАК ЗаказДата,
+               |	ЭКОМ_ДокументыЮЗД.ЗаказНомер КАК ЗаказНомер,
+               |	ЭКОМ_ДокументыЮЗД.НомерТранзакции КАК ИдентификаторОснование,
+               |	ЭКОМ_ДокументыЮЗД.Контрагент КАК Контрагент,
+               |	ЭКОМ_ДокументыЮЗД.Организация КАК Организация,
+               |	ЗНАЧЕНИЕ(Перечисление.ЭКОМ_Статусы.Отправлен) КАК Статус,
+               |	ЭКОМ_ДокументыЮЗД.xmlКонтрагент КАК xmlКонтрагент,
+               |	ЭКОМ_ДокументыЮЗД.xmlОрганизация КАК xmlОрганизация,
+               |	ЭКОМ_ДокументыЮЗД.Контрагент.ИНН КАК КонтрагентИНН,
+               |	ЭКОМ_ДокументыЮЗД.Контрагент.КПП КАК КонтрагентКПП,
+               |	ЭКОМ_ДокументыЮЗД.Контрагент.Наименование КАК КонтрагентНаименование,
+               |	ЭКОМ_ДокументыЮЗД.Организация.ИНН КАК ОрганизацияИНН,
+               |	ЭКОМ_ДокументыЮЗД.Организация.КПП КАК ОрганизацияКПП,
+               |	ЭКОМ_ДокументыЮЗД.Организация.Наименование КАК ОрганизацияНаименование,
+               |	ЭКОМ_GLN.Сертификат.ДолжностьПодписанта КАК СертификатДолжностьПодписанта,
+               |	ЭКОМ_GLN.Сертификат.ФамилияПодписанта КАК СертификатФамилияПодписанта,
+               |	ЭКОМ_GLN.Сертификат.ИмяПодписанта КАК СертификатИмяПодписанта,
+               |	ЭКОМ_GLN.Сертификат.ОтчествоПодписанта КАК СертификатОтчествоПодписанта,
+               |	ЭКОМ_ДокументыЮЗД.НомерТранзакции КАК ИмяПоступившегоФайла,
+               |	ЭКОМ_Объекты_События.ЭЦП КАК ЭЦП_ПоступившегоФайла,
+               |	ЭКОМ_Объекты_События.СтруктураФайла КАК СтруктураФайлаЮЗД,
+               |	ЭКОМ_ЦепочкиДокументовПокупателя.ТекстПричиныАннулирования КАК Комментарий
                |ИЗ
-               |	РегистрСведений.ЭКОМ_Объекты_События КАК ЭКОМ_Объекты_СобытияDP_PRANNUL
-               |		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЭКОМ_GLN КАК ЭКОМ_GLN_Организация
-               |		ПО (ЭКОМ_Объекты_СобытияDP_PRANNUL.Организация = ЭКОМ_GLN_Организация.Объект)
-               |		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЭКОМ_GLN КАК ЭКОМ_GLN_Контрагент
-               |		ПО (ЭКОМ_Объекты_СобытияDP_PRANNUL.Контрагент = ЭКОМ_GLN_Контрагент.Объект)
+               |	Документ.ЭКОМ_Документы КАК ЭКОМ_ДокументыЮЗД
+               |		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЭКОМ_GLN КАК ЭКОМ_GLN
+               |		ПО (ЭКОМ_ДокументыЮЗД.Организация = ЭКОМ_GLN.Объект)
+               |		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЭКОМ_Объекты_События КАК ЭКОМ_Объекты_События
+               |		ПО (ЭКОМ_ДокументыЮЗД.Ссылка = ЭКОМ_Объекты_События.Документ_Основание)
+               |			И (ЭКОМ_ДокументыЮЗД.ВидДокумента = ЭКОМ_Объекты_События.ВидДокумента)
                |		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЭКОМ_ЦепочкиДокументовПокупателя КАК ЭКОМ_ЦепочкиДокументовПокупателя
-               |		ПО (ЭКОМ_Объекты_СобытияDP_PRANNUL.Документ_Основание = ЭКОМ_ЦепочкиДокументовПокупателя.ЮЗД)
+               |		ПО (ЭКОМ_ДокументыЮЗД.Ссылка = ЭКОМ_ЦепочкиДокументовПокупателя.ЮЗД)
                |ГДЕ
-               |	ЭКОМ_Объекты_СобытияDP_PRANNUL.Документ_Основание В (&amp;Документ)
-               |	И ЭКОМ_Объекты_СобытияDP_PRANNUL.ВидДокумента = ЗНАЧЕНИЕ(Перечисление.ЭКОМ_ВидыДокументов.DP_PRANNUL_22)
-               |	И ЭКОМ_Объекты_СобытияDP_PRANNUL.НаправлениеОбмена = ЗНАЧЕНИЕ(Перечисление.ЭКОМ_НаправлениеОбмена.Входящий)";
+               |	ЭКОМ_ДокументыЮЗД.Ссылка В (&amp;Документ)";
 
 Запрос.УстановитьПараметр("Документ", Источник);
 РезультатЗапроса = Запрос.Выполнить();
@@ -596,35 +671,28 @@
 МассивКолонок.Добавить("ВерсПрог");
 МассивКолонок.Добавить("ВерсФорм");
 
-//Документ
-МассивКолонок.Добавить("КНД");
-
 //УчастЭДО
 МассивКолонок.Добавить("УчастЭДО_ИдУчастЭДО");
 МассивКолонок.Добавить("УчастЭДО_НаимОрг");
 МассивКолонок.Добавить("УчастЭДО_ИННЮЛ");
 МассивКолонок.Добавить("УчастЭДО_КПП");
 
-//СвУведУточ
-МассивКолонок.Добавить("ДатаПол");
-МассивКолонок.Добавить("ВремяПол");
+//СведАнФайл
+МассивКолонок.Добавить("ИмяАнФайла");
+МассивКолонок.Добавить("ЭЦПАнФайл");
 
-//СведПолФайл
-МассивКолонок.Добавить("ИмяПостФайла");
-МассивКолонок.Добавить("ЭЦППолФайл");
+//ТекстПредАн
+МассивКолонок.Добавить("ТекстПредАн");
 
-//ТекстУведУточ
-МассивКолонок.Добавить("ТекстУведУточ");
-
-//ОтпрДок
+//НапрПредАн
 МассивКолонок.Добавить("ТипПолучателя");
-МассивКолонок.Добавить("ОтпрДок_ИдУчастЭДО");
-МассивКолонок.Добавить("ОтпрДок_НаимОрг");
-МассивКолонок.Добавить("ОтпрДок_ИННЮЛ");
-МассивКолонок.Добавить("ОтпрДок_КПП");
-МассивКолонок.Добавить("ОтпрДок_ФамилияФЛ");
-МассивКолонок.Добавить("ОтпрДок_ИмяФЛ");
-МассивКолонок.Добавить("ОтпрДок_ОтчествоФЛ");
+МассивКолонок.Добавить("НапрПредАн_ИдУчастЭДО");
+МассивКолонок.Добавить("НапрПредАн_НаимОрг");
+МассивКолонок.Добавить("НапрПредАн_ИННЮЛ");
+МассивКолонок.Добавить("НапрПредАн_КПП");
+МассивКолонок.Добавить("НапрПредАн_ФамилияФЛ");
+МассивКолонок.Добавить("НапрПредАн_ИмяФЛ");
+МассивКолонок.Добавить("НапрПредАн_ОтчествоФЛ");
 
 //Подписант
 МассивКолонок.Добавить("Подписант_Должность");
@@ -640,72 +708,72 @@
 
 Пока ВыборкаДокумента.Следующий() Цикл
 
-	ОтпрДок_ИдУчастЭДО  = ВыборкаДокумента.ИдОператораКонтрагента + ВыборкаДокумента.ИдКонтрагента;
-	УчастЭДО_ИдУчастЭДО = ВыборкаДокумента.ИдОператораОрганизации + ВыборкаДокумента.ИдОрганизации;
+	НапрПредАн_ИдУчастЭДО = ВыборкаДокумента.xmlКонтрагент;
+	УчастЭДО_ИдУчастЭДО   = ВыборкаДокумента.xmlОрганизация;
 
-	СтруктураФайлаОснования = Неопределено;
-	Если ЗначениеЗаполнено(ВыборкаДокумента.СтруктураФайлаОснования) Тогда
-		СтруктураФайлаОснования = ВыборкаДокумента.СтруктураФайлаОснования.Получить();
+	СтруктураФайлаЮЗД = Неопределено;
+	Если ЗначениеЗаполнено(ВыборкаДокумента.СтруктураФайлаЮЗД) Тогда
+		СтруктураФайлаЮЗД = ВыборкаДокумента.СтруктураФайлаЮЗД.Получить();
 	КонецЕсли;
 
 	// Получаю из хранилища двоичные данные подписи
-	ЭЦППолФайл = Неопределено;
-	Если ЗначениеЗаполнено(ВыборкаДокумента.ЭЦП_ФайлаОснования) Тогда
-		ЭЦППолФайл = ВыборкаДокумента.ЭЦП_ФайлаОснования.Получить();
+	ЭЦПАнФайл = Неопределено;
+	Если ЗначениеЗаполнено(ВыборкаДокумента.ЭЦП_ПоступившегоФайла) Тогда
+		ЭЦПАнФайл = ВыборкаДокумента.ЭЦП_ПоступившегоФайла.Получить();
 
-		Если НЕ ЗначениеЗаполнено(ЭЦППолФайл) Тогда
-			Сообщить("ЭЦП не определен! на документ " + ВыборкаДокумента.ИдентификаторОснование  + " отклонение аннулирование отправлено не будет!");
+		Если НЕ ЗначениеЗаполнено(ЭЦПАнФайл) Тогда
+			Сообщить("ЭЦП не определен! на документ " + ВыборкаДокумента.ИмяПоступившегоФайла  + " аннулирование отправлено не будет!");
 			Продолжить;
 		КонецЕсли;
 
 	Иначе
-		Сообщить("Нет данных по ЭЦП для документа - " + ВыборкаДокумента.ИдентификаторОснование  + " отклонение аннулирование отправлено не будет!");
+		Сообщить("Нет данных по ЭЦП для документа - " + ВыборкаДокумента.ИмяПоступившегоФайла  + " аннулирование отправлено не будет!");
 		Продолжить;
 	КонецЕсли;
 
 	СтруктураДокумента = Результат.Добавить();
-	СтруктураДокумента.ОтпрДок_ИдУчастЭДО = ОтпрДок_ИдУчастЭДО;
-	СтруктураДокумента.ОтпрДок_ИННЮЛ      = ВыборкаДокумента.КонтрагентИНН;
+	СтруктураДокумента.НапрПредАн_ИдУчастЭДО = НапрПредАн_ИдУчастЭДО;
+	СтруктураДокумента.НапрПредАн_ИННЮЛ      = ВыборкаДокумента.КонтрагентИНН;
 
 	ЭтоЮрЛицоКонтрагент  = ЮрФизЛицоОпределитьТипОбъекта(ВыборкаДокумента.Контрагент, СтруктураМетаДанных.ИмяРеквизитаКонтрагента, СтруктураМетаДанных.ПеречислениеЮрЛицо);
 	Если ЭтоЮрЛицоКонтрагент Тогда
 
-		//ОтпрДок
+		//НапрПредАн
 		СтруктураДокумента.ТипПолучателя = "ЮЛ";
-		СтруктураДокумента.ОтпрДок_НаимОрг    = ВыборкаДокумента.КонтрагентНаименование;
-		СтруктураДокумента.ОтпрДок_КПП        = ВыборкаДокумента.КонтрагентКПП;
+		СтруктураДокумента.НапрПредАн_НаимОрг = ВыборкаДокумента.КонтрагентНаименование;
+		СтруктураДокумента.НапрПредАн_КПП     = ВыборкаДокумента.КонтрагентКПП;
 
 	Иначе
 
-		//ОтпрДок
+		//НапрПредАн
 		СтруктураДокумента.ТипПолучателя = "ИП";
-		СтруктураДокумента.ОтпрДок_ФамилияФЛ  = "Нет";
-		СтруктураДокумента.ОтпрДок_ИмяФЛ      = "Нет";
-		СтруктураДокумента.ОтпрДок_ОтчествоФЛ = "";
+		СтруктураДокумента.НапрПредАн_ФамилияФЛ  = "Нет";
+		СтруктураДокумента.НапрПредАн_ИмяФЛ      = "Нет";
+		СтруктураДокумента.НапрПредАн_ОтчествоФЛ = "";
 
-		Если НЕ СтруктураФайлаОснования = Неопределено Тогда
+		Если НЕ СтруктураФайлаЮЗД = Неопределено Тогда
 
-			Если СтруктураФайлаОснования.Свойство("Документ_Подписант_ФЛ_ФИО_Фамилия") Тогда
-				СтруктураДокумента.ОтпрДок_ФамилияФЛ  = СтруктураФайлаОснования.Документ_Подписант_ФЛ_ФИО_Фамилия;
-			ИначеЕсли СтруктураФайлаОснования.Свойство("Подписант_Фамилия") Тогда
-				СтруктураДокумента.ОтпрДок_ФамилияФЛ  = СтруктураФайлаОснования.Подписант_Фамилия;
+			Если СтруктураФайлаЮЗД.Свойство("Документ_Подписант_ФЛ_ФИО_Фамилия") Тогда
+				СтруктураДокумента.НапрПредАн_ФамилияФЛ  = СтруктураФайлаЮЗД.Документ_Подписант_ФЛ_ФИО_Фамилия;
+			ИначеЕсли СтруктураФайлаЮЗД.Свойство("Подписант_Фамилия") Тогда
+				СтруктураДокумента.НапрПредАн_ФамилияФЛ  = СтруктураФайлаЮЗД.Подписант_Фамилия;
 			КонецЕсли;
 
-			Если СтруктураФайлаОснования.Свойство("Документ_Подписант_ФЛ_ФИО_Имя") Тогда
-				СтруктураДокумента.ОтпрДок_ИмяФЛ = СтруктураФайлаОснования.Документ_Подписант_ФЛ_ФИО_Имя;
-			ИначеЕсли СтруктураФайлаОснования.Свойство("Подписант_Имя") Тогда
-	            СтруктураДокумента.ОтпрДок_ИмяФЛ = СтруктураФайлаОснования.Подписант_Имя;
+			Если СтруктураФайлаЮЗД.Свойство("Документ_Подписант_ФЛ_ФИО_Имя") Тогда
+				СтруктураДокумента.НапрПредАн_ИмяФЛ = СтруктураФайлаЮЗД.Документ_Подписант_ФЛ_ФИО_Имя;
+			ИначеЕсли СтруктураФайлаЮЗД.Свойство("Подписант_Имя") Тогда
+	            СтруктураДокумента.НапрПредАн_ИмяФЛ = СтруктураФайлаЮЗД.Подписант_Имя;
 			КонецЕсли;
 
-			Если СтруктураФайлаОснования.Свойство("Документ_Подписант_ФЛ_ФИО_Отчество") Тогда
-				СтруктураДокумента.ОтпрДок_ОтчествоФЛ = СтруктураФайлаОснования.Документ_Подписант_ФЛ_ФИО_Отчество;
-			ИначеЕсли СтруктураФайлаОснования.Свойство("Подписант_Отчество") Тогда
-				СтруктураДокумента.ОтпрДок_ОтчествоФЛ = СтруктураФайлаОснования.Подписант_Отчество;
+			Если СтруктураФайлаЮЗД.Свойство("Документ_Подписант_ФЛ_ФИО_Отчество") Тогда
+				СтруктураДокумента.НапрПредАн_ОтчествоФЛ = СтруктураФайлаЮЗД.Документ_Подписант_ФЛ_ФИО_Отчество;
+			ИначеЕсли СтруктураФайлаЮЗД.Свойство("Подписант_Отчество") Тогда
+			    СтруктураДокумента.НапрПредАн_ОтчествоФЛ = СтруктураФайлаЮЗД.Подписант_Отчество;
 			КонецЕсли;
 
 		КонецЕсли;
 
-		Если СтруктураДокумента.ОтпрДок_ФамилияФЛ = "Нет" Тогда
+		Если СтруктураДокумента.НапрПредАн_ФамилияФЛ = "Нет" Тогда
 			НаименованиеФЛ = ВыборкаДокумента.КонтрагентНаименование;
 			Если Найти(ВРег(НаименованиеФЛ), "ИП ") = 1 Тогда
 				НаименованиеФЛ = Прав(НаименованиеФЛ, СтрДлина(НаименованиеФЛ) - 3);
@@ -714,22 +782,22 @@
 			МассивИмяФЛ = Эком_РазложитьСтрокуВМассивПодстрок(НаименованиеФЛ, " ");
 
 			Если МассивИмяФЛ.Количество() 		&gt;= 3 Тогда
-				СтруктураДокумента.ОтпрДок_ФамилияФЛ 	= МассивИмяФЛ.Получить(0);
-				СтруктураДокумента.ОтпрДок_ИмяФЛ 		= МассивИмяФЛ.Получить(1);
-				СтруктураДокумента.ОтпрДок_ОтчествоФЛ 	= МассивИмяФЛ.Получить(2);
+				СтруктураДокумента.НапрПредАн_ФамилияФЛ 	= МассивИмяФЛ.Получить(0);
+				СтруктураДокумента.НапрПредАн_ИмяФЛ 		= МассивИмяФЛ.Получить(1);
+				СтруктураДокумента.НапрПредАн_ОтчествоФЛ 	= МассивИмяФЛ.Получить(2);
 			ИначеЕсли МассивИмяФЛ.Количество() 	= 2 Тогда
-				СтруктураДокумента.ОтпрДок_ФамилияФЛ 	= МассивИмяФЛ.Получить(0);
-				СтруктураДокумента.ОтпрДок_ИмяФЛ 		= МассивИмяФЛ.Получить(1);
+				СтруктураДокумента.НапрПредАн_ФамилияФЛ 	= МассивИмяФЛ.Получить(0);
+				СтруктураДокумента.НапрПредАн_ИмяФЛ 		= МассивИмяФЛ.Получить(1);
 			ИначеЕсли МассивИмяФЛ.Количество() 	= 1 Тогда
-				СтруктураДокумента.ОтпрДок_ФамилияФЛ 	= МассивИмяФЛ.Получить(0);
+				СтруктураДокумента.НапрПредАн_ФамилияФЛ 	= МассивИмяФЛ.Получить(0);
 			КонецЕсли;
 		КонецЕсли;
 
 	КонецЕсли;
 
 	Идентификатор = Новый УникальныйИдентификатор;
-	ИдентификаторДляФайла = "DP_UVUTOCH_"
-	+ ОтпрДок_ИдУчастЭДО + "_"
+	ИдентификаторДляФайла = "DP_PRANNUL_"
+	+ НапрПредАн_ИдУчастЭДО + "_"
 	+ УчастЭДО_ИдУчастЭДО + "_"
 	+ Формат(ТекущаяДата(), "ДФ=yyyyMMdd") + "_"
 	+ Строка(Идентификатор);
@@ -751,25 +819,18 @@
 	СтруктураДокумента.ВерсПрог = "Exite 1C";
 	СтруктураДокумента.ВерсФорм = "1.02";
 
-	//Документ
-	СтруктураДокумента.КНД = "1115113";
-
 	//УчастЭДО
 	СтруктураДокумента.УчастЭДО_ИдУчастЭДО = УчастЭДО_ИдУчастЭДО;
 	СтруктураДокумента.УчастЭДО_НаимОрг    = ВыборкаДокумента.ОрганизацияНаименование;
 	СтруктураДокумента.УчастЭДО_ИННЮЛ      = ВыборкаДокумента.ОрганизацияИНН;
 	СтруктураДокумента.УчастЭДО_КПП        = ВыборкаДокумента.ОрганизацияКПП;
 
-	//СвУведУточ
-	СтруктураДокумента.ДатаПол  = Формат(ВыборкаДокумента.ДатаЗаписи, "ДФ=dd.MM.yyyy");
-	СтруктураДокумента.ВремяПол = Формат(ВыборкаДокумента.ДатаЗаписи, "ДФ=hh.mm.ss");
+	//СведАнФайл
+	СтруктураДокумента.ИмяАнФайла = ВыборкаДокумента.ИмяПоступившегоФайла;
+	СтруктураДокумента.ЭЦПАнФайл  = Base64Строка(ЭЦПАнФайл);
 
-	//СведПолФайл
-	СтруктураДокумента.ИмяПостФайла = ВыборкаДокумента.ИдентификаторОснование;
-	СтруктураДокумента.ЭЦППолФайл    = Base64Строка(ЭЦППолФайл);
-
-	//ТекстУведУточ
-	СтруктураДокумента.ТекстУведУточ  = ВыборкаДокумента.ТекстОтклоненияАннулирования;
+	//ТекстПредАн
+	СтруктураДокумента.ТекстПредАн  = ВыборкаДокумента.Комментарий;
 
 	//Подписант
 	СтруктураДокумента.Подписант_Должность = ВыборкаДокумента.СертификатДолжностьПодписанта;
@@ -783,7 +844,7 @@
 		<Value xsi:type="ValueTable"/>
 		<Value xsi:type="ValueListType">
 			<valueType/>
-			<lastId xsi:type="xs:decimal">35</lastId>
+			<lastId xsi:type="xs:decimal">32</lastId>
 			<item>
 				<value xsi:type="xs:string">ВидДокумента</value>
 				<id xsi:type="xs:decimal">0</id>
@@ -837,96 +898,84 @@
 				<id xsi:type="xs:decimal">12</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">КНД</value>
+				<value xsi:type="xs:string">УчастЭДО_ИдУчастЭДО</value>
 				<id xsi:type="xs:decimal">13</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">УчастЭДО_ИдУчастЭДО</value>
+				<value xsi:type="xs:string">УчастЭДО_НаимОрг</value>
 				<id xsi:type="xs:decimal">14</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">УчастЭДО_НаимОрг</value>
+				<value xsi:type="xs:string">УчастЭДО_ИННЮЛ</value>
 				<id xsi:type="xs:decimal">15</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">УчастЭДО_ИННЮЛ</value>
+				<value xsi:type="xs:string">УчастЭДО_КПП</value>
 				<id xsi:type="xs:decimal">16</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">УчастЭДО_КПП</value>
+				<value xsi:type="xs:string">ИмяАнФайла</value>
 				<id xsi:type="xs:decimal">17</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ДатаПол</value>
+				<value xsi:type="xs:string">ЭЦПАнФайл</value>
 				<id xsi:type="xs:decimal">18</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ВремяПол</value>
+				<value xsi:type="xs:string">ТекстПредАн</value>
 				<id xsi:type="xs:decimal">19</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ИмяПостФайла</value>
+				<value xsi:type="xs:string">ТипПолучателя</value>
 				<id xsi:type="xs:decimal">20</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ЭЦППолФайл</value>
+				<value xsi:type="xs:string">НапрПредАн_ИдУчастЭДО</value>
 				<id xsi:type="xs:decimal">21</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ТекстУведУточ</value>
+				<value xsi:type="xs:string">НапрПредАн_НаимОрг</value>
 				<id xsi:type="xs:decimal">22</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ТипПолучателя</value>
+				<value xsi:type="xs:string">НапрПредАн_ИННЮЛ</value>
 				<id xsi:type="xs:decimal">23</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ОтпрДок_ИдУчастЭДО</value>
+				<value xsi:type="xs:string">НапрПредАн_КПП</value>
 				<id xsi:type="xs:decimal">24</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ОтпрДок_НаимОрг</value>
+				<value xsi:type="xs:string">НапрПредАн_ФамилияФЛ</value>
 				<id xsi:type="xs:decimal">25</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ОтпрДок_ИННЮЛ</value>
+				<value xsi:type="xs:string">НапрПредАн_ИмяФЛ</value>
 				<id xsi:type="xs:decimal">26</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ОтпрДок_КПП</value>
+				<value xsi:type="xs:string">НапрПредАн_ОтчествоФЛ</value>
 				<id xsi:type="xs:decimal">27</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ОтпрДок_ФамилияФЛ</value>
+				<value xsi:type="xs:string">Подписант_Должность</value>
 				<id xsi:type="xs:decimal">28</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ОтпрДок_ИмяФЛ</value>
+				<value xsi:type="xs:string">Подписант_Фамилия</value>
 				<id xsi:type="xs:decimal">29</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ОтпрДок_ОтчествоФЛ</value>
+				<value xsi:type="xs:string">Подписант_Имя</value>
 				<id xsi:type="xs:decimal">30</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">Подписант_Должность</value>
+				<value xsi:type="xs:string">Подписант_Отчество</value>
 				<id xsi:type="xs:decimal">31</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">Подписант_Фамилия</value>
-				<id xsi:type="xs:decimal">32</id>
-			</item>
-			<item>
-				<value xsi:type="xs:string">Подписант_Имя</value>
-				<id xsi:type="xs:decimal">33</id>
-			</item>
-			<item>
-				<value xsi:type="xs:string">Подписант_Отчество</value>
-				<id xsi:type="xs:decimal">34</id>
-			</item>
-			<item>
 				<value xsi:type="xs:string">НомерПоПорядку</value>
-				<id xsi:type="xs:decimal">35</id>
+				<id xsi:type="xs:decimal">32</id>
 			</item>
 		</Value>
 		<Value xsi:type="ValueListType">
@@ -936,13 +985,13 @@
 		<Value xsi:type="xs:decimal">0</Value>
 		<Value xsi:type="xs:decimal">0</Value>
 		<Value xsi:type="xs:boolean">true</Value>
-		<Value xsi:type="xs:string">DP_UVUTOCH_14 (отклонение аннулирования)</Value>
+		<Value xsi:type="xs:string">DP_PRANNUL (покупатель - аннулирование)</Value>
 		<Value xsi:type="ValueListType">
 			<valueType/>
 			<lastId xsi:type="xs:decimal">3</lastId>
 			<item>
 				<value xsi:type="xs:string">ИмяКнопки</value>
-				<presentation>DP_UVUTOCH_14 (отклонение аннулирования)</presentation>
+				<presentation>DP_PRANNUL (покупатель - аннулирование)</presentation>
 				<checkState>1</checkState>
 				<id xsi:type="xs:decimal">0</id>
 			</item>

@@ -363,14 +363,14 @@
 			<Value xsi:nil="true"/>
 		</row>
 		<Value xsi:type="xs:boolean">true</Value>
-		<Value xsi:type="xs:string">Исходящий DP_UVUTOCH_14 (отклонение аннулирования)</Value>
-		<Value xsi:type="xs:string">DP_UVUTOCH_14 (отклонение аннулирования)</Value>
+		<Value xsi:type="xs:string">Исходящий DP_UVUTOCH_24 (отклонение аннулирования)</Value>
+		<Value xsi:type="xs:string">DP_UVUTOCH_24 (отклонение аннулирования)</Value>
 		<Value xsi:type="xs:string">ДокументСЧФ</Value>
 		<Value xsi:type="xs:string">Файл</Value>
 		<Value xsi:type="xs:string">Запрос = Новый Запрос;
 Запрос.Текст = "ВЫБРАТЬ
                |	ЭКОМ_Объекты_СобытияDP_PRANNUL.Документ_Основание КАК Ссылка,
-               |	ЗНАЧЕНИЕ(Перечисление.ЭКОМ_ВидыДокументов.DP_UVUTOCH_14) КАК ВидДокумента,
+               |	ЗНАЧЕНИЕ(Перечисление.ЭКОМ_ВидыДокументов.DP_UVUTOCH_24) КАК ВидДокумента,
                |	ЭКОМ_Объекты_СобытияDP_PRANNUL.ЗаказДата,
                |	ЭКОМ_Объекты_СобытияDP_PRANNUL.ЗаказНомер,
                |	ЭКОМ_Объекты_СобытияDP_PRANNUL.Идентификатор КАК ИдентификаторОснование,
@@ -830,7 +830,7 @@
 			<lastId xsi:type="xs:decimal">7</lastId>
 			<item>
 				<value xsi:type="xs:string">ИмяКнопки</value>
-				<presentation>DP_UVUTOCH_14 (отклонение аннулирования)</presentation>
+				<presentation>DP_UVUTOCH_24 (отклонение аннулирования)</presentation>
 				<checkState>1</checkState>
 				<id xsi:type="xs:decimal">4</id>
 			</item>

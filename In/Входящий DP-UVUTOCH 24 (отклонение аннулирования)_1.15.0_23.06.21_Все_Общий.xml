@@ -33,8 +33,8 @@
 	</column>
 	<row>
 		<Value xsi:type="xs:boolean">true</Value>
-		<Value xsi:type="xs:string">Входящий DP_UVUTOCH_14 (отклонение аннулирования)</Value>
-		<Value xsi:type="xs:string">Входящий DP_UVUTOCH_14 (отклонение аннулирования)</Value>
+		<Value xsi:type="xs:string">Входящий DP_UVUTOCH_24 (отклонение аннулирования)</Value>
+		<Value xsi:type="xs:string">Входящий DP_UVUTOCH_24 (отклонение аннулирования)</Value>
 		<Value xsi:nil="true"/>
 		<Value xsi:nil="true"/>
 		<Value xsi:nil="true"/>
@@ -44,7 +44,7 @@
 			<lastId xsi:type="xs:decimal">3</lastId>
 			<item>
 				<value xsi:type="xs:string">ИмяКнопки</value>
-				<presentation>Входящий DP_UVUTOCH_14 (отклонение аннулирования)</presentation>
+				<presentation>Входящий DP_UVUTOCH_24 (отклонение аннулирования)</presentation>
 				<checkState>1</checkState>
 				<id xsi:type="xs:decimal">0</id>
 			</item>
