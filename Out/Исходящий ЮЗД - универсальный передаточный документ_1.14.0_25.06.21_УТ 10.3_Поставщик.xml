@@ -2644,26 +2644,26 @@
 						<Value xsi:type="xs:boolean">false</Value>
 						<Value xsi:type="ValueListType">
 							<valueType/>
-							<lastId xsi:type="xs:decimal">3</lastId>
+							<lastId xsi:type="xs:decimal">7</lastId>
 							<item>
 								<value xsi:type="xs:string">СтоимДоИзм</value>
 								<presentation>СведТов.СтТовБезНДССтоимДоИзм</presentation>
-								<id xsi:type="xs:decimal">0</id>
+								<id xsi:type="xs:decimal">4</id>
 							</item>
 							<item>
 								<value xsi:type="xs:string">СтоимПослеИзм</value>
-								<presentation>СведТов.СтТовУчНалСтоимПослеИзм</presentation>
-								<id xsi:type="xs:decimal">1</id>
+								<presentation>СведТов.СтТовБезНДССтоимПослеИзм</presentation>
+								<id xsi:type="xs:decimal">5</id>
 							</item>
 							<item>
 								<value xsi:type="xs:string">СтоимУвел</value>
 								<presentation>СведТов.СтТовБезНДССтоимУвел</presentation>
-								<id xsi:type="xs:decimal">2</id>
+								<id xsi:type="xs:decimal">6</id>
 							</item>
 							<item>
 								<value xsi:type="xs:string">СтоимУм</value>
 								<presentation>СведТов.СтТовБезНДССтоимУм</presentation>
-								<id xsi:type="xs:decimal">3</id>
+								<id xsi:type="xs:decimal">7</id>
 							</item>
 						</Value>
 						<Value xsi:nil="true"/>
