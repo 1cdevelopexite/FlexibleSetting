@@ -122,6 +122,35 @@
 			<Value xsi:type="xs:boolean">true</Value>
 			<Value xsi:type="xs:string"/>
 			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">ACTION</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+			<Value xsi:type="xs:string">Документ.ACTION</Value>
+			<Value xsi:type="ValueTable"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
 			<Value xsi:type="xs:string">RETURNDATE</Value>
 			<Value xsi:nil="true"/>
 			<Value xsi:type="ValueListType">
@@ -530,6 +559,35 @@
 					<Value xsi:type="xs:boolean">true</Value>
 					<Value xsi:type="xs:string"/>
 					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string">DESCRIPTION</Value>
+					<Value xsi:nil="true"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="xs:string">POSITION.DESCRIPTION</Value>
+					<Value xsi:type="ValueTable"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:boolean">false</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</row>
+				<row>
+					<Value xsi:type="xs:boolean">true</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string"/>
 					<Value xsi:type="xs:string">RETURNQUANTITY</Value>
 					<Value xsi:nil="true"/>
 					<Value xsi:type="ValueListType">
@@ -740,7 +798,7 @@
 							<valueType/>
 							<lastId xsi:type="xs:decimal">-1</lastId>
 						</Value>
-						<Value xsi:type="xs:string">POSITION.DESCRIPTION</Value>
+						<Value xsi:type="xs:string">POSITION.ACTION_DESCRIPTION</Value>
 						<Value xsi:type="ValueTable"/>
 						<Value xsi:type="ValueListType">
 							<valueType/>
@@ -811,6 +869,7 @@
                |	ВозвратТоваровОтКлиентаТовары.Цена КАК Цена,
                |	ВозвратТоваровОтКлиентаТовары.Номенклатура.СтавкаНДС КАК СтавкаНДС,
                |	""12E"" КАК CODE,
+               |	""принят"" КАК ACTION_DESCRIPTION,
                |	СУММА(ВозвратТоваровОтКлиентаТовары.СуммаСНДС) КАК СуммаСНДС
                |ПОМЕСТИТЬ ВТ_Товары
                |ИЗ
@@ -860,6 +919,7 @@
                |	ВТ_Товары.СуммаСНДС КАК СуммаСНДС,
                |	ВТ_Товары.НоменклатураПредставление КАК DESCRIPTION,
                |	ВТ_Товары.CODE КАК CODE,
+               |	ВТ_Товары.ACTION_DESCRIPTION КАК ACTION_DESCRIPTION,
                |	ВТ_Товары.ВалютаДокумента КАК CURRENCY
                |ИЗ
                |	ВТ_Товары КАК ВТ_Товары
@@ -882,6 +942,7 @@
                |	ВТ_Товары.НоменклатураАртикул,
                |	ЕСТЬNULL(ВТ_ШтрихкодыМакс.Штрихкод, ВТ_Товары.НоменклатураАртикул),
                |	ВТ_Товары.CODE,
+               |	ВТ_Товары.ACTION_DESCRIPTION,
                |	ВТ_Товары.ВалютаДокумента,
                |	ЕСТЬNULL(ЭКОМ_НоменклатураКонтрагентов.КодНоменклатурыКонтрагента, """"),
                |	ВТ_Товары.СуммаСНДС";
@@ -907,7 +968,7 @@
 				<Value xsi:type="ValueTable"/>
 				<Value xsi:type="ValueListType">
 					<valueType/>
-					<lastId xsi:type="xs:decimal">19</lastId>
+					<lastId xsi:type="xs:decimal">20</lastId>
 					<item>
 						<value xsi:type="xs:string">Ссылка</value>
 						<id xsi:type="xs:decimal">0</id>
@@ -965,28 +1026,32 @@
 						<id xsi:type="xs:decimal">13</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">CURRENCY</value>
+						<value xsi:type="xs:string">ACTION_DESCRIPTION</value>
 						<id xsi:type="xs:decimal">14</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">AMOUNT</value>
+						<value xsi:type="xs:string">CURRENCY</value>
 						<id xsi:type="xs:decimal">15</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">AMOUNTWITHVAT</value>
+						<value xsi:type="xs:string">AMOUNT</value>
 						<id xsi:type="xs:decimal">16</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">RETURNQUANTITY</value>
+						<value xsi:type="xs:string">AMOUNTWITHVAT</value>
 						<id xsi:type="xs:decimal">17</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">VAT</value>
+						<value xsi:type="xs:string">RETURNQUANTITY</value>
 						<id xsi:type="xs:decimal">18</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">НомерПоПорядку</value>
+						<value xsi:type="xs:string">VAT</value>
 						<id xsi:type="xs:decimal">19</id>
+					</item>
+					<item>
+						<value xsi:type="xs:string">НомерПоПорядку</value>
+						<id xsi:type="xs:decimal">20</id>
 					</item>
 				</Value>
 				<Value xsi:type="ValueListType">
@@ -1091,6 +1156,7 @@
                |	ЭКОМ_ЦепочкиДокументовПоставщика.xmlКонтрагент КАК RECIPIENT,
                |	ЭКОМ_ЦепочкиДокументовПоставщика.xmlТочкаДоставки КАК DELIVERYPLACE,
                |	""RETINS"" КАК ВидДокумента,
+               |	""27"" КАК ACTION,
                |	ЭКОМ_ЦепочкиДокументовПоставщика.ORDERNUMBER КАК ORDERNUMBER,
                |	ЭКОМ_ЦепочкиДокументовПоставщика.ORDERDATE КАК ЗаказДата
                |ИЗ
@@ -1133,7 +1199,7 @@
 		<Value xsi:type="ValueTable"/>
 		<Value xsi:type="ValueListType">
 			<valueType/>
-			<lastId xsi:type="xs:decimal">24</lastId>
+			<lastId xsi:type="xs:decimal">25</lastId>
 			<item>
 				<value xsi:type="xs:string">Ссылка</value>
 				<id xsi:type="xs:decimal">0</id>
@@ -1191,48 +1257,52 @@
 				<id xsi:type="xs:decimal">13</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ORDERNUMBER</value>
+				<value xsi:type="xs:string">ACTION</value>
 				<id xsi:type="xs:decimal">14</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ЗаказДата</value>
+				<value xsi:type="xs:string">ORDERNUMBER</value>
 				<id xsi:type="xs:decimal">15</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">DATE</value>
+				<value xsi:type="xs:string">ЗаказДата</value>
 				<id xsi:type="xs:decimal">16</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">RETANNDATE</value>
+				<value xsi:type="xs:string">DATE</value>
 				<id xsi:type="xs:decimal">17</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">RETURNDATE</value>
+				<value xsi:type="xs:string">RETANNDATE</value>
 				<id xsi:type="xs:decimal">18</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ORDERDATE</value>
+				<value xsi:type="xs:string">RETURNDATE</value>
 				<id xsi:type="xs:decimal">19</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">EDIMESSAGE</value>
+				<value xsi:type="xs:string">ORDERDATE</value>
 				<id xsi:type="xs:decimal">20</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">EDIINTERCHANGEID</value>
+				<value xsi:type="xs:string">EDIMESSAGE</value>
 				<id xsi:type="xs:decimal">21</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ФайлИмя</value>
+				<value xsi:type="xs:string">EDIINTERCHANGEID</value>
 				<id xsi:type="xs:decimal">22</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">Идентификатор</value>
+				<value xsi:type="xs:string">ФайлИмя</value>
 				<id xsi:type="xs:decimal">23</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">НомерПоПорядку</value>
+				<value xsi:type="xs:string">Идентификатор</value>
 				<id xsi:type="xs:decimal">24</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">НомерПоПорядку</value>
+				<id xsi:type="xs:decimal">25</id>
 			</item>
 		</Value>
 		<Value xsi:type="ValueListType">
