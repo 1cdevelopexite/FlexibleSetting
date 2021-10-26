@@ -1089,6 +1089,9 @@
 				<Value xsi:type="xs:string">// ВыполнитьГибкиеНастройки(,Источник);  // Для тестирования
 
 Запрос = Новый Запрос;
+Запрос.Текст = // ВыполнитьГибкиеНастройки(,Источник);  // Для тестирования
+
+Запрос = Новый Запрос;
 Запрос.Текст = "ВЫБРАТЬ
                |	ТоварыORDER.Заказ КАК Ссылка,
                |	ВЫРАЗИТЬ("""""""" КАК СТРОКА(100)) КАК POSITIONNUMBER,
@@ -1197,6 +1200,7 @@
 
 Результат.Колонки.Добавить("PRODUCT");
 Результат.Колонки.Добавить("PRODUCTIDBUYER");
+Результат.Колонки.Добавить("PRODUCTIDSUPPLIER");
 Результат.Колонки.Добавить("PRICE");
 Результат.Колонки.Добавить("PRICEWITHVAT");
 Результат.Колонки.Добавить("VAT");
@@ -1229,6 +1233,7 @@
 
     Строка.PRODUCT = Строка.Штрихкод;
     Строка.PRODUCTIDBUYER = Строка.Артикул; 
+    Строка.PRODUCTIDSUPPLIER = Строка.НоменклатураКод;
     Строка.INFO = "Сумма НДС = " + Формат(Строка.СуммаНДС, "ЧДЦ=2; ЧРД=.; ЧГ=0");
 
     // Преобразование числа в строку и заполнение значения.
@@ -1253,11 +1258,12 @@
 	
 КонецЦикла;
 
-Возврат Результат;</Value>
+Возврат Результат;;
+</Value>
 				<Value xsi:type="ValueTable"/>
 				<Value xsi:type="ValueListType">
 					<valueType/>
-					<lastId xsi:type="xs:decimal">33</lastId>
+					<lastId xsi:type="xs:decimal">34</lastId>
 					<item>
 						<value xsi:type="xs:string">Ссылка</value>
 						<id xsi:type="xs:decimal">0</id>
@@ -1359,40 +1365,44 @@
 						<id xsi:type="xs:decimal">24</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">PRICE</value>
+						<value xsi:type="xs:string">PRODUCTIDSUPPLIER</value>
 						<id xsi:type="xs:decimal">25</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">PRICEWITHVAT</value>
+						<value xsi:type="xs:string">PRICE</value>
 						<id xsi:type="xs:decimal">26</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">VAT</value>
+						<value xsi:type="xs:string">PRICEWITHVAT</value>
 						<id xsi:type="xs:decimal">27</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">INFO</value>
+						<value xsi:type="xs:string">VAT</value>
 						<id xsi:type="xs:decimal">28</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">CALIBRE</value>
+						<value xsi:type="xs:string">INFO</value>
 						<id xsi:type="xs:decimal">29</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">PACKINGTYPE</value>
+						<value xsi:type="xs:string">CALIBRE</value>
 						<id xsi:type="xs:decimal">30</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">PACKINGQUANTITY</value>
+						<value xsi:type="xs:string">PACKINGTYPE</value>
 						<id xsi:type="xs:decimal">31</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">PACKINGUNIT</value>
+						<value xsi:type="xs:string">PACKINGQUANTITY</value>
 						<id xsi:type="xs:decimal">32</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">НомерПоПорядку</value>
+						<value xsi:type="xs:string">PACKINGUNIT</value>
 						<id xsi:type="xs:decimal">33</id>
+					</item>
+					<item>
+						<value xsi:type="xs:string">НомерПоПорядку</value>
+						<id xsi:type="xs:decimal">34</id>
 					</item>
 				</Value>
 				<Value xsi:type="ValueListType">
