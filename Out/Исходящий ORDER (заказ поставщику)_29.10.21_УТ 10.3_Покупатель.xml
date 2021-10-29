@@ -182,8 +182,8 @@
 				<Value xsi:type="xs:string"/>
 				<Value xsi:type="xs:string"/>
 				<Value xsi:type="xs:string"/>
-				<Value xsi:type="xs:string">CAMPAIGNNUMBER</Value>
-				<Value xsi:type="xs:string">Документ.CAMPAIGNNUMBER</Value>
+				<Value xsi:type="xs:string">CAMPAIGNDATE</Value>
+				<Value xsi:type="xs:string">Документ.CAMPAIGNDATE</Value>
 				<Value xsi:type="xs:boolean">false</Value>
 				<Value xsi:type="ValueListType">
 					<valueType/>
@@ -211,8 +211,8 @@
 				<Value xsi:type="xs:string"/>
 				<Value xsi:type="xs:string"/>
 				<Value xsi:type="xs:string"/>
-				<Value xsi:type="xs:string">CAMPAIGNDATE</Value>
-				<Value xsi:type="xs:string">Документ.CAMPAIGNDATE</Value>
+				<Value xsi:type="xs:string">CAMPAIGNNUMBER</Value>
+				<Value xsi:type="xs:string">Документ.CAMPAIGNNUMBER</Value>
 				<Value xsi:type="xs:boolean">false</Value>
 				<Value xsi:type="ValueListType">
 					<valueType/>
@@ -1098,7 +1098,7 @@
                |	""ORDER"" КАК ТипДокумента,
                |	""220"" КАК DOCUMENTNAME,
                |	""RUB"" КАК CURRENCY,
-               |	Заказ.ДоговорКонтрагента.Дата КАК CAMPAIGNDATE,
+               |	Заказ.ДоговорКонтрагента.Дата КАК ДатаДоговора,
                |	Заказ.ДоговорКонтрагента.Номер КАК CAMPAIGNNUMBER,
                |	""O"" КАК DOCTYPE
                |ИЗ
@@ -1119,6 +1119,7 @@
 Результат.Колонки.Добавить("DATE", 				Новый ОписаниеТипов("Строка"));
 Результат.Колонки.Добавить("NUMBER", 			Новый ОписаниеТипов("Строка"));
 Результат.Колонки.Добавить("TIME", 				Новый ОписаниеТипов("Строка"));
+Результат.Колонки.Добавить("CAMPAIGNDATE", 		Новый ОписаниеТипов("Строка"));
 Результат.Колонки.Добавить("DELIVERYDATE", 		Новый ОписаниеТипов("Строка"));
 Результат.Колонки.Добавить("EDIINTERCHANGEID", 	Новый ОписаниеТипов("Строка"));
 Результат.Колонки.Добавить("EDIMESSAGE", 		Новый ОписаниеТипов("Строка"));
@@ -1133,6 +1134,7 @@ EDIINTERCHANGEID = 0;
 
     Строка.NUMBER			= СокрЛП(Строка.Номер);
     Строка.DATE				= Формат(Строка.Дата, "ДФ=yyyy-MM-dd");
+	Строка.CAMPAIGNDATE		= Формат(Строка.ДатаДоговора, "ДФ=yyyy-MM-dd");
     Строка.TIME				= Формат(Строка.Дата, "ДФ=HH:mm");
     Строка.DELIVERYDATE		= Формат(Строка.ДатаПоступления, "ДФ=yyyy-MM-dd");
     Строка.EDIINTERCHANGEID = Формат(EDIINTERCHANGEID, "ЧГ=0");
@@ -1195,7 +1197,7 @@ EDIINTERCHANGEID = 0;
 		<Value xsi:type="ValueTable"/>
 		<Value xsi:type="ValueListType">
 			<valueType/>
-			<lastId xsi:type="xs:decimal">29</lastId>
+			<lastId xsi:type="xs:decimal">30</lastId>
 			<item>
 				<value xsi:type="xs:string">Ссылка</value>
 				<id xsi:type="xs:decimal">0</id>
@@ -1273,7 +1275,7 @@ EDIINTERCHANGEID = 0;
 				<id xsi:type="xs:decimal">18</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">CAMPAIGNDATE</value>
+				<value xsi:type="xs:string">ДатаДоговора</value>
 				<id xsi:type="xs:decimal">19</id>
 			</item>
 			<item>
@@ -1297,24 +1299,28 @@ EDIINTERCHANGEID = 0;
 				<id xsi:type="xs:decimal">24</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">DELIVERYDATE</value>
+				<value xsi:type="xs:string">CAMPAIGNDATE</value>
 				<id xsi:type="xs:decimal">25</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">EDIINTERCHANGEID</value>
+				<value xsi:type="xs:string">DELIVERYDATE</value>
 				<id xsi:type="xs:decimal">26</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">EDIMESSAGE</value>
+				<value xsi:type="xs:string">EDIINTERCHANGEID</value>
 				<id xsi:type="xs:decimal">27</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ФайлИмя</value>
+				<value xsi:type="xs:string">EDIMESSAGE</value>
 				<id xsi:type="xs:decimal">28</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">Идентификатор</value>
+				<value xsi:type="xs:string">ФайлИмя</value>
 				<id xsi:type="xs:decimal">29</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">Идентификатор</value>
+				<id xsi:type="xs:decimal">30</id>
 			</item>
 		</Value>
 		<Value xsi:type="ValueListType">
