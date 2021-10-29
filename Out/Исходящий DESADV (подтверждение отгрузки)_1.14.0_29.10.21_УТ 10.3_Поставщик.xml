@@ -181,6 +181,35 @@
 			<Value xsi:type="xs:string"/>
 			<Value xsi:type="xs:string"/>
 			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">DOCTYPE</Value>
+			<Value xsi:type="xs:string">Документ.DOCTYPE</Value>
+			<Value xsi:type="xs:boolean">false</Value>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="ValueTable"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
 			<Value xsi:type="xs:string">ORDERDATE</Value>
 			<Value xsi:type="xs:string">Документ.ORDERDATE</Value>
 			<Value xsi:type="xs:boolean">true</Value>
@@ -328,35 +357,6 @@
 			<Value xsi:type="xs:string"/>
 			<Value xsi:type="xs:string">CAMPAIGNNUMBER</Value>
 			<Value xsi:type="xs:string">Документ.CAMPAIGNNUMBER</Value>
-			<Value xsi:type="xs:boolean">false</Value>
-			<Value xsi:type="ValueListType">
-				<valueType/>
-				<lastId xsi:type="xs:decimal">-1</lastId>
-			</Value>
-			<Value xsi:nil="true"/>
-			<Value xsi:type="ValueListType">
-				<valueType/>
-				<lastId xsi:type="xs:decimal">-1</lastId>
-			</Value>
-			<Value xsi:type="xs:decimal">0</Value>
-			<Value xsi:type="xs:decimal">0</Value>
-			<Value xsi:type="ValueTable"/>
-			<Value xsi:type="ValueListType">
-				<valueType/>
-				<lastId xsi:type="xs:decimal">-1</lastId>
-			</Value>
-			<Value xsi:type="ValueListType">
-				<valueType/>
-				<lastId xsi:type="xs:decimal">-1</lastId>
-			</Value>
-		</row>
-		<row>
-			<Value xsi:type="xs:boolean">true</Value>
-			<Value xsi:type="xs:string"/>
-			<Value xsi:type="xs:string"/>
-			<Value xsi:type="xs:string"/>
-			<Value xsi:type="xs:string">DOCTYPE</Value>
-			<Value xsi:type="xs:string">Документ.DOCTYPE</Value>
 			<Value xsi:type="xs:boolean">false</Value>
 			<Value xsi:type="ValueListType">
 				<valueType/>
@@ -735,35 +735,6 @@
 						<Value xsi:type="xs:string"/>
 						<Value xsi:type="xs:string"/>
 						<Value xsi:type="xs:string"/>
-						<Value xsi:type="xs:string">ORDEREDQUANTITY</Value>
-						<Value xsi:type="xs:string">POSITION.ORDEREDQUANTITY</Value>
-						<Value xsi:type="xs:boolean">true</Value>
-						<Value xsi:type="ValueListType">
-							<valueType/>
-							<lastId xsi:type="xs:decimal">-1</lastId>
-						</Value>
-						<Value xsi:nil="true"/>
-						<Value xsi:type="ValueListType">
-							<valueType/>
-							<lastId xsi:type="xs:decimal">-1</lastId>
-						</Value>
-						<Value xsi:type="xs:decimal">0</Value>
-						<Value xsi:type="xs:decimal">0</Value>
-						<Value xsi:type="ValueTable"/>
-						<Value xsi:type="ValueListType">
-							<valueType/>
-							<lastId xsi:type="xs:decimal">-1</lastId>
-						</Value>
-						<Value xsi:type="ValueListType">
-							<valueType/>
-							<lastId xsi:type="xs:decimal">-1</lastId>
-						</Value>
-					</row>
-					<row>
-						<Value xsi:type="xs:boolean">true</Value>
-						<Value xsi:type="xs:string"/>
-						<Value xsi:type="xs:string"/>
-						<Value xsi:type="xs:string"/>
 						<Value xsi:type="xs:string">DELIVEREDQUANTITY</Value>
 						<Value xsi:type="xs:string">POSITION.DELIVEREDQUANTITY</Value>
 						<Value xsi:type="xs:boolean">true</Value>
@@ -822,9 +793,9 @@
 						<Value xsi:type="xs:string"/>
 						<Value xsi:type="xs:string"/>
 						<Value xsi:type="xs:string"/>
-						<Value xsi:type="xs:string">AMOUNT</Value>
-						<Value xsi:type="xs:string">POSITION.AMOUNT</Value>
-						<Value xsi:type="xs:boolean">false</Value>
+						<Value xsi:type="xs:string">ORDEREDQUANTITY</Value>
+						<Value xsi:type="xs:string">POSITION.ORDEREDQUANTITY</Value>
+						<Value xsi:type="xs:boolean">true</Value>
 						<Value xsi:type="ValueListType">
 							<valueType/>
 							<lastId xsi:type="xs:decimal">-1</lastId>
@@ -854,6 +825,64 @@
 						<Value xsi:type="xs:string">ORDERUNIT</Value>
 						<Value xsi:type="xs:string">POSITION.ORDERUNIT</Value>
 						<Value xsi:type="xs:boolean">true</Value>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+						<Value xsi:nil="true"/>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+						<Value xsi:type="xs:decimal">0</Value>
+						<Value xsi:type="xs:decimal">0</Value>
+						<Value xsi:type="ValueTable"/>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+					</row>
+					<row>
+						<Value xsi:type="xs:boolean">true</Value>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="xs:string">CALIBRE</Value>
+						<Value xsi:type="xs:string">POSITION.CALIBRE</Value>
+						<Value xsi:type="xs:boolean">false</Value>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+						<Value xsi:nil="true"/>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+						<Value xsi:type="xs:decimal">0</Value>
+						<Value xsi:type="xs:decimal">0</Value>
+						<Value xsi:type="ValueTable"/>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+					</row>
+					<row>
+						<Value xsi:type="xs:boolean">true</Value>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="xs:string">AMOUNT</Value>
+						<Value xsi:type="xs:string">POSITION.AMOUNT</Value>
+						<Value xsi:type="xs:boolean">false</Value>
 						<Value xsi:type="ValueListType">
 							<valueType/>
 							<lastId xsi:type="xs:decimal">-1</lastId>
@@ -967,35 +996,6 @@
 						<Value xsi:type="xs:string"/>
 						<Value xsi:type="xs:string"/>
 						<Value xsi:type="xs:string"/>
-						<Value xsi:type="xs:string">DESCRIPTION</Value>
-						<Value xsi:type="xs:string">POSITION.DESCRIPTION</Value>
-						<Value xsi:type="xs:boolean">false</Value>
-						<Value xsi:type="ValueListType">
-							<valueType/>
-							<lastId xsi:type="xs:decimal">-1</lastId>
-						</Value>
-						<Value xsi:nil="true"/>
-						<Value xsi:type="ValueListType">
-							<valueType/>
-							<lastId xsi:type="xs:decimal">-1</lastId>
-						</Value>
-						<Value xsi:type="xs:decimal">0</Value>
-						<Value xsi:type="xs:decimal">0</Value>
-						<Value xsi:type="ValueTable"/>
-						<Value xsi:type="ValueListType">
-							<valueType/>
-							<lastId xsi:type="xs:decimal">-1</lastId>
-						</Value>
-						<Value xsi:type="ValueListType">
-							<valueType/>
-							<lastId xsi:type="xs:decimal">-1</lastId>
-						</Value>
-					</row>
-					<row>
-						<Value xsi:type="xs:boolean">true</Value>
-						<Value xsi:type="xs:string"/>
-						<Value xsi:type="xs:string"/>
-						<Value xsi:type="xs:string"/>
 						<Value xsi:type="xs:string">AMOUNTWITHVAT</Value>
 						<Value xsi:type="xs:string">POSITION.AMOUNTWITHVAT</Value>
 						<Value xsi:type="xs:boolean">false</Value>
@@ -1025,8 +1025,8 @@
 						<Value xsi:type="xs:string"/>
 						<Value xsi:type="xs:string"/>
 						<Value xsi:type="xs:string"/>
-						<Value xsi:type="xs:string">CALIBRE</Value>
-						<Value xsi:type="xs:string">POSITION.CALIBRE</Value>
+						<Value xsi:type="xs:string">DESCRIPTION</Value>
+						<Value xsi:type="xs:string">POSITION.DESCRIPTION</Value>
 						<Value xsi:type="xs:boolean">false</Value>
 						<Value xsi:type="ValueListType">
 							<valueType/>
