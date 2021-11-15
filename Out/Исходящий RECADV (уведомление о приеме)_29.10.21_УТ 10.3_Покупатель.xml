@@ -1144,7 +1144,7 @@
 		<Value xsi:type="xs:boolean">true</Value>
 		<Value xsi:type="xs:string">Исходящий RECADV (уведомление о приеме)</Value>
 		<Value xsi:type="xs:string">Уведомление о приемке (RECADV)</Value>
-		<Value xsi:type="xs:string"/>
+		<Value xsi:type="xs:string">ДокументПоступления</Value>
 		<Value xsi:type="xs:string">RECADV</Value>
 		<Value xsi:type="xs:string">Запрос = Новый Запрос;
 Запрос.Текст = "ВЫБРАТЬ
