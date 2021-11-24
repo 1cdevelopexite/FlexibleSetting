@@ -383,6 +383,35 @@
 			<Value xsi:type="xs:boolean">true</Value>
 			<Value xsi:type="xs:string"/>
 			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string">REASONDECREACEQUANTITYALL</Value>
+			<Value xsi:nil="true"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+			<Value xsi:type="xs:string">Документ.REASONDECREACEQUANTITYALL</Value>
+			<Value xsi:type="ValueTable"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:decimal">0</Value>
+			<Value xsi:type="xs:boolean">false</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="ValueListType">
+				<valueType/>
+				<lastId xsi:type="xs:decimal">-1</lastId>
+			</Value>
+		</row>
+		<row>
+			<Value xsi:type="xs:boolean">true</Value>
+			<Value xsi:type="xs:string"/>
+			<Value xsi:type="xs:string"/>
 			<Value xsi:type="xs:string">ACTION</Value>
 			<Value xsi:nil="true"/>
 			<Value xsi:type="ValueListType">
@@ -936,6 +965,35 @@
 					<Value xsi:type="xs:boolean">true</Value>
 					<Value xsi:type="xs:string"/>
 					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string">REASONDECREACEQUANTITY</Value>
+					<Value xsi:nil="true"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="xs:string">POSITION.REASONDECREACEQUANTITY</Value>
+					<Value xsi:type="ValueTable"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:boolean">false</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</row>
+				<row>
+					<Value xsi:type="xs:boolean">true</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string"/>
 					<Value xsi:type="xs:string">INFO</Value>
 					<Value xsi:nil="true"/>
 					<Value xsi:type="ValueListType">
@@ -1151,7 +1209,8 @@
                |	ТоварыORDER.КалибрУпаковки КАК КалибрУпаковки,
                |	ТоварыORDER.ТипФасовки КАК ТипФасовки,
                |	ТоварыORDER.КоличествоВФасовке КАК КоличествоВФасовке,
-               |	ТоварыORDER.БазоваяЕдиницаТовара КАК БазоваяЕдиницаТовара
+               |	ТоварыORDER.БазоваяЕдиницаТовара КАК БазоваяЕдиницаТовара,
+               |	ТоварыORDER.ПричинаОтказаТЧ КАК REASONDECREACEQUANTITY
                |ИЗ
                |	(ВЫБРАТЬ РАЗЛИЧНЫЕ
                |		ЭКОМ_ДокументыТЧ_Товары.Ссылка КАК ORDER,
@@ -1171,7 +1230,8 @@
                |		ЭКОМ_ДокументыТЧ_Товары.КалибрУпаковки КАК КалибрУпаковки,
                |		ЭКОМ_ДокументыТЧ_Товары.ТипФасовки КАК ТипФасовки,
                |		ЭКОМ_ДокументыТЧ_Товары.КоличествоВФасовке КАК КоличествоВФасовке,
-               |		ЭКОМ_ДокументыТЧ_Товары.БазоваяЕдиницаТовара КАК БазоваяЕдиницаТовара
+               |		ЭКОМ_ДокументыТЧ_Товары.БазоваяЕдиницаТовара КАК БазоваяЕдиницаТовара,
+               |		ЭКОМ_ДокументыТЧ_Товары.ПричинаОтказаТЧ КАК ПричинаОтказаТЧ
                |	ИЗ
                |		РегистрСведений.ЭКОМ_ЦепочкиДокументовПоставщика КАК ЭКОМ_ЦепочкиДокументовПоставщика
                |			ЛЕВОЕ СОЕДИНЕНИЕ Документ.ЭКОМ_Документы.ТЧ_Товары КАК ЭКОМ_ДокументыТЧ_Товары
@@ -1259,7 +1319,7 @@
 				<Value xsi:type="ValueTable"/>
 				<Value xsi:type="ValueListType">
 					<valueType/>
-					<lastId xsi:type="xs:decimal">33</lastId>
+					<lastId xsi:type="xs:decimal">34</lastId>
 					<item>
 						<value xsi:type="xs:string">Ссылка</value>
 						<id xsi:type="xs:decimal">0</id>
@@ -1337,64 +1397,68 @@
 						<id xsi:type="xs:decimal">18</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">PRODUCT</value>
+						<value xsi:type="xs:string">REASONDECREACEQUANTITY</value>
 						<id xsi:type="xs:decimal">19</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">PRODUCTIDBUYER</value>
+						<value xsi:type="xs:string">PRODUCT</value>
 						<id xsi:type="xs:decimal">20</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">PRODUCTIDSUPPLIER</value>
+						<value xsi:type="xs:string">PRODUCTIDBUYER</value>
 						<id xsi:type="xs:decimal">21</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">PRICE</value>
+						<value xsi:type="xs:string">PRODUCTIDSUPPLIER</value>
 						<id xsi:type="xs:decimal">22</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">PRICEWITHVAT</value>
+						<value xsi:type="xs:string">PRICE</value>
 						<id xsi:type="xs:decimal">23</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">VAT</value>
+						<value xsi:type="xs:string">PRICEWITHVAT</value>
 						<id xsi:type="xs:decimal">24</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">INFO</value>
+						<value xsi:type="xs:string">VAT</value>
 						<id xsi:type="xs:decimal">25</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">POSITIONNUMBER</value>
+						<value xsi:type="xs:string">INFO</value>
 						<id xsi:type="xs:decimal">26</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">ORDEREDQUANTITY</value>
+						<value xsi:type="xs:string">POSITIONNUMBER</value>
 						<id xsi:type="xs:decimal">27</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">ACCEPTEDQUANTITY</value>
+						<value xsi:type="xs:string">ORDEREDQUANTITY</value>
 						<id xsi:type="xs:decimal">28</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">CALIBRE</value>
+						<value xsi:type="xs:string">ACCEPTEDQUANTITY</value>
 						<id xsi:type="xs:decimal">29</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">PACKINGTYPE</value>
+						<value xsi:type="xs:string">CALIBRE</value>
 						<id xsi:type="xs:decimal">30</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">PACKINGQUANTITY</value>
+						<value xsi:type="xs:string">PACKINGTYPE</value>
 						<id xsi:type="xs:decimal">31</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">PACKINGUNIT</value>
+						<value xsi:type="xs:string">PACKINGQUANTITY</value>
 						<id xsi:type="xs:decimal">32</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">НомерПоПорядку</value>
+						<value xsi:type="xs:string">PACKINGUNIT</value>
 						<id xsi:type="xs:decimal">33</id>
+					</item>
+					<item>
+						<value xsi:type="xs:string">НомерПоПорядку</value>
+						<id xsi:type="xs:decimal">34</id>
 					</item>
 				</Value>
 				<Value xsi:type="ValueListType">
@@ -1522,7 +1586,8 @@
                |	""ORDRSP"" КАК ВидДокумента,
                |	ЭКОМ_ТочкиДоставки.GLN КАК DELIVERYPLACE,
                |	""O"" КАК DOCTYPE,
-               |	ЭКОМ_Объекты_СобытияORDER.СтруктураФайла КАК СтруктураФайлаORDER
+               |	ЭКОМ_Объекты_СобытияORDER.СтруктураФайла КАК СтруктураФайлаORDER,
+               |	ЕСТЬNULL(ЭКОМ_ЦепочкиДокументовПоставщика.ORDER.ПричинаОтказа, """") КАК REASONDECREACEQUANTITYALL
                |ИЗ
                |	Документ.СчетНаОплатуПокупателю КАК ЗаказКлиента
                |		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЭКОМ_GLN КАК ЭКОМ_GLN_Контрагент
@@ -1541,42 +1606,58 @@
 Запрос.УстановитьПараметр("Документ", Источник);
 РезультатЗапроса = Запрос.Выполнить(); 
 Результат = РезультатЗапроса.Выгрузить();
-Результат.Колонки.Добавить("FRESH", Новый ОписаниеТипов("Строка"));
-
+Результат.Колонки.Добавить("FRESH", Новый ОписаниеТипов("Строка"));     
+ 
 Запрос = Новый Запрос;
 Запрос.Текст = 
-    "ВЫБРАТЬ
-    |	ЭКОМ_ЦепочкиДокументовПоставщика.Заказ КАК ЗаказКлиента,
-    |	ВЫБОР
-    |		КОГДА ВложенныйЗапрос.ИтогКоличествоПоставляемое = 0
-    |			ТОГДА ИСТИНА
-    |		ИНАЧЕ ЛОЖЬ
-    |	КОНЕЦ КАК ПоставкаОтменена,
-    |	ВЫБОР
-    |		КОГДА ЭКОМ_ДокументыТЧ_Товары.КоличествоЗаказанное = ЭКОМ_ДокументыТЧ_Товары.КоличествоПоставляемое
-    |			ТОГДА ЛОЖЬ
-    |		ИНАЧЕ ИСТИНА
-    |	КОНЕЦ КАК ЕстьРасхождения
-    |ИЗ
-    |	РегистрСведений.ЭКОМ_ЦепочкиДокументовПоставщика КАК ЭКОМ_ЦепочкиДокументовПоставщика
-    |		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ЭКОМ_Документы.ТЧ_Товары КАК ЭКОМ_ДокументыТЧ_Товары
-    |		ПО ЭКОМ_ЦепочкиДокументовПоставщика.ORDER = ЭКОМ_ДокументыТЧ_Товары.Ссылка
-    |		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
-    |			ЭКОМ_ЦепочкиДокументовПоставщика.Заказ КАК ЗаказКлиента,
-    |			СУММА(ЭКОМ_ДокументыТЧ_Товары.КоличествоПоставляемое) КАК ИтогКоличествоПоставляемое
-    |		ИЗ
-    |			РегистрСведений.ЭКОМ_ЦепочкиДокументовПоставщика КАК ЭКОМ_ЦепочкиДокументовПоставщика
-    |				ЛЕВОЕ СОЕДИНЕНИЕ Документ.ЭКОМ_Документы.ТЧ_Товары КАК ЭКОМ_ДокументыТЧ_Товары
-    |				ПО ЭКОМ_ЦепочкиДокументовПоставщика.ORDER = ЭКОМ_ДокументыТЧ_Товары.Ссылка
-    |		ГДЕ
-    |			ЭКОМ_ЦепочкиДокументовПоставщика.Заказ В(&amp;Документ)
-    |		
-    |		СГРУППИРОВАТЬ ПО
-    |			ЭКОМ_ЦепочкиДокументовПоставщика.Заказ) КАК ВложенныйЗапрос
-    |		ПО ЭКОМ_ЦепочкиДокументовПоставщика.Заказ = ВложенныйЗапрос.ЗаказКлиента
-    |ГДЕ
-    |	ЭКОМ_ЦепочкиДокументовПоставщика.Заказ В(&amp;Документ)";
-
+"ВЫБРАТЬ
+|	ЭКОМ_ЦепочкиДокументовПоставщика.Заказ КАК Заказ,
+|	ЭКОМ_ДокументыТЧ_Товары.Номенклатура КАК Номенклатура,
+|	ЭКОМ_ДокументыТЧ_Товары.КоличествоЗаказанное КАК КоличествоЗаказанное
+|ПОМЕСТИТЬ ВходящиеOrders
+|ИЗ
+|	РегистрСведений.ЭКОМ_ЦепочкиДокументовПоставщика КАК ЭКОМ_ЦепочкиДокументовПоставщика
+|		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ЭКОМ_Документы.ТЧ_Товары КАК ЭКОМ_ДокументыТЧ_Товары
+|		ПО ЭКОМ_ЦепочкиДокументовПоставщика.ORDER = ЭКОМ_ДокументыТЧ_Товары.Ссылка
+|ГДЕ
+|	ЭКОМ_ЦепочкиДокументовПоставщика.Заказ В(&amp;Документ)
+|
+|ИНДЕКСИРОВАТЬ ПО
+|	Заказ,
+|	Номенклатура
+|;
+|
+|////////////////////////////////////////////////////////////////////////////////
+|ВЫБРАТЬ
+|	ВходящиеOrders.Заказ КАК ЗаказКлиента,
+|	ВходящиеOrders.Номенклатура КАК Номенклатура,
+|	СУММА(ЕСТЬNULL(ЗаказКлиентаТовары.Количество, 0)) КАК КоличествоПоставляемое,
+|	СУММА(ВходящиеOrders.КоличествоЗаказанное) КАК КоличествоЗаказанное
+|ПОМЕСТИТЬ СгруппированныеТовары
+|ИЗ
+|	ВходящиеOrders КАК ВходящиеOrders
+|		ЛЕВОЕ СОЕДИНЕНИЕ Документ.СчетНаОплатуПокупателю.Товары КАК ЗаказКлиентаТовары
+|		ПО (ЗаказКлиентаТовары.Ссылка = ВходящиеOrders.Заказ)
+|			И (ЗаказКлиентаТовары.Номенклатура = ВходящиеOrders.Номенклатура)
+|
+|СГРУППИРОВАТЬ ПО
+|	ВходящиеOrders.Заказ,
+|	ВходящиеOrders.Номенклатура
+|;
+|
+|////////////////////////////////////////////////////////////////////////////////
+|ВЫБРАТЬ
+|	СгруппированныеТовары.ЗаказКлиента КАК ЗаказКлиента,
+|	МАКСИМУМ(ВЫБОР
+|			КОГДА СгруппированныеТовары.КоличествоЗаказанное &lt;&gt; СгруппированныеТовары.КоличествоПоставляемое
+|				ТОГДА ИСТИНА
+|			ИНАЧЕ ЛОЖЬ
+|		КОНЕЦ) КАК ЕстьРасхождения
+|ИЗ
+|	СгруппированныеТовары КАК СгруппированныеТовары
+|
+|СГРУППИРОВАТЬ ПО
+|	СгруппированныеТовары.ЗаказКлиента"; 
 Запрос.УстановитьПараметр("Документ", Источник);
 РезультатЗапроса = Запрос.Выполнить();
 ДокументыТабличнаяЧасть = РезультатЗапроса.Выгрузить();
@@ -1595,29 +1676,13 @@ EDIINTERCHANGEID = 0;
 	КонецЕсли;
 	
     EDIINTERCHANGEID = НовыйНомерТранзакции(EDIINTERCHANGEID);
-   	
-	Отбор = Новый Структура();
-	Отбор.Вставить("ЗаказКлиента", Строка.Ссылка);
-	МассивСтрок = ДокументыТабличнаяЧасть.НайтиСтроки(Отбор);
 	
-	ЕстьРасхождения  = Ложь;
-    ПоставкаОтменена = Ложь;
-	Для Каждого СтрокаТЧ Из МассивСтрок Цикл		
-		Если СтрокаТЧ.ПоставкаОтменена = Истина Тогда
-		     ПоставкаОтменена = Истина;
-			 Прервать;
-		КонецЕсли;
-		Если СтрокаТЧ.ЕстьРасхождения = Истина Тогда
-		     ЕстьРасхождения = Истина;
-			 Прервать;
-		КонецЕсли;
-    КонецЦикла;
-
-    Если ПоставкаОтменена Тогда
-        Строка.ACTION = "27";
-    ИначеЕсли ЕстьРасхождения Тогда
-        Строка.ACTION = "4";
-    КонецЕсли;
+	НайденнаяСтрока = ДокументыТабличнаяЧасть.Найти(Строка.Ссылка, "ЗаказКлиента");
+	Если Не НайденнаяСтрока = Неопределено И НайденнаяСтрока.ЕстьРасхождения Тогда
+		Строка.ACTION = "4"; // Есть расхождения
+	// для отмененной поставки используется значение "27", но в БП отсутствует типовой функционал отмены, поэтому подразумевается использование
+	// отклонения из ЭКОМ документа ORDER входящий
+	КонецЕсли;        	
 
     FRESH = "0";  // 1 - Да 0 - Нет
 	Если ТипЗнч(Строка.СтруктураФайлаORDER) = Тип("ХранилищеЗначения")  Тогда
@@ -1647,7 +1712,7 @@ EDIINTERCHANGEID = 0;
 		<Value xsi:type="ValueTable"/>
 		<Value xsi:type="ValueListType">
 			<valueType/>
-			<lastId xsi:type="xs:decimal">33</lastId>
+			<lastId xsi:type="xs:decimal">34</lastId>
 			<item>
 				<value xsi:type="xs:string">Ссылка</value>
 				<id xsi:type="xs:decimal">0</id>
@@ -1777,12 +1842,16 @@ EDIINTERCHANGEID = 0;
 				<id xsi:type="xs:decimal">31</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">FRESH</value>
+				<value xsi:type="xs:string">REASONDECREACEQUANTITYALL</value>
 				<id xsi:type="xs:decimal">32</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">НомерПоПорядку</value>
+				<value xsi:type="xs:string">FRESH</value>
 				<id xsi:type="xs:decimal">33</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">НомерПоПорядку</value>
+				<id xsi:type="xs:decimal">34</id>
 			</item>
 		</Value>
 		<Value xsi:type="ValueListType">
