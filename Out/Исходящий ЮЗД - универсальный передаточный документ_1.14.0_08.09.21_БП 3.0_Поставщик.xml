@@ -149,30 +149,20 @@
 					<Value xsi:type="xs:boolean">true</Value>
 					<Value xsi:type="xs:string"/>
 					<Value xsi:type="xs:string"/>
-					<Value xsi:type="xs:string">ИспрКСчФ</Value>
-					<Value xsi:type="xs:string">Возврат ЗначениеЗаполнено(Документ.НомерКорИсправления);</Value>
+					<Value xsi:type="xs:string">СчФ</Value>
+					<Value xsi:nil="true"/>
 					<Value xsi:type="ValueListType">
 						<valueType/>
-						<lastId xsi:type="xs:decimal">3</lastId>
+						<lastId xsi:type="xs:decimal">1</lastId>
 						<item>
-							<value xsi:type="xs:string">НомИспрКСчФ</value>
-							<presentation>Документ.НомерКорИсправления</presentation>
+							<value xsi:type="xs:string">НомерСчФ</value>
+							<presentation>Документ.НомерСчФ</presentation>
 							<id xsi:type="xs:decimal">0</id>
 						</item>
 						<item>
-							<value xsi:type="xs:string">ДатаИспрКСчФ</value>
-							<presentation>Документ.ДатаКорИсправления</presentation>
+							<value xsi:type="xs:string">ДатаСчФ</value>
+							<presentation>Документ.ДатаСчФ</presentation>
 							<id xsi:type="xs:decimal">1</id>
-						</item>
-						<item>
-							<value xsi:type="xs:string">ДефДатаИспрСчф</value>
-							<presentation>Документ.ДефДатаИспрСчф</presentation>
-							<id xsi:type="xs:decimal">2</id>
-						</item>
-						<item>
-							<value xsi:type="xs:string">ДефНомИспрСчф</value>
-							<presentation>Документ.ДефНомИспрСчф</presentation>
-							<id xsi:type="xs:decimal">3</id>
 						</item>
 					</Value>
 					<Value xsi:type="xs:string"/>
@@ -195,62 +185,23 @@
 					</Value>
 				</row>
 				<row>
-					<row>
-						<Value xsi:type="xs:boolean">true</Value>
-						<Value xsi:type="xs:string"/>
-						<Value xsi:type="xs:string"/>
-						<Value xsi:type="xs:string">ИспрСчФ</Value>
-						<Value xsi:type="xs:string">Возврат ЗначениеЗаполнено(Документ.НомИспрСчФ);</Value>
-						<Value xsi:type="ValueListType">
-							<valueType/>
-							<lastId xsi:type="xs:decimal">3</lastId>
-							<item>
-								<value xsi:type="xs:string">НомИспрСчФ</value>
-								<presentation>Документ.НомИспрСчФ</presentation>
-								<id xsi:type="xs:decimal">2</id>
-							</item>
-							<item>
-								<value xsi:type="xs:string">ДатаИспрСчФ</value>
-								<presentation>Документ.ДатаИспрСчФ</presentation>
-								<id xsi:type="xs:decimal">3</id>
-							</item>
-						</Value>
-						<Value xsi:type="xs:string"/>
-						<Value xsi:type="ValueTable"/>
-						<Value xsi:type="ValueListType">
-							<valueType/>
-							<lastId xsi:type="xs:decimal">-1</lastId>
-						</Value>
-						<Value xsi:type="ValueListType">
-							<valueType/>
-							<lastId xsi:type="xs:decimal">-1</lastId>
-						</Value>
-						<Value xsi:type="xs:decimal">0</Value>
-						<Value xsi:type="xs:decimal">0</Value>
-						<Value xsi:type="xs:boolean">false</Value>
-						<Value xsi:type="xs:string"/>
-						<Value xsi:type="ValueListType">
-							<valueType/>
-							<lastId xsi:type="xs:decimal">-1</lastId>
-						</Value>
-					</row>
 					<Value xsi:type="xs:boolean">true</Value>
 					<Value xsi:type="xs:string"/>
 					<Value xsi:type="xs:string"/>
-					<Value xsi:type="xs:string">СчФ</Value>
-					<Value xsi:nil="true"/>
+					<Value xsi:type="xs:string">ИспрКСчФ</Value>
+					<Value xsi:type="xs:string">Возврат ЗначениеЗаполнено(Документ.НомерКорИсправления);</Value>
 					<Value xsi:type="ValueListType">
 						<valueType/>
-						<lastId xsi:type="xs:decimal">1</lastId>
+						<lastId xsi:type="xs:decimal">5</lastId>
 						<item>
-							<value xsi:type="xs:string">НомерСчФ</value>
-							<presentation>Документ.НомерСчФ</presentation>
-							<id xsi:type="xs:decimal">0</id>
+							<value xsi:type="xs:string">НомИспрКСчФ</value>
+							<presentation>Документ.НомерКорИсправления</presentation>
+							<id xsi:type="xs:decimal">4</id>
 						</item>
 						<item>
-							<value xsi:type="xs:string">ДатаСчФ</value>
-							<presentation>Документ.ДатаСчФ</presentation>
-							<id xsi:type="xs:decimal">1</id>
+							<value xsi:type="xs:string">ДатаИспрКСчФ</value>
+							<presentation>Документ.ДатаКорИсправления</presentation>
+							<id xsi:type="xs:decimal">5</id>
 						</item>
 					</Value>
 					<Value xsi:type="xs:string"/>
@@ -3417,6 +3368,11 @@
 |	КорректировкаРеализацииТовары.Сумма КАК СУММА,
 |	КорректировкаРеализацииТовары.СтавкаНДС КАК СтавкаНДС,
 |	КорректировкаРеализацииТовары.СуммаНДС КАК СуммаНДС,
+|	КорректировкаРеализацииТовары.КоличествоДоИзменения КАК КоличествоДоИзменения,
+|	КорректировкаРеализацииТовары.СуммаДоИзменения КАК СуммаДоИзменения,
+|	КорректировкаРеализацииТовары.ЦенаДоИзменения КАК ЦенаДоИзменения,
+|	КорректировкаРеализацииТовары.СуммаНДСДоИзменения КАК СуммаНДСДоИзменения,
+|	КорректировкаРеализацииТовары.СтавкаНДСДоИзменения КАК СтавкаНДСДоИзменения,
 |	КорректировкаРеализацииТовары.Ссылка.СуммаВключаетНДС КАК СуммаВключаетНДС,
 |	"""" КАК КодПроисх,
 |	"""" КАК КрНаимСтрПр,
@@ -3483,11 +3439,11 @@
 |	NULL КАК НомерГТД,
 |	ВТОсновная.CAMPAIGNNUMBER КАК CAMPAIGNNUMBER,
 |	ЭКОМ_ИнфоПоля.Ссылка КАК ЭКОМ_ИнфоПоля,
-|	РеализацияТоваровУслугТовары.Количество КАК КоличествоДоИзменения,
-|	РеализацияТоваровУслугТовары.Сумма КАК СуммаДоИзменения,
-|	РеализацияТоваровУслугТовары.Цена КАК ЦенаДоИзменения,
-|	РеализацияТоваровУслугТовары.СуммаНДС КАК СуммаНДСДоИзменения,
-|	РеализацияТоваровУслугТовары.СтавкаНДС КАК СтавкаНДСДоИзменения
+|	ВТОсновная.КоличествоДоИзменения КАК КоличествоДоИзменения,
+|	ВТОсновная.СуммаДоИзменения КАК СуммаДоИзменения,
+|	ВТОсновная.ЦенаДоИзменения КАК ЦенаДоИзменения,
+|	ВТОсновная.СуммаНДСДоИзменения КАК СуммаНДСДоИзменения,
+|	ВТОсновная.СтавкаНДСДоИзменения КАК СтавкаНДСДоИзменения
 |ИЗ
 |	ВТОсновная КАК ВТОсновная
 |		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЭКОМ_НоменклатураКонтрагентов КАК ЭКОМ_НоменклатураКонтрагентов
@@ -3495,9 +3451,6 @@
 |			И ВТОсновная.Номенклатура = ЭКОМ_НоменклатураКонтрагентов.Номенклатура
 |		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ЭКОМ_ИнфоПоля КАК ЭКОМ_ИнфоПоля
 |		ПО ВТОсновная.ФорматУПД = ЭКОМ_ИнфоПоля.ФорматУПД
-|		ЛЕВОЕ СОЕДИНЕНИЕ Документ.РеализацияТоваровУслуг.Товары КАК РеализацияТоваровУслугТовары
-|		ПО ВТОсновная.ИзначальнаяРеализация = РеализацияТоваровУслугТовары.Ссылка
-|			И ВТОсновная.Номенклатура = РеализацияТоваровУслугТовары.Номенклатура
 |
 |УПОРЯДОЧИТЬ ПО
 |	НомерСтроки";
@@ -5324,7 +5277,15 @@
 		ТипФайла     = "ON_NKORSCHFDOPPR";
 		ТипДокумента = "ИспКор";
         ИсходнаяСчетФактура = ВыборкаДокумента.ИсправляемыйСчетФактура;
+        СкорректированнаяСчетФактура = ВыборкаДокумента.Ссылка.ИсправляемыйСчетФактура;
         ВидДокумента = ВидДокументаКоррИспр;
+        
+        СтруктураДокумента.НомерКорСчФ = Эком_ПолучитьНомерНаПечать(СкорректированнаяСчетФактура);
+        СтруктураДокумента.ДатаКорСчФ  = Формат(СкорректированнаяСчетФактура.Дата, "ДЛФ=Д");
+        СтруктураДокумента.НомерКорИсправления = Формат(ТекущийНомерИсправления,"ЧЦ=3; ЧВН=");
+        СтруктураДокумента.ДатаКорИсправления  = Формат(ДатаИсправления, "ДЛФ=Д");
+
+        
     ИначеЕсли ЭтоИсправление Тогда
         ТипДокумента        = "ИспСчФ";
         ИсходнаяСчетФактура = ВыборкаДокумента.ИсправляемыйСчетФактура;
