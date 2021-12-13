@@ -4076,79 +4076,6 @@
 					<Value xsi:type="xs:string"/>
 					<Value xsi:type="xs:string"/>
 					<Value xsi:type="xs:string"/>
-					<Value xsi:type="xs:string">ОснКор</Value>
-					<Value xsi:type="xs:string"/>
-					<Value xsi:type="xs:boolean">false</Value>
-					<Value xsi:type="ValueListType">
-						<valueType/>
-						<lastId xsi:type="xs:decimal">0</lastId>
-						<item>
-							<value xsi:type="xs:string">НаимОсн</value>
-							<presentation>Документ.НаименованиеОснования</presentation>
-							<id xsi:type="xs:decimal">0</id>
-						</item>
-					</Value>
-					<Value xsi:nil="true"/>
-					<Value xsi:type="ValueListType">
-						<valueType/>
-						<lastId xsi:type="xs:decimal">-1</lastId>
-					</Value>
-					<Value xsi:type="xs:decimal">0</Value>
-					<Value xsi:type="xs:decimal">0</Value>
-					<Value xsi:type="ValueTable"/>
-					<Value xsi:type="ValueListType">
-						<valueType/>
-						<lastId xsi:type="xs:decimal">-1</lastId>
-					</Value>
-					<Value xsi:type="ValueListType">
-						<valueType/>
-						<lastId xsi:type="xs:decimal">-1</lastId>
-					</Value>
-				</row>
-				<Value xsi:type="xs:boolean">true</Value>
-				<Value xsi:type="xs:string"/>
-				<Value xsi:type="xs:string"/>
-				<Value xsi:type="xs:string"/>
-				<Value xsi:type="xs:string">СодФХЖ3</Value>
-				<Value xsi:type="xs:string">// Для старого формата ON_KORSCHFDOPPR</Value>
-				<Value xsi:type="xs:boolean">false</Value>
-				<Value xsi:type="ValueListType">
-					<valueType/>
-					<lastId xsi:type="xs:decimal">1</lastId>
-					<item>
-						<value xsi:type="xs:string">ПередатДокум</value>
-						<presentation>Документ.ПередатДокум</presentation>
-						<id xsi:type="xs:decimal">0</id>
-					</item>
-					<item>
-						<value xsi:type="xs:string">СодОпер</value>
-						<presentation>Документ.СодОпер</presentation>
-						<id xsi:type="xs:decimal">1</id>
-					</item>
-				</Value>
-				<Value xsi:type="xs:string">Возврат Найти(Документ.ТипФайла, "ON_KORSCHFDOPPR") &gt; 0;</Value>
-				<Value xsi:type="ValueListType">
-					<valueType/>
-					<lastId xsi:type="xs:decimal">-1</lastId>
-				</Value>
-				<Value xsi:type="xs:decimal">0</Value>
-				<Value xsi:type="xs:decimal">0</Value>
-				<Value xsi:type="ValueTable"/>
-				<Value xsi:type="ValueListType">
-					<valueType/>
-					<lastId xsi:type="xs:decimal">-1</lastId>
-				</Value>
-				<Value xsi:type="ValueListType">
-					<valueType/>
-					<lastId xsi:type="xs:decimal">-1</lastId>
-				</Value>
-			</row>
-			<row>
-				<row>
-					<Value xsi:type="xs:boolean">true</Value>
-					<Value xsi:type="xs:string"/>
-					<Value xsi:type="xs:string"/>
-					<Value xsi:type="xs:string"/>
 					<Value xsi:type="xs:string">ПередатДокум</Value>
 					<Value xsi:type="xs:string"/>
 					<Value xsi:type="xs:boolean">false</Value>
@@ -4894,8 +4821,7 @@
 |	КонтрагентыКонтактнаяИнформация.Поле6 КАК КонтрагентыКонтактнаяИнформацияПоле6,
 |	КонтрагентыКонтактнаяИнформация.Поле7 КАК КонтрагентыКонтактнаяИнформацияПоле7,
 |	КонтрагентыКонтактнаяИнформация.Поле8 КАК КонтрагентыКонтактнаяИнформацияПоле8,
-|	КонтрагентыКонтактнаяИнформация.Поле9 КАК КонтрагентыКонтактнаяИнформацияПоле9,
-|	ДанныеКонтрагента.Контрагент_ОтправитьНовыйЮЗД
+|	КонтрагентыКонтактнаяИнформация.Поле9 КАК КонтрагентыКонтактнаяИнформацияПоле9
 |ПОМЕСТИТЬ ВТОсновная
 |ИЗ
 |	Документ.СчетФактураВыданный КАК СчетФактураВыданный
@@ -4977,8 +4903,7 @@
 |	КорректировкаРеализации.Ссылка КАК КорректировкаРеализации,
 |	СУММА(КорректировкаРеализацииРасхождения.Сумма - КорректировкаРеализацииРасхождения.СуммаНДС) КАК ВсегоСтТовБезНДСВсего,
 |	СУММА(КорректировкаРеализацииРасхождения.Сумма) КАК ВсегоСтТовУчНалВсего,
-|	СУММА(КорректировкаРеализацииРасхождения.СуммаНДС) КАК ВсегоСумНДС,
-|	ВТОсновная.Контрагент_ОтправитьНовыйЮЗД
+|	СУММА(КорректировкаРеализацииРасхождения.СуммаНДС) КАК ВсегоСумНДС
 |ПОМЕСТИТЬ ВТКорректировка
 |ИЗ
 |	ВТОсновная КАК ВТОсновная
@@ -4990,8 +4915,7 @@
 |	ТИПЗНАЧЕНИЯ(ВТОсновная.ДокументОснование) = ТИП(Документ.КорректировкаРеализации)
 |
 |СГРУППИРОВАТЬ ПО
-|	КорректировкаРеализации.Ссылка,
-|	ВТОсновная.Контрагент_ОтправитьНовыйЮЗД
+|	КорректировкаРеализации.Ссылка
 |;
 |
 |////////////////////////////////////////////////////////////////////////////////
@@ -5142,8 +5066,7 @@
 |	ВТОсновная.КонтрагентыКонтактнаяИнформацияПоле7,
 |	ВТОсновная.КонтрагентыКонтактнаяИнформацияПоле8,
 |	ВТОсновная.КонтрагентыКонтактнаяИнформацияПоле9,
-|	ВТОсновная.ИсправляемыйСчетФактураДата,
-|	ВТОсновная.Контрагент_ОтправитьНовыйЮЗД
+|	ВТОсновная.ИсправляемыйСчетФактураДата
 |ИЗ
 |	ВТОсновная КАК ВТОсновная
 |		ЛЕВОЕ СОЕДИНЕНИЕ ВТКорректировка КАК ВТКорректировка
@@ -5387,13 +5310,7 @@
         СтруктураДокумента.ДефНомИспрСчФ = "-";
 	КонецЕсли;
 
-	Если ВыборкаДокумента.Контрагент_ОтправитьНовыйЮЗД = Ложь
-		И Найти(ТипФайла, "KORSCHFDOPPR") &gt; 0 Тогда
-		  ТипФайла = СтрЗаменить(ТипФайла, "ON_NKORSCHFDOPPR", "ON_KORSCHFDOPPR");
-	Иначе
-		  ТипФайла = ТипФайла + ТипТоваров;
-
-	КонецЕсли;
+	ТипФайла = ТипФайла + ТипТоваров;
 
 	Если НЕ ЗначениеЗаполнено(ВыборкаДокумента.КонтрагентОператорИд)
 		ИЛИ НЕ ЗначениеЗаполнено(ВыборкаДокумента.КонтрагентОператорИНН)
@@ -5799,14 +5716,10 @@
 
     СтруктураДокумента.ИнфТекст = СоответсвияИнфоПолей;
 
-    Если Найти(ТипФайла, "KORSCHFDOPPR") &gt; 0 Тогда
+    Если Найти(ТипФайла, "NKORSCHFDOPPR") &gt; 0 Тогда
 
-		Если Найти(ТипФайла, "ON_NKORSCHFDOPPR") &gt; 0 Тогда
-			СтруктураДокумента.КНД = "1115133";
-		Иначе
-			СтруктураДокумента.КНД = "1115127";
-        КонецЕсли;
-
+		СтруктураДокумента.КНД = "1115133";
+		
         Если СтруктураДокумента.ДокФункция = "СЧФДОП" Тогда
             СтруктураДокумента.ДокФункция = "КСЧФДИС";
             СтруктураДокумента.ПоФактХЖ = "Документ об изменении стоимости отгруженных товаров "
