@@ -149,6 +149,45 @@
 					<Value xsi:type="xs:boolean">true</Value>
 					<Value xsi:type="xs:string"/>
 					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string">СчФ</Value>
+					<Value xsi:nil="true"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">1</lastId>
+						<item>
+							<value xsi:type="xs:string">НомерСчФ</value>
+							<presentation>Документ.НомерСчФ</presentation>
+							<id xsi:type="xs:decimal">0</id>
+						</item>
+						<item>
+							<value xsi:type="xs:string">ДатаСчФ</value>
+							<presentation>Документ.ДатаСчФ</presentation>
+							<id xsi:type="xs:decimal">1</id>
+						</item>
+					</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="ValueTable"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:boolean">false</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</row>
+				<row>
+					<Value xsi:type="xs:boolean">true</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string"/>
 					<Value xsi:type="xs:string">ИспрКСчФ</Value>
 					<Value xsi:type="xs:string">Возврат ЗначениеЗаполнено(Документ.НомерКорИсправления);</Value>
 					<Value xsi:type="ValueListType">
@@ -173,84 +212,6 @@
 							<value xsi:type="xs:string">ДефНомИспрСчф</value>
 							<presentation>Документ.ДефНомИспрСчф</presentation>
 							<id xsi:type="xs:decimal">3</id>
-						</item>
-					</Value>
-					<Value xsi:type="xs:string"/>
-					<Value xsi:type="ValueTable"/>
-					<Value xsi:type="ValueListType">
-						<valueType/>
-						<lastId xsi:type="xs:decimal">-1</lastId>
-					</Value>
-					<Value xsi:type="ValueListType">
-						<valueType/>
-						<lastId xsi:type="xs:decimal">-1</lastId>
-					</Value>
-					<Value xsi:type="xs:decimal">0</Value>
-					<Value xsi:type="xs:decimal">0</Value>
-					<Value xsi:type="xs:boolean">false</Value>
-					<Value xsi:type="xs:string"/>
-					<Value xsi:type="ValueListType">
-						<valueType/>
-						<lastId xsi:type="xs:decimal">-1</lastId>
-					</Value>
-				</row>
-				<row>
-					<row>
-						<Value xsi:type="xs:boolean">true</Value>
-						<Value xsi:type="xs:string"/>
-						<Value xsi:type="xs:string"/>
-						<Value xsi:type="xs:string">ИспрСчФ</Value>
-						<Value xsi:type="xs:string">Возврат ЗначениеЗаполнено(Документ.НомИспрСчФ);</Value>
-						<Value xsi:type="ValueListType">
-							<valueType/>
-							<lastId xsi:type="xs:decimal">3</lastId>
-							<item>
-								<value xsi:type="xs:string">НомИспрСчФ</value>
-								<presentation>Документ.НомИспрСчФ</presentation>
-								<id xsi:type="xs:decimal">2</id>
-							</item>
-							<item>
-								<value xsi:type="xs:string">ДатаИспрСчФ</value>
-								<presentation>Документ.ДатаИспрСчФ</presentation>
-								<id xsi:type="xs:decimal">3</id>
-							</item>
-						</Value>
-						<Value xsi:type="xs:string"/>
-						<Value xsi:type="ValueTable"/>
-						<Value xsi:type="ValueListType">
-							<valueType/>
-							<lastId xsi:type="xs:decimal">-1</lastId>
-						</Value>
-						<Value xsi:type="ValueListType">
-							<valueType/>
-							<lastId xsi:type="xs:decimal">-1</lastId>
-						</Value>
-						<Value xsi:type="xs:decimal">0</Value>
-						<Value xsi:type="xs:decimal">0</Value>
-						<Value xsi:type="xs:boolean">false</Value>
-						<Value xsi:type="xs:string"/>
-						<Value xsi:type="ValueListType">
-							<valueType/>
-							<lastId xsi:type="xs:decimal">-1</lastId>
-						</Value>
-					</row>
-					<Value xsi:type="xs:boolean">true</Value>
-					<Value xsi:type="xs:string"/>
-					<Value xsi:type="xs:string"/>
-					<Value xsi:type="xs:string">СчФ</Value>
-					<Value xsi:nil="true"/>
-					<Value xsi:type="ValueListType">
-						<valueType/>
-						<lastId xsi:type="xs:decimal">1</lastId>
-						<item>
-							<value xsi:type="xs:string">НомерСчФ</value>
-							<presentation>Документ.НомерСчФ</presentation>
-							<id xsi:type="xs:decimal">0</id>
-						</item>
-						<item>
-							<value xsi:type="xs:string">ДатаСчФ</value>
-							<presentation>Документ.ДатаСчФ</presentation>
-							<id xsi:type="xs:decimal">1</id>
 						</item>
 					</Value>
 					<Value xsi:type="xs:string"/>
@@ -5401,6 +5362,12 @@
 		ТипДокумента = "ИспКор";
         ИсходнаяСчетФактура = ВыборкаДокумента.ИсправляемыйСчетФактура;
         ВидДокумента = ВидДокументаКоррИспр;
+        КоррСчетФактура     = ВыборкаДокумента.Ссылка;
+        
+        СтруктураДокумента.НомерКорСчФ = Эком_ПолучитьНомерНаПечать(КоррСчетФактура);
+        СтруктураДокумента.ДатаКорСчФ  = Формат(КоррСчетФактура.Дата, "ДЛФ=Д");
+        СтруктураДокумента.НомерКорИсправления = Формат(ТекущийНомерИсправления,"ЧЦ=3; ЧВН=");
+        СтруктураДокумента.ДатаКорИсправления  = Формат(ДатаИсправления, "ДЛФ=Д");
     ИначеЕсли ЭтоИсправление Тогда
         ТипДокумента        = "ИспСчФ";
         ИсходнаяСчетФактура = ВыборкаДокумента.ИсправляемыйСчетФактура;
