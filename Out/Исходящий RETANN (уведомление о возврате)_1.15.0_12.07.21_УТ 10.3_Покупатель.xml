@@ -763,7 +763,7 @@
                |	ВТ_Товары.НоменклатураАртикул КАК PRODUCTIDBUYER,
                |	ВТ_Товары.КоличествоВозврат,
                |	ВТ_Товары.СтавкаНДС КАК СтавкаНДС,
-               |	ВТ_Товары.Цена КАК PRICE,
+               |	ВТ_Товары.Цена КАК Цена,
                |	ВТ_Товары.Сумма КАК Сумма,
                |	ВТ_Товары.НоменклатураПредставление КАК DESCRIPTION,
                |	ВТ_Товары.CODE,
@@ -792,15 +792,17 @@
 РезультатЗапроса = Запрос.Выполнить();
 Результат = РезультатЗапроса.Выгрузить();
 
+Результат.Колонки.Добавить("PRICE"		      , Новый ОписаниеТипов("Строка"));
 Результат.Колонки.Добавить("AMOUNT"		      , Новый ОписаниеТипов("Строка"));
 Результат.Колонки.Добавить("RETURNQUANTITY"   , Новый ОписаниеТипов("Строка"));
 Результат.Колонки.Добавить("QUANTITYOFCUINTU" , Новый ОписаниеТипов("Строка"));
 Результат.Колонки.Добавить("VAT"			  , Новый ОписаниеТипов("Строка"));
 
 Для Каждого Строка Из Результат Цикл
-	Строка.AMOUNT 	        = Формат(Строка.Сумма, "ЧГ=0");
+	Строка.PRICE 	        = Формат(Строка.Цена,  "ЧДЦ=2; ЧРД=.; ЧН=; ЧГ=0");
+	Строка.AMOUNT 	        = Формат(Строка.Сумма, "ЧДЦ=2; ЧРД=.; ЧН=; ЧГ=0");
 	Строка.QUANTITYOFCUINTU = "0";
-	Строка.RETURNQUANTITY 	= Формат(Строка.КоличествоВозврат, "ЧГ=0");
+	Строка.RETURNQUANTITY 	= Формат(Строка.КоличествоВозврат, "ЧДЦ=3; ЧРД=.; ЧН=; ЧГ=0");
 	
 	СтавкаНДСЧисло = УчетНДС.ПолучитьСтавкуНДС(Строка.СтавкаНДС);
 	Строка.VAT = Формат(СтавкаНДСЧисло, "ЧГ=0");  
@@ -827,7 +829,7 @@
 				<Value xsi:type="ValueTable"/>
 				<Value xsi:type="ValueListType">
 					<valueType/>
-					<lastId xsi:type="xs:decimal">16</lastId>
+					<lastId xsi:type="xs:decimal">17</lastId>
 					<item>
 						<value xsi:type="xs:string">Ссылка</value>
 						<id xsi:type="xs:decimal">0</id>
@@ -861,7 +863,7 @@
 						<id xsi:type="xs:decimal">7</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">PRICE</value>
+						<value xsi:type="xs:string">Цена</value>
 						<id xsi:type="xs:decimal">8</id>
 					</item>
 					<item>
@@ -881,20 +883,24 @@
 						<id xsi:type="xs:decimal">12</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">AMOUNT</value>
+						<value xsi:type="xs:string">PRICE</value>
 						<id xsi:type="xs:decimal">13</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">RETURNQUANTITY</value>
+						<value xsi:type="xs:string">AMOUNT</value>
 						<id xsi:type="xs:decimal">14</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">QUANTITYOFCUINTU</value>
+						<value xsi:type="xs:string">RETURNQUANTITY</value>
 						<id xsi:type="xs:decimal">15</id>
 					</item>
 					<item>
-						<value xsi:type="xs:string">VAT</value>
+						<value xsi:type="xs:string">QUANTITYOFCUINTU</value>
 						<id xsi:type="xs:decimal">16</id>
+					</item>
+					<item>
+						<value xsi:type="xs:string">VAT</value>
+						<id xsi:type="xs:decimal">17</id>
 					</item>
 				</Value>
 				<Value xsi:type="ValueListType">
