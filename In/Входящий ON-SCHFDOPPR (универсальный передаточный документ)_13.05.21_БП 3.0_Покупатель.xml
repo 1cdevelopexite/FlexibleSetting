@@ -1,39 +1,39 @@
 ﻿<ValueTree xmlns="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ValueTree">
 	<column>
 		<Name xsi:type="xs:string">Использовать</Name>
-		<ValueType />
+		<ValueType/>
 	</column>
 	<column>
 		<Name xsi:type="xs:string">ТипТранзакции</Name>
-		<ValueType />
+		<ValueType/>
 	</column>
 	<column>
 		<Name xsi:type="xs:string">Служебные</Name>
-		<ValueType />
+		<ValueType/>
 	</column>
 	<column>
 		<Name xsi:type="xs:string">СлужебныеТекст</Name>
-		<ValueType />
+		<ValueType/>
 	</column>
 	<column>
 		<Name xsi:type="xs:string">Сохранение</Name>
-		<ValueType />
+		<ValueType/>
 	</column>
 	<column>
 		<Name xsi:type="xs:string">Загрузка</Name>
-		<ValueType />
+		<ValueType/>
 	</column>
 	<column>
 		<Name xsi:type="xs:string">Кнопка</Name>
-		<ValueType />
+		<ValueType/>
 	</column>
 	<column>
 		<Name xsi:type="xs:string">КоллекцияТЧ</Name>
-		<ValueType />
+		<ValueType/>
 	</column>
 	<row>
 		<Value xsi:type="xs:boolean">true</Value>
-		<Value xsi:type="xs:string">Входящий ON_SCHFDOPPR (универсальный передаточный документ)</Value>
+		<Value xsi:type="xs:string">Входящий ЮЗД - универсальный передаточный документ</Value>
 		<Value xsi:type="xs:string"> // Для тестирования
  //ВыполнитьГибкиеНастройки(Приемник, , СтруктураДокумента, ЛогСобытий);
 
@@ -435,12 +435,12 @@
 	 Приемник.СтатусОбработкиДокумента = Перечисления.ЭКОМ_Статусы.НеОбработан;
  КонецЕсли;
 </Value>
-		<Value xsi:type="xs:string" />
+		<Value xsi:type="xs:string"/>
 		<Value xsi:type="xs:decimal">0</Value>
 		<Value xsi:type="xs:decimal">0</Value>
 		<Value xsi:type="xs:string">ЮЗД (УПД / УКД / иУПД)</Value>
 		<Value xsi:type="ValueListType">
-			<valueType />
+			<valueType/>
 			<lastId xsi:type="xs:decimal">3</lastId>
 			<item>
 				<value xsi:type="xs:string">ИмяКнопки</value>
