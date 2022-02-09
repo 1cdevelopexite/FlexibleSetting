@@ -33,7 +33,7 @@
 	</column>
 	<row>
 		<Value xsi:type="xs:boolean">true</Value>
-		<Value xsi:type="xs:string">Входящий ON_SCHFDOPPR (универсальный передаточный документ)</Value>
+		<Value xsi:type="xs:string">Входящий ЮЗД - универсальный передаточный документ</Value>
 		<Value xsi:type="xs:string"> // Для получения ссылки документа
  Приемник.Записать();
 
@@ -396,7 +396,30 @@
 		<Value xsi:type="xs:string">ЮЗД (УПД / УКД / иУПД)</Value>
 		<Value xsi:type="ValueListType">
 			<valueType/>
-			<lastId xsi:type="xs:decimal">-1</lastId>
+			<lastId xsi:type="xs:decimal">4</lastId>
+			<item>
+				<value xsi:type="xs:string">Прайс-лист</value>
+				<id xsi:type="xs:decimal">0</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ЭТРН</value>
+				<id xsi:type="xs:decimal">1</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">Поставщик</value>
+				<id xsi:type="xs:decimal">2</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">Покупатель</value>
+				<checkState>1</checkState>
+				<id xsi:type="xs:decimal">3</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ИмяКнопки</value>
+				<presentation>ЮЗД (УПД / УКД / иУПД)</presentation>
+				<checkState>1</checkState>
+				<id xsi:type="xs:decimal">4</id>
+			</item>
 		</Value>
 	</row>
 </ValueTree>

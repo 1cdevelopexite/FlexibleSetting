@@ -1,43 +1,43 @@
 ﻿<ValueTree xmlns="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ValueTree">
 	<column>
 		<Name xsi:type="xs:string">Использовать</Name>
-		<ValueType />
+		<ValueType/>
 	</column>
 	<column>
 		<Name xsi:type="xs:string">ТипТранзакции</Name>
-		<ValueType />
+		<ValueType/>
 	</column>
 	<column>
 		<Name xsi:type="xs:string">Кнопка</Name>
-		<ValueType />
+		<ValueType/>
 	</column>
 	<column>
 		<Name xsi:type="xs:string">СлужебныеТекст</Name>
-		<ValueType />
+		<ValueType/>
 	</column>
 	<column>
 		<Name xsi:type="xs:string">Сохранение</Name>
-		<ValueType />
+		<ValueType/>
 	</column>
 	<column>
 		<Name xsi:type="xs:string">Загрузка</Name>
-		<ValueType />
+		<ValueType/>
 	</column>
 	<column>
 		<Name xsi:type="xs:string">Служебные</Name>
-		<ValueType />
+		<ValueType/>
 	</column>
 	<column>
 		<Name xsi:type="xs:string">КоллекцияТЧ</Name>
-		<ValueType />
+		<ValueType/>
 	</column>
 	<row>
 		<Value xsi:type="xs:boolean">true</Value>
-		<Value xsi:type="xs:string">Входящий ON_SCHFDOPPR (универсальный передаточный документ)</Value>
+		<Value xsi:type="xs:string">Входящий ЮЗД - универсальный передаточный документ</Value>
 		<Value xsi:type="xs:string">ЮЗД (УПД / УКД / иУПД)</Value>
-		<Value xsi:type="xs:string" />
-		<Value xsi:nil="true" />
-		<Value xsi:nil="true" />
+		<Value xsi:nil="true"/>
+		<Value xsi:nil="true"/>
+		<Value xsi:nil="true"/>
 		<Value xsi:type="xs:string">// Для получения ссылки документа
 Приемник.НеВыполнятьКодПриЗаписи = Истина;
 Приемник.Записать();
@@ -383,8 +383,31 @@
  КонецЕсли;
 </Value>
 		<Value xsi:type="ValueListType">
-			<valueType />
-			<lastId xsi:type="xs:decimal">-1</lastId>
+			<valueType/>
+			<lastId xsi:type="xs:decimal">9</lastId>
+			<item>
+				<value xsi:type="xs:string">Прайс-лист</value>
+				<id xsi:type="xs:decimal">5</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ЭТРН</value>
+				<id xsi:type="xs:decimal">6</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">Поставщик</value>
+				<id xsi:type="xs:decimal">7</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">Покупатель</value>
+				<checkState>1</checkState>
+				<id xsi:type="xs:decimal">8</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">ИмяКнопки</value>
+				<presentation>ЮЗД (УПД / УКД / иУПД)</presentation>
+				<checkState>1</checkState>
+				<id xsi:type="xs:decimal">9</id>
+			</item>
 		</Value>
 	</row>
 </ValueTree>
