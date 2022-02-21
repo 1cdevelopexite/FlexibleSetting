@@ -47,7 +47,7 @@
 		<Value xsi:type="xs:boolean">true</Value>
 		<Value xsi:type="xs:string">Создать поступление</Value>
 		<Value xsi:type="xs:string">Заказ поставщику</Value>
-		<Value xsi:type="xs:string">Приобретение товаров и услуг</Value>
+		<Value xsi:type="xs:string">ПриобретениеТоваровУслуг</Value>
 		<Value xsi:type="xs:string">ИмяДокументаПрименика = "Поступление 1С";
 
 Если НЕ (Источник.Статус = Перечисления.СтатусыЗаказовПоставщикам.Подтвержден 

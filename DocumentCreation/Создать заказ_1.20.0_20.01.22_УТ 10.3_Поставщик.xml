@@ -48,7 +48,7 @@
 		<Value xsi:type="xs:string">Создать заказ</Value>
 		<Value xsi:type="xs:string">ЭКОМ_Документ_ORDER</Value>
 		<Value xsi:type="xs:string">Docrobot Документ</Value>
-		<Value xsi:type="xs:string">Заказ покупателя</Value>
+		<Value xsi:type="xs:string">ЗаказПокупателя</Value>
 		<Value xsi:nil="true"/>
 		<Value xsi:nil="true"/>
 		<Value xsi:nil="true"/>
