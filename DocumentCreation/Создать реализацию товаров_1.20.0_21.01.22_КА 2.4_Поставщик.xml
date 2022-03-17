@@ -47,7 +47,7 @@
 		<Value xsi:type="xs:boolean">true</Value>
 		<Value xsi:type="xs:string">Создать реализацию товаров</Value>
 		<Value xsi:type="xs:string">Заказ клиента</Value>
-		<Value xsi:type="xs:string">Реализация товаров и услуг</Value>
+		<Value xsi:type="xs:string">РеализацияТоваровУслуг</Value>
 		<Value xsi:type="xs:string">РазделятьРеализации = Настройка_Параметр_Прочитать("ЭКОМ_РазделятьРеализации", Ложь);
 
 Если КэшированныеЗначения = Неопределено Тогда

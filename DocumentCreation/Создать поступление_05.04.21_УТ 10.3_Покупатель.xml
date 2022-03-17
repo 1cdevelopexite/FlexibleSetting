@@ -48,7 +48,7 @@
 		<Value xsi:type="xs:string">Создать поступление</Value>
 		<Value xsi:type="xs:string">ДокументЗаказа</Value>
 		<Value xsi:type="xs:string">Заказ поставщику</Value>
-		<Value xsi:type="xs:string">Поступление товаров и услуг</Value>
+		<Value xsi:type="xs:string">ПоступлениеТоваровУслуг</Value>
 		<Value xsi:type="xs:string"/>
 		<Value xsi:nil="true"/>
 		<Value xsi:nil="true"/>

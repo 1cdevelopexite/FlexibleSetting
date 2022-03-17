@@ -48,7 +48,7 @@
 		<Value xsi:type="xs:string">Создать реализацию товаров</Value>
 		<Value xsi:type="xs:string">ДокументЗаказа</Value>
 		<Value xsi:type="xs:string">Заказ покупателя</Value>
-		<Value xsi:type="xs:string">Реализация товаров и услуг</Value>
+		<Value xsi:type="xs:string">РеализацияТоваровУслуг</Value>
 		<Value xsi:type="xs:string"/>
 		<Value xsi:nil="true"/>
 		<Value xsi:nil="true"/>

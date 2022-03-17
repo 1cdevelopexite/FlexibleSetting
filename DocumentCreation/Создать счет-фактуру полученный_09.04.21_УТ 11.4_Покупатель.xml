@@ -47,7 +47,7 @@
 		<Value xsi:type="xs:boolean">true</Value>
 		<Value xsi:type="xs:string">Создать счет-фактуру полученный</Value>
 		<Value xsi:type="xs:string">Приобретение товаров и услуг</Value>
-		<Value xsi:type="xs:string">Счет-фактура полученный</Value>
+		<Value xsi:type="xs:string">СчетФактураПолученный</Value>
 		<Value xsi:type="xs:string">ПараметрыДокумента = Новый Структура;
 ПараметрыДокумента.Вставить("ДокументОснование", Источник.Ссылка);
 Приемник.Заполнить(ПараметрыДокумента);
