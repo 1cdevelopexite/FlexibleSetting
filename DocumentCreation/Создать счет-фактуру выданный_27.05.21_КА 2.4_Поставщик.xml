@@ -1,4 +1,4 @@
-﻿<ValueTree xmlns="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ValueTree">
+﻿  <ValueTree xmlns="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ValueTree">
 	<column>
 		<Name xsi:type="xs:string">Использовать</Name>
 		<ValueType/>
@@ -47,7 +47,7 @@
 		<Value xsi:type="xs:boolean">true</Value>
 		<Value xsi:type="xs:string">Создать счет-фактуру выданный</Value>
 		<Value xsi:type="xs:string">Реализация товаров и услуг</Value>
-		<Value xsi:type="xs:string">Счет-фактура выданный</Value>
+		<Value xsi:type="xs:string">СчетФактураВыданный</Value>
 		<Value xsi:type="xs:string">ПараметрыДокумента = Новый Структура;
 ПараметрыДокумента.Вставить("ДокументОснование", Источник.Ссылка);
 Приемник.Заполнить(ПараметрыДокумента);

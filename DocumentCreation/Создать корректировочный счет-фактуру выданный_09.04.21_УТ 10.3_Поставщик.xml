@@ -40,7 +40,7 @@
 		<Value xsi:type="xs:string">Создать корректировку счет-фактуру выданный</Value>
 		<Value xsi:type="xs:string">КорректировкаРеализации</Value>
 		<Value xsi:type="xs:string">Реализация товаров и услуг</Value>
-		<Value xsi:type="xs:string">Счет-фактура выданный</Value>
+		<Value xsi:type="xs:string">СчетФактураВыданный</Value>
 		<Value xsi:type="xs:string"/>
 		<Value xsi:type="xs:string"/>
 		<Value xsi:type="xs:string">Если Источник.Метаданные().Реквизиты.Найти("ОтражатьВБухгалтерскомУчете") &lt;&gt; Неопределено 
