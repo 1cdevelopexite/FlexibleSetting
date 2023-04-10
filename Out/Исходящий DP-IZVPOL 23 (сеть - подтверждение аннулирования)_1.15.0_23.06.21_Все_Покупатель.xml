@@ -437,7 +437,7 @@
 				<lastId xsi:type="xs:decimal">-1</lastId>
 			</Value>
 		</row>
-		<Value xsi:type="xs:boolean">true</Value>
+		<Value xsi:type="xs:boolean">false</Value>
 		<Value xsi:type="xs:string">Исходящий DP_IZVPOL_23 (подтверждение аннулирования)</Value>
 		<Value xsi:type="xs:string">ДокументЭКОМ_ЮЗД</Value>
 		<Value xsi:type="xs:string">Файл</Value>
@@ -521,31 +521,72 @@
                |	ЭКОМ_GLN_Организация.Объект.ИНН КАК ОрганизацияИНН,
                |	ЭКОМ_GLN_Организация.Объект.КПП КАК ОрганизацияКПП,
                |	ЭКОМ_GLN_Организация.Объект.Наименование КАК ОрганизацияНаименование,
-               |	ЭКОМ_GLN_Организация.Сертификат.ДолжностьПодписанта КАК СертификатДолжностьПодписанта,
-               |	ЭКОМ_GLN_Организация.Сертификат.ФамилияПодписанта КАК СертификатФамилияПодписанта,
-               |	ЭКОМ_GLN_Организация.Сертификат.ИмяПодписанта КАК СертификатИмяПодписанта,
-               |	ЭКОМ_GLN_Организация.Сертификат.ОтчествоПодписанта КАК СертификатОтчествоПодписанта,
+               |	ВЫБОР
+               |		КОГДА ЭКОМ_GLN_Контрагент.Контрагент_ОтправитьМЧД = ИСТИНА
+               |			ТОГДА DR_МЧД.Сертификат
+               |		ИНАЧЕ ЭКОМ_GLN_Организация.Сертификат
+               |	КОНЕЦ КАК Сертификат,
+               |	ВЫБОР
+               |		КОГДА ЭКОМ_GLN_Контрагент.Контрагент_ОтправитьМЧД = ИСТИНА
+               |			ТОГДА DR_МЧД.Сертификат.ДолжностьПодписанта
+               |		ИНАЧЕ ЭКОМ_GLN_Организация.Сертификат.ДолжностьПодписанта
+               |	КОНЕЦ КАК СертификатДолжностьПодписанта,
+               |	ВЫБОР
+               |		КОГДА ЭКОМ_GLN_Контрагент.Контрагент_ОтправитьМЧД = ИСТИНА
+               |			ТОГДА DR_МЧД.Сертификат.ФамилияПодписанта
+               |		ИНАЧЕ ЭКОМ_GLN_Организация.Сертификат.ФамилияПодписанта
+               |	КОНЕЦ КАК СертификатФамилияПодписанта,
+               |	ВЫБОР
+               |		КОГДА ЭКОМ_GLN_Контрагент.Контрагент_ОтправитьМЧД = ИСТИНА
+               |			ТОГДА DR_МЧД.Сертификат.ИмяПодписанта
+               |		ИНАЧЕ ЭКОМ_GLN_Организация.Сертификат.ИмяПодписанта
+               |	КОНЕЦ КАК СертификатИмяПодписанта,
+               |	ВЫБОР
+               |		КОГДА ЭКОМ_GLN_Контрагент.Контрагент_ОтправитьМЧД = ИСТИНА
+               |			ТОГДА DR_МЧД.Сертификат.ОтчествоПодписанта
+               |		ИНАЧЕ ЭКОМ_GLN_Организация.Сертификат.ОтчествоПодписанта
+               |	КОНЕЦ КАК СертификатОтчествоПодписанта,
                |	ЭКОМ_Объекты_СобытияDP_PRANNUL.ЭЦП КАК ЭЦП_ФайлаОснования,
                |	ЭКОМ_Объекты_СобытияDP_PRANNUL.СтруктураФайла КАК СтруктураФайлаОснования,
-               |	ЭКОМ_Объекты_СобытияDP_PRANNUL.ДатаЗаписи КАК ДатаЗаписи
+               |	ЭКОМ_Объекты_СобытияDP_PRANNUL.ДатаЗаписи КАК ДатаЗаписи,
+               |	ЭКОМ_GLN_Контрагент.Контрагент_ОтправитьМЧД КАК ОтправитьМЧД,
+               |	DR_МЧД.СтрокаМЧД КАК СтрокаМЧД
                |ИЗ
                |	РегистрСведений.ЭКОМ_Объекты_События КАК ЭКОМ_Объекты_СобытияDP_PRANNUL
                |		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЭКОМ_GLN КАК ЭКОМ_GLN_Организация
+               |			ЛЕВОЕ СОЕДИНЕНИЕ Справочник.DR_МЧД КАК DR_МЧД
+               |			ПО (ЭКОМ_GLN_Организация.Объект = DR_МЧД.Организация)
+               |				И (ВЫБОР
+               |					КОГДА &amp;ЭтоРегламентноеЗадание = ИСТИНА
+               |						ТОГДА DR_МЧД.ДляРегламентныхЗаданий = ИСТИНА
+               |					ИНАЧЕ DR_МЧД.Пользователь = &amp;Пользователь
+               |				КОНЕЦ)
+               |				И (DR_МЧД.МЧДДействительнаПо &gt; &amp;ТекущаяДата)
+               |				И (DR_МЧД.МЧДДействительнаС &lt; &amp;ТекущаяДата)
                |		ПО (ЭКОМ_Объекты_СобытияDP_PRANNUL.Организация = ЭКОМ_GLN_Организация.Объект)
                |		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЭКОМ_GLN КАК ЭКОМ_GLN_Контрагент
                |		ПО (ЭКОМ_Объекты_СобытияDP_PRANNUL.Контрагент = ЭКОМ_GLN_Контрагент.Объект)
                |ГДЕ
-               |	ЭКОМ_Объекты_СобытияDP_PRANNUL.Документ_Основание В (&amp;Документ)
+               |	ЭКОМ_Объекты_СобытияDP_PRANNUL.Документ_Основание В(&amp;Документ)
                |	И ЭКОМ_Объекты_СобытияDP_PRANNUL.ВидДокумента = ЗНАЧЕНИЕ(Перечисление.ЭКОМ_ВидыДокументов.DP_PRANNUL_22)
                |	И ЭКОМ_Объекты_СобытияDP_PRANNUL.НаправлениеОбмена = ЗНАЧЕНИЕ(Перечисление.ЭКОМ_НаправлениеОбмена.Входящий)";
 
 Запрос.УстановитьПараметр("Документ", Источник);
+Запрос.УстановитьПараметр("Пользователь", НайтиТекущегоПользователя());
+Запрос.УстановитьПараметр("ЭтоРегламентноеЗадание", ЭтоРегламентноеЗадание);
+Запрос.УстановитьПараметр("ТекущаяДата", ТекущаяДата());
+
 РезультатЗапроса = Запрос.Выполнить();
 ВыборкаДокумента = РезультатЗапроса.Выбрать();
 
 Результат = Новый ТаблицаЗначений;
 МассивКолонок = Новый Массив;
-
+ 
+//МЧД
+МассивКолонок.Добавить("ОтправитьМЧД");
+МассивКолонок.Добавить("Сертификат");
+МассивКолонок.Добавить("СтрокаМЧД");
+ 
 //Сведения для регистра ЭКОМ события для документа
 МассивКолонок.Добавить("ВидДокумента");
 МассивКолонок.Добавить("ЗаказДата");
@@ -628,6 +669,13 @@
 	КонецЕсли;
 
 	СтруктураДокумента = Результат.Добавить();
+	
+	СтруктураДокумента.Сертификат = ВыборкаДокумента.Сертификат;
+    СтруктураДокумента.ОтправитьМЧД = ВыборкаДокумента.ОтправитьМЧД;
+    Если СтруктураДокумента.ОтправитьМЧД = Истина Тогда 
+    	СтруктураДокумента.СтрокаМЧД = ВыборкаДокумента.СтрокаМЧД; 
+    КонецЕсли; 
+
 	СтруктураДокумента.ОтпрДок_ИдУчастЭДО = ОтпрДок_ИдУчастЭДО;
 	СтруктураДокумента.ОтпрДок_ИННЮЛ      = ВыборкаДокумента.КонтрагентИНН;
 
@@ -744,146 +792,158 @@
 		<Value xsi:type="ValueTable"/>
 		<Value xsi:type="ValueListType">
 			<valueType/>
-			<lastId xsi:type="xs:decimal">34</lastId>
+			<lastId xsi:type="xs:decimal">37</lastId>
 			<item>
-				<value xsi:type="xs:string">ВидДокумента</value>
+				<value xsi:type="xs:string">ОтправитьМЧД</value>
 				<id xsi:type="xs:decimal">0</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ЗаказДата</value>
+				<value xsi:type="xs:string">Сертификат</value>
 				<id xsi:type="xs:decimal">1</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ЗаказНомер</value>
+				<value xsi:type="xs:string">СтрокаМЧД</value>
 				<id xsi:type="xs:decimal">2</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">Идентификатор</value>
+				<value xsi:type="xs:string">ВидДокумента</value>
 				<id xsi:type="xs:decimal">3</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ИдентификаторИспр</value>
+				<value xsi:type="xs:string">ЗаказДата</value>
 				<id xsi:type="xs:decimal">4</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">Контрагент</value>
+				<value xsi:type="xs:string">ЗаказНомер</value>
 				<id xsi:type="xs:decimal">5</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">Организация</value>
+				<value xsi:type="xs:string">Идентификатор</value>
 				<id xsi:type="xs:decimal">6</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">Ссылка</value>
+				<value xsi:type="xs:string">ИдентификаторИспр</value>
 				<id xsi:type="xs:decimal">7</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">Статус</value>
+				<value xsi:type="xs:string">Контрагент</value>
 				<id xsi:type="xs:decimal">8</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ФайлИмя</value>
+				<value xsi:type="xs:string">Организация</value>
 				<id xsi:type="xs:decimal">9</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ИдФайл</value>
+				<value xsi:type="xs:string">Ссылка</value>
 				<id xsi:type="xs:decimal">10</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ВерсПрог</value>
+				<value xsi:type="xs:string">Статус</value>
 				<id xsi:type="xs:decimal">11</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ВерсФорм</value>
+				<value xsi:type="xs:string">ФайлИмя</value>
 				<id xsi:type="xs:decimal">12</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">КНД</value>
+				<value xsi:type="xs:string">ИдФайл</value>
 				<id xsi:type="xs:decimal">13</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">УчастЭДО_ИдУчастЭДО</value>
+				<value xsi:type="xs:string">ВерсПрог</value>
 				<id xsi:type="xs:decimal">14</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">УчастЭДО_НаимОрг</value>
+				<value xsi:type="xs:string">ВерсФорм</value>
 				<id xsi:type="xs:decimal">15</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">УчастЭДО_ИННЮЛ</value>
+				<value xsi:type="xs:string">КНД</value>
 				<id xsi:type="xs:decimal">16</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">УчастЭДО_КПП</value>
+				<value xsi:type="xs:string">УчастЭДО_ИдУчастЭДО</value>
 				<id xsi:type="xs:decimal">17</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ДатаПол</value>
+				<value xsi:type="xs:string">УчастЭДО_НаимОрг</value>
 				<id xsi:type="xs:decimal">18</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ВремяПол</value>
+				<value xsi:type="xs:string">УчастЭДО_ИННЮЛ</value>
 				<id xsi:type="xs:decimal">19</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ИмяПостФайла</value>
+				<value xsi:type="xs:string">УчастЭДО_КПП</value>
 				<id xsi:type="xs:decimal">20</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ЭЦППолФайл</value>
+				<value xsi:type="xs:string">ДатаПол</value>
 				<id xsi:type="xs:decimal">21</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ТипПолучателя</value>
+				<value xsi:type="xs:string">ВремяПол</value>
 				<id xsi:type="xs:decimal">22</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ОтпрДок_ИдУчастЭДО</value>
+				<value xsi:type="xs:string">ИмяПостФайла</value>
 				<id xsi:type="xs:decimal">23</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ОтпрДок_НаимОрг</value>
+				<value xsi:type="xs:string">ЭЦППолФайл</value>
 				<id xsi:type="xs:decimal">24</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ОтпрДок_ИННЮЛ</value>
+				<value xsi:type="xs:string">ТипПолучателя</value>
 				<id xsi:type="xs:decimal">25</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ОтпрДок_КПП</value>
+				<value xsi:type="xs:string">ОтпрДок_ИдУчастЭДО</value>
 				<id xsi:type="xs:decimal">26</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ОтпрДок_ФамилияФЛ</value>
+				<value xsi:type="xs:string">ОтпрДок_НаимОрг</value>
 				<id xsi:type="xs:decimal">27</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ОтпрДок_ИмяФЛ</value>
+				<value xsi:type="xs:string">ОтпрДок_ИННЮЛ</value>
 				<id xsi:type="xs:decimal">28</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ОтпрДок_ОтчествоФЛ</value>
+				<value xsi:type="xs:string">ОтпрДок_КПП</value>
 				<id xsi:type="xs:decimal">29</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">Подписант_Должность</value>
+				<value xsi:type="xs:string">ОтпрДок_ФамилияФЛ</value>
 				<id xsi:type="xs:decimal">30</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">Подписант_Фамилия</value>
+				<value xsi:type="xs:string">ОтпрДок_ИмяФЛ</value>
 				<id xsi:type="xs:decimal">31</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">Подписант_Имя</value>
+				<value xsi:type="xs:string">ОтпрДок_ОтчествоФЛ</value>
 				<id xsi:type="xs:decimal">32</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">Подписант_Отчество</value>
+				<value xsi:type="xs:string">Подписант_Должность</value>
 				<id xsi:type="xs:decimal">33</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">НомерПоПорядку</value>
+				<value xsi:type="xs:string">Подписант_Фамилия</value>
 				<id xsi:type="xs:decimal">34</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">Подписант_Имя</value>
+				<id xsi:type="xs:decimal">35</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">Подписант_Отчество</value>
+				<id xsi:type="xs:decimal">36</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">НомерПоПорядку</value>
+				<id xsi:type="xs:decimal">37</id>
 			</item>
 		</Value>
 		<Value xsi:type="ValueListType">
