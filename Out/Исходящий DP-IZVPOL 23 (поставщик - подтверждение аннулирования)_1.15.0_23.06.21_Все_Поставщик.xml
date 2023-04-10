@@ -437,7 +437,7 @@
 				<lastId xsi:type="xs:decimal">-1</lastId>
 			</Value>
 		</row>
-		<Value xsi:type="xs:boolean">false</Value>
+		<Value xsi:type="xs:boolean">true</Value>
 		<Value xsi:type="xs:string">Исходящий DP_IZVPOL_23 (подтверждение аннулирования)</Value>
 		<Value xsi:type="xs:string">ДокументСЧФ</Value>
 		<Value xsi:type="xs:string">Файл</Value>
@@ -603,6 +603,7 @@
 МассивКолонок.Добавить("ИдФайл");
 МассивКолонок.Добавить("ВерсПрог");
 МассивКолонок.Добавить("ВерсФорм");
+МассивКолонок.Добавить("GUIDФайла");
 
 //Документ
 МассивКолонок.Добавить("КНД");
@@ -762,6 +763,7 @@
 	СтруктураДокумента.ИдФайл   = ИдентификаторДляФайла;
 	СтруктураДокумента.ВерсПрог = "Exite 1C";
 	СтруктураДокумента.ВерсФорм = "1.02";
+	СтруктураДокумента.GUIDФайла = Идентификатор;
 
 	//Документ
 	СтруктураДокумента.КНД = "1115110";
@@ -795,7 +797,7 @@
 		<Value xsi:type="ValueTable"/>
 		<Value xsi:type="ValueListType">
 			<valueType/>
-			<lastId xsi:type="xs:decimal">37</lastId>
+			<lastId xsi:type="xs:decimal">38</lastId>
 			<item>
 				<value xsi:type="xs:string">ОтправитьМЧД</value>
 				<id xsi:type="xs:decimal">0</id>
@@ -861,92 +863,96 @@
 				<id xsi:type="xs:decimal">15</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">КНД</value>
+				<value xsi:type="xs:string">GUIDФайла</value>
 				<id xsi:type="xs:decimal">16</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">УчастЭДО_ИдУчастЭДО</value>
+				<value xsi:type="xs:string">КНД</value>
 				<id xsi:type="xs:decimal">17</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">УчастЭДО_НаимОрг</value>
+				<value xsi:type="xs:string">УчастЭДО_ИдУчастЭДО</value>
 				<id xsi:type="xs:decimal">18</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">УчастЭДО_ИННЮЛ</value>
+				<value xsi:type="xs:string">УчастЭДО_НаимОрг</value>
 				<id xsi:type="xs:decimal">19</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">УчастЭДО_КПП</value>
+				<value xsi:type="xs:string">УчастЭДО_ИННЮЛ</value>
 				<id xsi:type="xs:decimal">20</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ДатаПол</value>
+				<value xsi:type="xs:string">УчастЭДО_КПП</value>
 				<id xsi:type="xs:decimal">21</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ВремяПол</value>
+				<value xsi:type="xs:string">ДатаПол</value>
 				<id xsi:type="xs:decimal">22</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ИмяПостФайла</value>
+				<value xsi:type="xs:string">ВремяПол</value>
 				<id xsi:type="xs:decimal">23</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ЭЦППолФайл</value>
+				<value xsi:type="xs:string">ИмяПостФайла</value>
 				<id xsi:type="xs:decimal">24</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ТипПолучателя</value>
+				<value xsi:type="xs:string">ЭЦППолФайл</value>
 				<id xsi:type="xs:decimal">25</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ОтпрДок_ИдУчастЭДО</value>
+				<value xsi:type="xs:string">ТипПолучателя</value>
 				<id xsi:type="xs:decimal">26</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ОтпрДок_НаимОрг</value>
+				<value xsi:type="xs:string">ОтпрДок_ИдУчастЭДО</value>
 				<id xsi:type="xs:decimal">27</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ОтпрДок_ИННЮЛ</value>
+				<value xsi:type="xs:string">ОтпрДок_НаимОрг</value>
 				<id xsi:type="xs:decimal">28</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ОтпрДок_КПП</value>
+				<value xsi:type="xs:string">ОтпрДок_ИННЮЛ</value>
 				<id xsi:type="xs:decimal">29</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ОтпрДок_ФамилияФЛ</value>
+				<value xsi:type="xs:string">ОтпрДок_КПП</value>
 				<id xsi:type="xs:decimal">30</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ОтпрДок_ИмяФЛ</value>
+				<value xsi:type="xs:string">ОтпрДок_ФамилияФЛ</value>
 				<id xsi:type="xs:decimal">31</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">ОтпрДок_ОтчествоФЛ</value>
+				<value xsi:type="xs:string">ОтпрДок_ИмяФЛ</value>
 				<id xsi:type="xs:decimal">32</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">Подписант_Должность</value>
+				<value xsi:type="xs:string">ОтпрДок_ОтчествоФЛ</value>
 				<id xsi:type="xs:decimal">33</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">Подписант_Фамилия</value>
+				<value xsi:type="xs:string">Подписант_Должность</value>
 				<id xsi:type="xs:decimal">34</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">Подписант_Имя</value>
+				<value xsi:type="xs:string">Подписант_Фамилия</value>
 				<id xsi:type="xs:decimal">35</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">Подписант_Отчество</value>
+				<value xsi:type="xs:string">Подписант_Имя</value>
 				<id xsi:type="xs:decimal">36</id>
 			</item>
 			<item>
-				<value xsi:type="xs:string">НомерПоПорядку</value>
+				<value xsi:type="xs:string">Подписант_Отчество</value>
 				<id xsi:type="xs:decimal">37</id>
+			</item>
+			<item>
+				<value xsi:type="xs:string">НомерПоПорядку</value>
+				<id xsi:type="xs:decimal">38</id>
 			</item>
 		</Value>
 		<Value xsi:type="ValueListType">
