@@ -252,7 +252,7 @@
 									<id xsi:type="xs:decimal">2</id>
 								</item>
 							</Value>
-							<Value xsi:nil="true"/>
+							<Value xsi:type="xs:string"/>
 							<Value xsi:type="ValueListType">
 								<valueType/>
 								<lastId xsi:type="xs:decimal">-1</lastId>
@@ -821,7 +821,7 @@
 									<id xsi:type="xs:decimal">2</id>
 								</item>
 							</Value>
-							<Value xsi:type="xs:string">Возврат Документ.ПродТипОрганизации = "ЮЛ";</Value>
+							<Value xsi:type="xs:string">Возврат (Документ.ПродТипОрганизации = "ЮЛ" ИЛИ Документ.ПродТипОрганизации = "ФЛ");</Value>
 							<Value xsi:type="ValueListType">
 								<valueType/>
 								<lastId xsi:type="xs:decimal">-1</lastId>
@@ -904,7 +904,7 @@
 									<id xsi:type="xs:decimal">1</id>
 								</item>
 							</Value>
-							<Value xsi:type="xs:string">Возврат Документ.ПродТипОрганизации = "ФЛ";</Value>
+							<Value xsi:type="xs:string">Возврат Документ.ПродТипОрганизации = "ИП";</Value>
 							<Value xsi:type="ValueListType">
 								<valueType/>
 								<lastId xsi:type="xs:decimal">-1</lastId>
@@ -4473,6 +4473,84 @@
 							<id xsi:type="xs:decimal">1</id>
 						</item>
 					</Value>
+					<Value xsi:type="xs:string">Возврат Документ.ПродТипОрганизации = "ИП";</Value>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="xs:decimal">0</Value>
+					<Value xsi:type="ValueTable"/>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</row>
+				<row>
+					<row>
+						<Value xsi:type="xs:boolean">true</Value>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="xs:string">ФИО</Value>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="xs:boolean">false</Value>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">2</lastId>
+							<item>
+								<value xsi:type="xs:string">Фамилия</value>
+								<presentation>Документ.ОргПодписантФамилия</presentation>
+								<id xsi:type="xs:decimal">0</id>
+							</item>
+							<item>
+								<value xsi:type="xs:string">Имя</value>
+								<presentation>Документ.ОргПодписантИмя</presentation>
+								<id xsi:type="xs:decimal">1</id>
+							</item>
+							<item>
+								<value xsi:type="xs:string">Отчество</value>
+								<presentation>Документ.ОргПодписантОтчество</presentation>
+								<id xsi:type="xs:decimal">2</id>
+							</item>
+						</Value>
+						<Value xsi:nil="true"/>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+						<Value xsi:type="xs:decimal">0</Value>
+						<Value xsi:type="xs:decimal">0</Value>
+						<Value xsi:type="ValueTable"/>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+						<Value xsi:type="ValueListType">
+							<valueType/>
+							<lastId xsi:type="xs:decimal">-1</lastId>
+						</Value>
+					</row>
+					<Value xsi:type="xs:boolean">true</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:string">ФЛ</Value>
+					<Value xsi:type="xs:string"/>
+					<Value xsi:type="xs:boolean">false</Value>
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">9</lastId>
+						<item>
+							<value xsi:type="xs:string">ИННФЛ</value>
+							<presentation>Документ.ОргПодписантИНН</presentation>
+							<id xsi:type="xs:decimal">9</id>
+						</item>
+					</Value>
 					<Value xsi:type="xs:string">Возврат Документ.ПродТипОрганизации = "ФЛ";</Value>
 					<Value xsi:type="ValueListType">
 						<valueType/>
@@ -4645,10 +4723,12 @@
 |	СчетФактураВыданный.Организация КАК Организация,
 |	СчетФактураВыданный.Организация.Представление КАК ПредставлениеОрганизации,
 |	ВЫБОР
+|		КОГДА ДанныеКонтрагента.Контрагент_ОтправитьМЧД = ИСТИНА И DR_МЧД.Сертификат.ИННФизЛица &lt;&gt; """"
+|			ТОГДА ""ФЛ""
 |		КОГДА СчетФактураВыданный.Организация.ЮрФизЛицо = ЗНАЧЕНИЕ(Перечисление.ЮрФизЛицо.ЮрЛицо)
 |			ТОГДА ""ЮЛ""
 |		КОГДА СчетФактураВыданный.Организация.ЮрФизЛицо = ЗНАЧЕНИЕ(Перечисление.ЮрФизЛицо.ФизЛицо)
-|			ТОГДА ""ФЛ""
+|			ТОГДА ""ИП""
 |		ИНАЧЕ ""ЮЛ""
 |	КОНЕЦ КАК ОрганизацияЮрФизЛицо,
 |	СчетФактураВыданный.Организация.ИНН КАК ОрганизацияИНН,
@@ -5139,6 +5219,7 @@
 |	ВТОсновная.КонтрагентыКонтактнаяИнформацияПоле9,
 |	ВТОсновная.ИсправляемыйСчетФактураДата,
 |	ВТОсновная.ОтправитьМЧД,
+|	ВТОсновная.Сертификат.ИННФизЛица КАК ОргПодписантИНН,
 |	ВТОсновная.Сертификат,
 |	ВТОсновная.СтрокаМЧД
 |ИЗ
@@ -5484,7 +5565,7 @@
         Продолжить;
     КонецЕсли;
 
-    Если ВыборкаДокумента.ОрганизацияЮрФизЛицо = "ФЛ" Тогда
+    Если ВыборкаДокумента.ОрганизацияЮрФизЛицо = "ИП" Тогда
         СтруктураДокумента.ОргПодписантСвГосРегИП = ВыборкаДокумента.ОрганизацияОГРН + ", "
         + ВыборкаДокумента.ОрганизацияСвидетельствоСерияНомер + " от " + Формат(ВыборкаДокумента.ОрганизацияСвидетельствоДатаВыдачи, "ДФ=dd.MM.yyyy");
 
@@ -5862,7 +5943,7 @@
 
     КонецЕсли;
 
-    Если СтруктураДокумента.ПродТипОрганизации = "ЮЛ" Тогда
+    Если СтруктураДокумента.ПродТипОрганизации = "ЮЛ" ИЛИ СтруктураДокумента.ПродТипОрганизации = "ФЛ" Тогда
         СтруктураДокумента.НаимЭконСубСост = СтруктураДокумента.ПродНаимОрг;
     Иначе
         СтруктураДокумента.НаимЭконСубСост = СокрЛП(Лев(ВыборкаДокумента.ОрганизацияФамилияИП + " "
@@ -5909,11 +5990,11 @@
     СтруктураДокумента.КППОператор           = СокрЛП(ВыборкаДокумента.ОрганизацияОператорКПП);
     СтруктураДокумента.ИдЭДООператор         = СокрЛП(ВыборкаДокумента.ОрганизацияОператорИд);
 	СтруктураДокумента.ОргПодписантФамилия   = СокрЛП(ВыборкаДокумента.ФамилияПодписанта);
-    СтруктураДокумента.ОргПодписантИмя       = СокрЛП(ВыборкаДокумента.ИмяПодписанта);
-    СтруктураДокумента.ОргПодписантИНН       = СокрЛП(ВыборкаДокумента.ОрганизацияИНН);
-    СтруктураДокумента.ОргПодписантОтчество  = СокрЛП(ВыборкаДокумента.ОтчествоПодписанта);
-    СтруктураДокумента.ПодписантТип          = ВыборкаДокумента.ОрганизацияЮрФизЛицо;
+    СтруктураДокумента.ОргПодписантИмя       = СокрЛП(ВыборкаДокумента.ИмяПодписанта);   
+    СтруктураДокумента.ОргПодписантИНН       = СокрЛП(ВыборкаДокумента.ОргПодписантИНН);// ОрганизацияИНН 
     СтруктураДокумента.ОргПодписантДолжность = СокрЛП(ВыборкаДокумента.ДолжностьПодписанта);
+	СтруктураДокумента.ОргПодписантОтчество  = СокрЛП(ВыборкаДокумента.ОтчествоПодписанта);
+    СтруктураДокумента.ПодписантТип          = ВыборкаДокумента.ОрганизацияЮрФизЛицо;
 	СтруктураДокумента.СтТовБезНДСВсего      = Формат(ВыборкаДокумента.СуммаСНДС - ВыборкаДокумента.СуммаНДС, "ЧДЦ=2; ЧРД=.; ЧГ=0; ЧН=");
     СтруктураДокумента.СтТовУчНалВсего       = Формат(ВыборкаДокумента.СуммаСНДС, "ЧДЦ=2; ЧРД=.; ЧГ=0; ЧН=");
     СтруктураДокумента.СуммаНДССчФ           = Формат(ВыборкаДокумента.СуммаНДС , "ЧДЦ=2; ЧРД=.; ЧГ=0; ЧН=");
